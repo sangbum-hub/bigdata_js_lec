@@ -1,0 +1,1051 @@
+{
+  "Code": 200,
+  "Result": {
+    "MapUIElementMapping": [
+      {
+        "TimeStamp": 1648451611,
+        "CoordinateType": "pixel",
+        "MapWidth": 1280,
+        "MapHeight": 720,
+        "UIElementTypeName": "DDP",
+        "UIElementUniqueName": "b364c35d-966a-4b22-aace-e9ff76b05f69",
+        "UIElementDisplayName": "Slide_a783c78f-71bd-495c-9702-1495f8079d89",
+        "DataJSON": {
+          "MapServiceUrl": "/22b0da4d-4fdf-4746-ae0b-c89b70e6af16/SlideImages/b364c35d-966a-4b22-aace-e9ff76b05f69.png",
+          "MapBgColor": [
+            255,
+            "#162a42"
+          ],
+          "MapBgType": "Image",
+          "HomeSlide": "a783c78f-71bd-495c-9702-1495f8079d89",
+          "TopSlide": "a783c78f-71bd-495c-9702-1495f8079d89",
+          "PrevSlide": "",
+          "NextSlide": "",
+          "Parent": "2d36d0db-e8e0-4ef7-9065-75606f35ff29",
+          "UseTile": false,
+          "zoomable": true,
+          "pannable": true,
+          "zoomLimit": false
+        },
+        "MapUIElementInfo": [
+          {
+            "X": 742,
+            "Y": 85,
+            "Z": 0,
+            "W": 492,
+            "H": 293,
+            "D": 0,
+            "UIElementTypeName": "Chart",
+            "UIElementUniqueName": "c13a7430-3b74-47f9-ad6a-4eac481e5350",
+            "UIElementDisplayName": "Chart_2d7ec",
+            "ClassName": "Chart",
+            "DataJSON": {
+              "ID": "c13a7430-3b74-47f9-ad6a-4eac481e5350",
+              "Name": "Table_c13a7430-3b74-47f9-ad6a-4eac481e5350",
+              "ZIndex": "6",
+              "ClassName": "Chart",
+              "Position": [
+                [
+                  742,
+                  85
+                ],
+                [
+                  1234,
+                  379
+                ]
+              ],
+              "meta": {
+                "data": {
+                  "name": "chart1",
+                  "url": "http://play.drilldown.info:1880/itrm_line?proc=PROC_NETWORK_TRAFFIC_ALL",
+                  "method": "GET",
+                  "reloadtime": 0,
+                  "body": "{}",
+                  "url_options": [
+                    {
+                      "name": "chart1",
+                      "url": "http://play.drilldown.info:1880/itrm_line?proc=PROC_NETWORK_TRAFFIC_ALL",
+                      "interval": 5,
+                      "body": "{}"
+                    }
+                  ],
+                  "interval": 5
+                },
+                "position": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                }
+              },
+              "hover": false
+            }
+          },
+          {
+            "X": 742,
+            "Y": 412,
+            "Z": 0,
+            "W": 492,
+            "H": 254,
+            "D": 0,
+            "UIElementTypeName": "Table",
+            "UIElementUniqueName": "c6da46db-28f4-4cf0-8042-9e311a93e18f",
+            "UIElementDisplayName": "Table_b252c",
+            "ClassName": "Table",
+            "DataJSON": {
+              "ID": "c6da46db-28f4-4cf0-8042-9e311a93e18f",
+              "Name": "Table_c6da46db-28f4-4cf0-8042-9e311a93e18f",
+              "ZIndex": "9",
+              "ClassName": "Table",
+              "Position": [
+                [
+                  742,
+                  412
+                ],
+                [
+                  1234,
+                  666
+                ]
+              ],
+              "meta": {
+                "data": {
+                  "name": "table1",
+                  "url": "http://play.drilldown.info:1880/itrm_table?proc=PROC_PROTOCOL_TRAFFIC_ALL",
+                  "method": "GET",
+                  "reloadtime": 0,
+                  "body": "{}",
+                  "url_options": [
+                    {
+                      "name": "table1",
+                      "url": "http://play.drilldown.info:1880/itrm_table?proc=PROC_PROTOCOL_TRAFFIC_ALL",
+                      "interval": 10,
+                      "body": "{}"
+                    }
+                  ],
+                  "interval": 10
+                },
+                "position": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                }
+              },
+              "hover": false
+            }
+          },
+          {
+            "X": 407,
+            "Y": 129,
+            "Z": 0,
+            "W": 34,
+            "H": 18,
+            "D": 0,
+            "UIElementTypeName": "Universal",
+            "UIElementUniqueName": "f4244e45-8e0c-4288-a16c-1367f0f49684",
+            "UIElementDisplayName": "UniversalRect",
+            "SplunkObjectID": 6,
+            "ClassName": "Universal",
+            "ShapeType": "Rectangle",
+            "ObjectType": "Universal",
+            "DataJSON": {
+              "ID": "f4244e45-8e0c-4288-a16c-1367f0f49684",
+              "Name": "Universal_f4244",
+              "ZIndex": 10,
+              "ShapeType": "Rectangle",
+              "SplunkObjectID": "6",
+              "ClassName": "Universal",
+              "Position": [
+                [
+                  407,
+                  129
+                ],
+                [
+                  440,
+                  147
+                ]
+              ],
+              "TitlePosition": [
+                [
+                  13,
+                  40
+                ],
+                [
+                  73,
+                  60
+                ]
+              ],
+              "TitleColor": [
+                255,
+                "#000000"
+              ],
+              "TitleCaption": "",
+              "TitleAlignment": "Center",
+              "IconPosition": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0
+                ]
+              ],
+              "IconImageUrl": "",
+              "ShowAlarmLamp": true,
+              "AlarmLampPosition": [
+                83,
+                12
+              ],
+              "AlarmLampSize": 12,
+              "AlarmLampColor": [
+                255,
+                "#00ff00"
+              ],
+              "AlarmLampBlink": false,
+              "Zoomable": false,
+              "HasLamp": true,
+              "BorderThickness": 1,
+              "BorderRadius": 3.2,
+              "BorderColor": [
+                0,
+                "#C9C9C9"
+              ],
+              "LinkedMapGuid": "",
+              "BackGroundColor": [
+                0,
+                "#000000"
+              ],
+              "BackGroundImageUrl": "",
+              "fontSize": "27px",
+              "LinkUrl": "",
+              "EnableLinkUrl": false,
+              "LoadHtml": "",
+              "EnableLoadHtml": false,
+              "LoadAPI": "",
+              "EnableLoadAPI": false,
+              "LoadPopup": "",
+              "EnableLoadPopup": false,
+              "LoadPOI": "",
+              "EnableLoadPOI": false,
+              "meta": {
+                "metric": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                },
+                "health": {
+                  "method": "GET",
+                  "url": "http://play.drilldown.info:1880/itrm_health2?proc=PROC_DEVICE_INFO&healthField=Status&compareValue=Running&device=PLC01&sort=naonDevice&title=Device1",
+                  "body": ""
+                },
+                "position": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                }
+              },
+              "hover": false
+            }
+          },
+          {
+            "X": 342,
+            "Y": 247,
+            "Z": 0,
+            "W": 34,
+            "H": 18,
+            "D": 0,
+            "UIElementTypeName": "Universal",
+            "UIElementUniqueName": "424bf7ea-b485-459e-af27-277a26dc36b3",
+            "UIElementDisplayName": "UniversalRect",
+            "SplunkObjectID": 6,
+            "ClassName": "Universal",
+            "ShapeType": "Rectangle",
+            "ObjectType": "Universal",
+            "DataJSON": {
+              "ID": "424bf7ea-b485-459e-af27-277a26dc36b3",
+              "Name": "Universal_424bf",
+              "ZIndex": 14,
+              "ShapeType": "Rectangle",
+              "SplunkObjectID": "6",
+              "ClassName": "Universal",
+              "Position": [
+                [
+                  342,
+                  247
+                ],
+                [
+                  375,
+                  265
+                ]
+              ],
+              "TitlePosition": [
+                [
+                  13,
+                  40
+                ],
+                [
+                  73,
+                  60
+                ]
+              ],
+              "TitleColor": [
+                255,
+                "#000000"
+              ],
+              "TitleCaption": "",
+              "TitleAlignment": "Center",
+              "IconPosition": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0
+                ]
+              ],
+              "IconImageUrl": "",
+              "ShowAlarmLamp": true,
+              "AlarmLampPosition": [
+                83,
+                12
+              ],
+              "AlarmLampSize": 12,
+              "AlarmLampColor": [
+                255,
+                "#00ff00"
+              ],
+              "AlarmLampBlink": false,
+              "Zoomable": false,
+              "HasLamp": true,
+              "BorderThickness": 1,
+              "BorderRadius": 3.2,
+              "BorderColor": [
+                0,
+                "#C9C9C9"
+              ],
+              "LinkedMapGuid": "",
+              "BackGroundColor": [
+                0,
+                "#000000"
+              ],
+              "BackGroundImageUrl": "",
+              "fontSize": "27px",
+              "LinkUrl": "",
+              "EnableLinkUrl": false,
+              "LoadHtml": "",
+              "EnableLoadHtml": false,
+              "LoadAPI": "",
+              "EnableLoadAPI": false,
+              "LoadPopup": "",
+              "EnableLoadPopup": false,
+              "LoadPOI": "",
+              "EnableLoadPOI": false,
+              "meta": {
+                "metric": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                },
+                "health": {
+                  "method": "GET",
+                  "url": "http://play.drilldown.info:1880/itrm_health2?proc=PROC_DEVICE_INFO&healthField=Status&compareValue=Running&device=PLC01&sort=naonDevice&title=Device2",
+                  "body": ""
+                },
+                "position": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                }
+              },
+              "hover": false
+            }
+          },
+          {
+            "X": 520,
+            "Y": 317,
+            "Z": 0,
+            "W": 34,
+            "H": 18,
+            "D": 0,
+            "UIElementTypeName": "Universal",
+            "UIElementUniqueName": "35e6bc30-b3af-4e95-867c-3cf32957ea67",
+            "UIElementDisplayName": "UniversalRect",
+            "SplunkObjectID": 6,
+            "ClassName": "Universal",
+            "ShapeType": "Rectangle",
+            "ObjectType": "Universal",
+            "DataJSON": {
+              "ID": "35e6bc30-b3af-4e95-867c-3cf32957ea67",
+              "Name": "Universal_35e6b",
+              "ZIndex": 18,
+              "ShapeType": "Rectangle",
+              "SplunkObjectID": "6",
+              "ClassName": "Universal",
+              "Position": [
+                [
+                  520,
+                  317
+                ],
+                [
+                  553,
+                  335
+                ]
+              ],
+              "TitlePosition": [
+                [
+                  13,
+                  40
+                ],
+                [
+                  73,
+                  60
+                ]
+              ],
+              "TitleColor": [
+                255,
+                "#000000"
+              ],
+              "TitleCaption": "",
+              "TitleAlignment": "Center",
+              "IconPosition": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0
+                ]
+              ],
+              "IconImageUrl": "",
+              "ShowAlarmLamp": true,
+              "AlarmLampPosition": [
+                83,
+                12
+              ],
+              "AlarmLampSize": 12,
+              "AlarmLampColor": [
+                255,
+                "#00ff00"
+              ],
+              "AlarmLampBlink": false,
+              "Zoomable": false,
+              "HasLamp": true,
+              "BorderThickness": 1,
+              "BorderRadius": 3.2,
+              "BorderColor": [
+                0,
+                "#C9C9C9"
+              ],
+              "LinkedMapGuid": "",
+              "BackGroundColor": [
+                0,
+                "#000000"
+              ],
+              "BackGroundImageUrl": "",
+              "fontSize": "27px",
+              "LinkUrl": "",
+              "EnableLinkUrl": false,
+              "LoadHtml": "",
+              "EnableLoadHtml": false,
+              "LoadAPI": "",
+              "EnableLoadAPI": false,
+              "LoadPopup": "",
+              "EnableLoadPopup": false,
+              "LoadPOI": "",
+              "EnableLoadPOI": false,
+              "meta": {
+                "metric": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                },
+                "health": {
+                  "method": "GET",
+                  "url": "http://play.drilldown.info:1880/itrm_health2?proc=PROC_DEVICE_INFO&healthField=Status&compareValue=Running&device=PLC01&sort=naonDevice&title=Device3",
+                  "body": ""
+                },
+                "position": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                }
+              },
+              "hover": false
+            }
+          },
+          {
+            "X": 273,
+            "Y": 314,
+            "Z": 0,
+            "W": 34,
+            "H": 18,
+            "D": 0,
+            "UIElementTypeName": "Universal",
+            "UIElementUniqueName": "debd0e16-b5d9-4937-b7a8-52fed472e8f1",
+            "UIElementDisplayName": "UniversalRect",
+            "SplunkObjectID": 6,
+            "ClassName": "Universal",
+            "ShapeType": "Rectangle",
+            "ObjectType": "Universal",
+            "DataJSON": {
+              "ID": "debd0e16-b5d9-4937-b7a8-52fed472e8f1",
+              "Name": "Universal_debd0",
+              "ZIndex": 22,
+              "ShapeType": "Rectangle",
+              "SplunkObjectID": "6",
+              "ClassName": "Universal",
+              "Position": [
+                [
+                  273,
+                  314
+                ],
+                [
+                  306,
+                  332
+                ]
+              ],
+              "TitlePosition": [
+                [
+                  13,
+                  40
+                ],
+                [
+                  73,
+                  60
+                ]
+              ],
+              "TitleColor": [
+                255,
+                "#000000"
+              ],
+              "TitleCaption": "",
+              "TitleAlignment": "Center",
+              "IconPosition": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0
+                ]
+              ],
+              "IconImageUrl": "",
+              "ShowAlarmLamp": true,
+              "AlarmLampPosition": [
+                83,
+                12
+              ],
+              "AlarmLampSize": 12,
+              "AlarmLampColor": [
+                255,
+                "#00ff00"
+              ],
+              "AlarmLampBlink": false,
+              "Zoomable": false,
+              "HasLamp": true,
+              "BorderThickness": 1,
+              "BorderRadius": 3.2,
+              "BorderColor": [
+                0,
+                "#C9C9C9"
+              ],
+              "LinkedMapGuid": "",
+              "BackGroundColor": [
+                0,
+                "#000000"
+              ],
+              "BackGroundImageUrl": "",
+              "fontSize": "27px",
+              "LinkUrl": "",
+              "EnableLinkUrl": false,
+              "LoadHtml": "",
+              "EnableLoadHtml": false,
+              "LoadAPI": "",
+              "EnableLoadAPI": false,
+              "LoadPopup": "",
+              "EnableLoadPopup": false,
+              "LoadPOI": "",
+              "EnableLoadPOI": false,
+              "meta": {
+                "metric": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                },
+                "health": {
+                  "method": "GET",
+                  "url": "http://play.drilldown.info:1880/itrm_health2?proc=PROC_DEVICE_INFO&healthField=Status&compareValue=Running&device=PLC01&sort=naonDevice&title=Device4",
+                  "body": ""
+                },
+                "position": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                }
+              },
+              "hover": false
+            }
+          },
+          {
+            "X": 134,
+            "Y": 546,
+            "Z": 0,
+            "W": 34,
+            "H": 18,
+            "D": 0,
+            "UIElementTypeName": "Universal",
+            "UIElementUniqueName": "dfb79c42-ee11-4732-a253-6ed6e43e85c8",
+            "UIElementDisplayName": "UniversalRect",
+            "SplunkObjectID": 6,
+            "ClassName": "Universal",
+            "ShapeType": "Rectangle",
+            "ObjectType": "Universal",
+            "DataJSON": {
+              "ID": "dfb79c42-ee11-4732-a253-6ed6e43e85c8",
+              "Name": "Universal_dfb79",
+              "ZIndex": 26,
+              "ShapeType": "Rectangle",
+              "SplunkObjectID": "6",
+              "ClassName": "Universal",
+              "Position": [
+                [
+                  134,
+                  546
+                ],
+                [
+                  167,
+                  564
+                ]
+              ],
+              "TitlePosition": [
+                [
+                  13,
+                  40
+                ],
+                [
+                  73,
+                  60
+                ]
+              ],
+              "TitleColor": [
+                255,
+                "#000000"
+              ],
+              "TitleCaption": "",
+              "TitleAlignment": "Center",
+              "IconPosition": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0
+                ]
+              ],
+              "IconImageUrl": "",
+              "ShowAlarmLamp": true,
+              "AlarmLampPosition": [
+                83,
+                12
+              ],
+              "AlarmLampSize": 12,
+              "AlarmLampColor": [
+                255,
+                "#00ff00"
+              ],
+              "AlarmLampBlink": false,
+              "Zoomable": false,
+              "HasLamp": true,
+              "BorderThickness": 1,
+              "BorderRadius": 3.2,
+              "BorderColor": [
+                0,
+                "#C9C9C9"
+              ],
+              "LinkedMapGuid": "",
+              "BackGroundColor": [
+                0,
+                "#000000"
+              ],
+              "BackGroundImageUrl": "",
+              "fontSize": "27px",
+              "LinkUrl": "",
+              "EnableLinkUrl": false,
+              "LoadHtml": "",
+              "EnableLoadHtml": false,
+              "LoadAPI": "",
+              "EnableLoadAPI": false,
+              "LoadPopup": "",
+              "EnableLoadPopup": false,
+              "LoadPOI": "",
+              "EnableLoadPOI": false,
+              "meta": {
+                "metric": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                },
+                "health": {
+                  "method": "GET",
+                  "url": "http://play.drilldown.info:1880/itrm_health2?proc=PROC_DEVICE_INFO&healthField=Status&compareValue=Running&device=PLC01&sort=naonDevice&title=Device5",
+                  "body": ""
+                },
+                "position": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                }
+              },
+              "hover": false
+            }
+          },
+          {
+            "X": 274,
+            "Y": 550,
+            "Z": 0,
+            "W": 34,
+            "H": 18,
+            "D": 0,
+            "UIElementTypeName": "Universal",
+            "UIElementUniqueName": "d6060f65-7651-4277-8121-bee77ee9146f",
+            "UIElementDisplayName": "UniversalRect",
+            "SplunkObjectID": 6,
+            "ClassName": "Universal",
+            "ShapeType": "Rectangle",
+            "ObjectType": "Universal",
+            "DataJSON": {
+              "ID": "d6060f65-7651-4277-8121-bee77ee9146f",
+              "Name": "Universal_d6060",
+              "ZIndex": 30,
+              "ShapeType": "Rectangle",
+              "SplunkObjectID": "6",
+              "ClassName": "Universal",
+              "Position": [
+                [
+                  274,
+                  550
+                ],
+                [
+                  307,
+                  568
+                ]
+              ],
+              "TitlePosition": [
+                [
+                  13,
+                  40
+                ],
+                [
+                  73,
+                  60
+                ]
+              ],
+              "TitleColor": [
+                255,
+                "#000000"
+              ],
+              "TitleCaption": "",
+              "TitleAlignment": "Center",
+              "IconPosition": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0
+                ]
+              ],
+              "IconImageUrl": "",
+              "ShowAlarmLamp": true,
+              "AlarmLampPosition": [
+                83,
+                12
+              ],
+              "AlarmLampSize": 12,
+              "AlarmLampColor": [
+                255,
+                "#00ff00"
+              ],
+              "AlarmLampBlink": false,
+              "Zoomable": false,
+              "HasLamp": true,
+              "BorderThickness": 1,
+              "BorderRadius": 3.2,
+              "BorderColor": [
+                0,
+                "#C9C9C9"
+              ],
+              "LinkedMapGuid": "",
+              "BackGroundColor": [
+                0,
+                "#000000"
+              ],
+              "BackGroundImageUrl": "",
+              "fontSize": "27px",
+              "LinkUrl": "",
+              "EnableLinkUrl": false,
+              "LoadHtml": "",
+              "EnableLoadHtml": false,
+              "LoadAPI": "",
+              "EnableLoadAPI": false,
+              "LoadPopup": "",
+              "EnableLoadPopup": false,
+              "LoadPOI": "",
+              "EnableLoadPOI": false,
+              "meta": {
+                "metric": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                },
+                "health": {
+                  "method": "GET",
+                  "url": "http://play.drilldown.info:1880/itrm_health2?proc=PROC_DEVICE_INFO&healthField=Status&compareValue=Running&device=PLC01&sort=naonDevice&title=Device6",
+                  "body": ""
+                },
+                "position": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                }
+              },
+              "hover": false
+            }
+          },
+          {
+            "X": 430,
+            "Y": 537,
+            "Z": 0,
+            "W": 34,
+            "H": 18,
+            "D": 0,
+            "UIElementTypeName": "Universal",
+            "UIElementUniqueName": "0261820b-e30f-4e8e-9d1d-3e57a1093ff0",
+            "UIElementDisplayName": "UniversalRect",
+            "SplunkObjectID": 6,
+            "ClassName": "Universal",
+            "ShapeType": "Rectangle",
+            "ObjectType": "Universal",
+            "DataJSON": {
+              "ID": "0261820b-e30f-4e8e-9d1d-3e57a1093ff0",
+              "Name": "Universal_02618",
+              "ZIndex": 34,
+              "ShapeType": "Rectangle",
+              "SplunkObjectID": "6",
+              "ClassName": "Universal",
+              "Position": [
+                [
+                  430,
+                  537
+                ],
+                [
+                  464,
+                  555
+                ]
+              ],
+              "TitlePosition": [
+                [
+                  13,
+                  40
+                ],
+                [
+                  73,
+                  60
+                ]
+              ],
+              "TitleColor": [
+                255,
+                "#000000"
+              ],
+              "TitleCaption": "",
+              "TitleAlignment": "Center",
+              "IconPosition": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0
+                ]
+              ],
+              "IconImageUrl": "",
+              "ShowAlarmLamp": true,
+              "AlarmLampPosition": [
+                83,
+                12
+              ],
+              "AlarmLampSize": 12,
+              "AlarmLampColor": [
+                255,
+                "#00ff00"
+              ],
+              "AlarmLampBlink": false,
+              "Zoomable": false,
+              "HasLamp": true,
+              "BorderThickness": 1,
+              "BorderRadius": 3.2,
+              "BorderColor": [
+                0,
+                "#C9C9C9"
+              ],
+              "LinkedMapGuid": "",
+              "BackGroundColor": [
+                0,
+                "#000000"
+              ],
+              "BackGroundImageUrl": "",
+              "fontSize": "27px",
+              "LinkUrl": "",
+              "EnableLinkUrl": false,
+              "LoadHtml": "",
+              "EnableLoadHtml": false,
+              "LoadAPI": "",
+              "EnableLoadAPI": false,
+              "LoadPopup": "",
+              "EnableLoadPopup": false,
+              "LoadPOI": "",
+              "EnableLoadPOI": false,
+              "meta": {
+                "metric": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                },
+                "health": {
+                  "method": "GET",
+                  "url": "http://play.drilldown.info:1880/itrm_health2?proc=PROC_DEVICE_INFO&healthField=Status&compareValue=Running&device=PLC01&sort=naonDevice&title=Device7",
+                  "body": ""
+                },
+                "position": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                }
+              },
+              "hover": false
+            }
+          },
+          {
+            "X": 621,
+            "Y": 540,
+            "Z": 0,
+            "W": 34,
+            "H": 18,
+            "D": 0,
+            "UIElementTypeName": "Universal",
+            "UIElementUniqueName": "2d147ba5-56d8-4f8d-8db6-aa3bc6cdfe03",
+            "UIElementDisplayName": "UniversalRect",
+            "SplunkObjectID": 6,
+            "ClassName": "Universal",
+            "ShapeType": "Rectangle",
+            "ObjectType": "Universal",
+            "DataJSON": {
+              "ID": "2d147ba5-56d8-4f8d-8db6-aa3bc6cdfe03",
+              "Name": "Universal_2d147",
+              "ZIndex": 38,
+              "ShapeType": "Rectangle",
+              "SplunkObjectID": "6",
+              "ClassName": "Universal",
+              "Position": [
+                [
+                  621,
+                  540
+                ],
+                [
+                  655,
+                  558
+                ]
+              ],
+              "TitlePosition": [
+                [
+                  13,
+                  40
+                ],
+                [
+                  73,
+                  60
+                ]
+              ],
+              "TitleColor": [
+                255,
+                "#000000"
+              ],
+              "TitleCaption": "",
+              "TitleAlignment": "Center",
+              "IconPosition": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0
+                ]
+              ],
+              "IconImageUrl": "",
+              "ShowAlarmLamp": true,
+              "AlarmLampPosition": [
+                83,
+                12
+              ],
+              "AlarmLampSize": 12,
+              "AlarmLampColor": [
+                255,
+                "#00ff00"
+              ],
+              "AlarmLampBlink": false,
+              "Zoomable": false,
+              "HasLamp": true,
+              "BorderThickness": 1,
+              "BorderRadius": 3.2,
+              "BorderColor": [
+                0,
+                "#C9C9C9"
+              ],
+              "LinkedMapGuid": "",
+              "BackGroundColor": [
+                0,
+                "#000000"
+              ],
+              "BackGroundImageUrl": "",
+              "fontSize": "27px",
+              "LinkUrl": "",
+              "EnableLinkUrl": false,
+              "LoadHtml": "",
+              "EnableLoadHtml": false,
+              "LoadAPI": "",
+              "EnableLoadAPI": false,
+              "LoadPopup": "",
+              "EnableLoadPopup": false,
+              "LoadPOI": "",
+              "EnableLoadPOI": false,
+              "meta": {
+                "metric": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                },
+                "health": {
+                  "method": "GET",
+                  "url": "http://play.drilldown.info:1880/itrm_health2?proc=PROC_DEVICE_INFO&healthField=Status&compareValue=Running&device=PLC01&sort=naonDevice&title=Device8",
+                  "body": ""
+                },
+                "position": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                }
+              },
+              "hover": false
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

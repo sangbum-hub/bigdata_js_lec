@@ -1,0 +1,1149 @@
+{
+  "Code": 200,
+  "Result": {
+    "MapUIElementMapping": [
+      {
+        "TimeStamp": 1648450184,
+        "CoordinateType": "pixel",
+        "MapWidth": 1280,
+        "MapHeight": 720,
+        "UIElementTypeName": "DDP",
+        "UIElementUniqueName": "4434a0cc-277f-4070-af0c-e52512a44665",
+        "UIElementDisplayName": "Slide_a783c78f-71bd-495c-9702-1495f8079d89",
+        "DataJSON": {
+          "MapServiceUrl": "/22b0da4d-4fdf-4746-ae0b-c89b70e6af16/SlideImages/4434a0cc-277f-4070-af0c-e52512a44665.png",
+          "MapBgColor": [
+            255,
+            "#162a42"
+          ],
+          "MapBgType": "Image",
+          "HomeSlide": "a783c78f-71bd-495c-9702-1495f8079d89",
+          "TopSlide": "a783c78f-71bd-495c-9702-1495f8079d89",
+          "PrevSlide": "",
+          "NextSlide": "",
+          "Parent": "a378d804-0038-474b-8253-e41c9fdf2f12",
+          "UseTile": false,
+          "zoomable": true,
+          "pannable": true,
+          "zoomLimit": false
+        },
+        "MapUIElementInfo": [
+          {
+            "X": 640,
+            "Y": 266,
+            "Z": 0,
+            "W": 90,
+            "H": 57,
+            "D": 0,
+            "UIElementTypeName": "Universal",
+            "UIElementUniqueName": "cc779e90-50a2-4fc1-9fbc-027e2e81d293",
+            "UIElementDisplayName": "IUniversalRect",
+            "SplunkObjectID": 5,
+            "ClassName": "Universal",
+            "ShapeType": "Rectangle",
+            "ObjectType": "IUniversal",
+            "DataJSON": {
+              "ID": "cc779e90-50a2-4fc1-9fbc-027e2e81d293",
+              "Name": "IUniversal_cc779",
+              "ZIndex": 2,
+              "ShapeType": "Rectangle",
+              "SplunkObjectID": "5",
+              "ClassName": "Universal",
+              "Position": [
+                [
+                  640,
+                  266
+                ],
+                [
+                  730,
+                  323
+                ]
+              ],
+              "TitlePosition": [
+                [
+                  20,
+                  42
+                ],
+                [
+                  80,
+                  58
+                ]
+              ],
+              "TitleColor": [
+                0,
+                "#000000"
+              ],
+              "TitleCaption": "",
+              "TitleAlignment": "Center",
+              "IconPosition": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  100,
+                  100
+                ]
+              ],
+              "IconImageUrl": "./contents/Dashboard/22b0da4d-4fdf-4746-ae0b-c89b70e6af16/ElementImages/def4909d-fcf4-4a7e-b1cb-07b33f82addc/cc779e90-50a2-4fc1-9fbc-027e2e81d293.svg",
+              "ShowAlarmLamp": true,
+              "AlarmLampPosition": [
+                5,
+                87
+              ],
+              "AlarmLampSize": 12,
+              "AlarmLampColor": [
+                255,
+                "#00ff00"
+              ],
+              "AlarmLampBlink": false,
+              "Zoomable": false,
+              "HasLamp": true,
+              "BorderThickness": 1,
+              "BorderRadius": 0,
+              "BorderColor": [
+                0,
+                "#C9C9C9"
+              ],
+              "LinkedMapGuid": "",
+              "BackGroundColor": [
+                0,
+                "#FFFFFF"
+              ],
+              "BackGroundImageUrl": "",
+              "fontSize": "27px",
+              "LinkUrl": "",
+              "EnableLinkUrl": false,
+              "LoadHtml": "",
+              "EnableLoadHtml": false,
+              "LoadAPI": "",
+              "EnableLoadAPI": false,
+              "LoadPopup": "",
+              "EnableLoadPopup": false,
+              "LoadPOI": "",
+              "EnableLoadPOI": false,
+              "meta": {
+                "metric": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                },
+                "health": {
+                  "method": "GET",
+                  "url": "http://play.drilldown.info:1880/itrm_random_camera?title=camera",
+                  "body": ""
+                },
+                "position": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                }
+              },
+              "hover": false
+            }
+          },
+          {
+            "X": 281,
+            "Y": 483,
+            "Z": 0,
+            "W": 90,
+            "H": 57,
+            "D": 0,
+            "UIElementTypeName": "Universal",
+            "UIElementUniqueName": "dfd653df-2c8b-4432-a0b0-6d9e8d9a1819",
+            "UIElementDisplayName": "IUniversalRect",
+            "SplunkObjectID": 5,
+            "ClassName": "Universal",
+            "ShapeType": "Rectangle",
+            "ObjectType": "IUniversal",
+            "DataJSON": {
+              "ID": "dfd653df-2c8b-4432-a0b0-6d9e8d9a1819",
+              "Name": "IUniversal_dfd65",
+              "ZIndex": 6,
+              "ShapeType": "Rectangle",
+              "SplunkObjectID": "5",
+              "ClassName": "Universal",
+              "Position": [
+                [
+                  281,
+                  483
+                ],
+                [
+                  371,
+                  540
+                ]
+              ],
+              "TitlePosition": [
+                [
+                  20,
+                  42
+                ],
+                [
+                  80,
+                  58
+                ]
+              ],
+              "TitleColor": [
+                0,
+                "#000000"
+              ],
+              "TitleCaption": "",
+              "TitleAlignment": "Center",
+              "IconPosition": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  100,
+                  100
+                ]
+              ],
+              "IconImageUrl": "./contents/Dashboard/22b0da4d-4fdf-4746-ae0b-c89b70e6af16/ElementImages/def4909d-fcf4-4a7e-b1cb-07b33f82addc/dfd653df-2c8b-4432-a0b0-6d9e8d9a1819.svg",
+              "ShowAlarmLamp": true,
+              "AlarmLampPosition": [
+                5,
+                87
+              ],
+              "AlarmLampSize": 12,
+              "AlarmLampColor": [
+                255,
+                "#00ff00"
+              ],
+              "AlarmLampBlink": false,
+              "Zoomable": false,
+              "HasLamp": true,
+              "BorderThickness": 1,
+              "BorderRadius": 0,
+              "BorderColor": [
+                0,
+                "#C9C9C9"
+              ],
+              "LinkedMapGuid": "",
+              "BackGroundColor": [
+                0,
+                "#FFFFFF"
+              ],
+              "BackGroundImageUrl": "",
+              "fontSize": "27px",
+              "LinkUrl": "",
+              "EnableLinkUrl": false,
+              "LoadHtml": "",
+              "EnableLoadHtml": false,
+              "LoadAPI": "",
+              "EnableLoadAPI": false,
+              "LoadPopup": "",
+              "EnableLoadPopup": false,
+              "LoadPOI": "",
+              "EnableLoadPOI": false,
+              "meta": {
+                "metric": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                },
+                "health": {
+                  "method": "GET",
+                  "url": "http://play.drilldown.info:1880/itrm_random_camera?title=camera",
+                  "body": ""
+                },
+                "position": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                }
+              },
+              "hover": false
+            }
+          },
+          {
+            "X": 747,
+            "Y": 238,
+            "Z": 0,
+            "W": 308,
+            "H": 219,
+            "D": 0,
+            "UIElementTypeName": "Video",
+            "UIElementUniqueName": "569a154a-3d1f-4141-9ea9-95552018cc18",
+            "UIElementDisplayName": "UniversalRect",
+            "ClassName": "Video",
+            "DataJSON": {
+              "ID": "569a154a-3d1f-4141-9ea9-95552018cc18",
+              "Name": "Video_569a1",
+              "ZIndex": "10",
+              "Position": [
+                [
+                  747,
+                  238
+                ],
+                [
+                  1055,
+                  456
+                ]
+              ],
+              "ClassName": "Video",
+              "content": "<div><iframe width='400' height='320' src='https://www.youtube.com/embed/HLPVRb0YTeU?' frameborder='0' allowfullscreen></iframe></div>",
+              "videoUrl": "https://www.youtube.com/embed/HLPVRb0YTeU?",
+              "meta": {
+                "data": {
+                  "url": "http://play.drilldown.info/DrilldownPlay/video/office2.mp4",
+                  "body": "",
+                  "url_list": [],
+                  "type": "video"
+                },
+                "position": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                }
+              },
+              "hover": false
+            }
+          },
+          {
+            "X": 389,
+            "Y": 483,
+            "Z": 0,
+            "W": 220,
+            "H": 180,
+            "D": 0,
+            "UIElementTypeName": "Video",
+            "UIElementUniqueName": "9fa7fad9-a959-4a35-8a06-ab444d2dcb5d",
+            "UIElementDisplayName": "UniversalRect",
+            "ClassName": "Video",
+            "DataJSON": {
+              "ID": "9fa7fad9-a959-4a35-8a06-ab444d2dcb5d",
+              "Name": "Video_9fa7f",
+              "ZIndex": "14",
+              "Position": [
+                [
+                  389,
+                  483
+                ],
+                [
+                  610,
+                  663
+                ]
+              ],
+              "ClassName": "Video",
+              "content": "<div><iframe width='400' height='320' src='https://www.youtube.com/embed/HLPVRb0YTeU?' frameborder='0' allowfullscreen></iframe></div>",
+              "videoUrl": "https://www.youtube.com/embed/HLPVRb0YTeU?",
+              "meta": {
+                "data": {
+                  "url": "http://play.drilldown.info/DrilldownPlay/video/office3.mp4",
+                  "body": "",
+                  "url_list": [],
+                  "type": "video"
+                },
+                "position": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                }
+              },
+              "hover": false
+            }
+          },
+          {
+            "X": 193,
+            "Y": 133,
+            "Z": 0,
+            "W": 34,
+            "H": 18,
+            "D": 0,
+            "UIElementTypeName": "Universal",
+            "UIElementUniqueName": "6243b01e-5091-41c9-a547-1ac9db5aecbd",
+            "UIElementDisplayName": "UniversalRect",
+            "SplunkObjectID": 6,
+            "ClassName": "Universal",
+            "ShapeType": "Rectangle",
+            "ObjectType": "Universal",
+            "DataJSON": {
+              "ID": "6243b01e-5091-41c9-a547-1ac9db5aecbd",
+              "Name": "Universal_6243b",
+              "ZIndex": 18,
+              "ShapeType": "Rectangle",
+              "SplunkObjectID": "6",
+              "ClassName": "Universal",
+              "Position": [
+                [
+                  193,
+                  133
+                ],
+                [
+                  227,
+                  151
+                ]
+              ],
+              "TitlePosition": [
+                [
+                  13,
+                  40
+                ],
+                [
+                  73,
+                  60
+                ]
+              ],
+              "TitleColor": [
+                255,
+                "#000000"
+              ],
+              "TitleCaption": "",
+              "TitleAlignment": "Center",
+              "IconPosition": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0
+                ]
+              ],
+              "IconImageUrl": "",
+              "ShowAlarmLamp": true,
+              "AlarmLampPosition": [
+                83,
+                12
+              ],
+              "AlarmLampSize": 12,
+              "AlarmLampColor": [
+                255,
+                "#00ff00"
+              ],
+              "AlarmLampBlink": false,
+              "Zoomable": false,
+              "HasLamp": true,
+              "BorderThickness": 1,
+              "BorderRadius": 3.2,
+              "BorderColor": [
+                0,
+                "#C9C9C9"
+              ],
+              "LinkedMapGuid": "",
+              "BackGroundColor": [
+                0,
+                "#000000"
+              ],
+              "BackGroundImageUrl": "",
+              "fontSize": "27px",
+              "LinkUrl": "",
+              "EnableLinkUrl": false,
+              "LoadHtml": "",
+              "EnableLoadHtml": false,
+              "LoadAPI": "",
+              "EnableLoadAPI": false,
+              "LoadPopup": "",
+              "EnableLoadPopup": false,
+              "LoadPOI": "",
+              "EnableLoadPOI": false,
+              "meta": {
+                "metric": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                },
+                "health": {
+                  "method": "GET",
+                  "url": "http://play.drilldown.info:1880/itrm_random_health?title=sensor1",
+                  "body": ""
+                },
+                "position": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                }
+              },
+              "hover": false
+            }
+          },
+          {
+            "X": 247,
+            "Y": 275,
+            "Z": 0,
+            "W": 34,
+            "H": 18,
+            "D": 0,
+            "UIElementTypeName": "Universal",
+            "UIElementUniqueName": "6dd2bc3e-6690-4d8e-b824-e6c5e8291eff",
+            "UIElementDisplayName": "UniversalRect",
+            "SplunkObjectID": 6,
+            "ClassName": "Universal",
+            "ShapeType": "Rectangle",
+            "ObjectType": "Universal",
+            "DataJSON": {
+              "ID": "6dd2bc3e-6690-4d8e-b824-e6c5e8291eff",
+              "Name": "Universal_6dd2b",
+              "ZIndex": 22,
+              "ShapeType": "Rectangle",
+              "SplunkObjectID": "6",
+              "ClassName": "Universal",
+              "Position": [
+                [
+                  247,
+                  275
+                ],
+                [
+                  281,
+                  293
+                ]
+              ],
+              "TitlePosition": [
+                [
+                  13,
+                  40
+                ],
+                [
+                  73,
+                  60
+                ]
+              ],
+              "TitleColor": [
+                255,
+                "#000000"
+              ],
+              "TitleCaption": "",
+              "TitleAlignment": "Center",
+              "IconPosition": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0
+                ]
+              ],
+              "IconImageUrl": "",
+              "ShowAlarmLamp": true,
+              "AlarmLampPosition": [
+                83,
+                12
+              ],
+              "AlarmLampSize": 12,
+              "AlarmLampColor": [
+                255,
+                "#00ff00"
+              ],
+              "AlarmLampBlink": false,
+              "Zoomable": false,
+              "HasLamp": true,
+              "BorderThickness": 1,
+              "BorderRadius": 3.2,
+              "BorderColor": [
+                0,
+                "#C9C9C9"
+              ],
+              "LinkedMapGuid": "",
+              "BackGroundColor": [
+                0,
+                "#000000"
+              ],
+              "BackGroundImageUrl": "",
+              "fontSize": "27px",
+              "LinkUrl": "",
+              "EnableLinkUrl": false,
+              "LoadHtml": "",
+              "EnableLoadHtml": false,
+              "LoadAPI": "",
+              "EnableLoadAPI": false,
+              "LoadPopup": "",
+              "EnableLoadPopup": false,
+              "LoadPOI": "",
+              "EnableLoadPOI": false,
+              "meta": {
+                "metric": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                },
+                "health": {
+                  "method": "GET",
+                  "url": "http://play.drilldown.info:1880/itrm_random_health?title=sensor2",
+                  "body": ""
+                },
+                "position": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                }
+              },
+              "hover": false
+            }
+          },
+          {
+            "X": 551,
+            "Y": 117,
+            "Z": 0,
+            "W": 34,
+            "H": 18,
+            "D": 0,
+            "UIElementTypeName": "Universal",
+            "UIElementUniqueName": "89069840-fcd8-4b4e-8d1f-96d372939b4b",
+            "UIElementDisplayName": "UniversalRect",
+            "SplunkObjectID": 6,
+            "ClassName": "Universal",
+            "ShapeType": "Rectangle",
+            "ObjectType": "Universal",
+            "DataJSON": {
+              "ID": "89069840-fcd8-4b4e-8d1f-96d372939b4b",
+              "Name": "Universal_89069",
+              "ZIndex": 26,
+              "ShapeType": "Rectangle",
+              "SplunkObjectID": "6",
+              "ClassName": "Universal",
+              "Position": [
+                [
+                  551,
+                  117
+                ],
+                [
+                  585,
+                  135
+                ]
+              ],
+              "TitlePosition": [
+                [
+                  13,
+                  40
+                ],
+                [
+                  73,
+                  60
+                ]
+              ],
+              "TitleColor": [
+                255,
+                "#000000"
+              ],
+              "TitleCaption": "",
+              "TitleAlignment": "Center",
+              "IconPosition": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0
+                ]
+              ],
+              "IconImageUrl": "",
+              "ShowAlarmLamp": true,
+              "AlarmLampPosition": [
+                83,
+                12
+              ],
+              "AlarmLampSize": 12,
+              "AlarmLampColor": [
+                255,
+                "#00ff00"
+              ],
+              "AlarmLampBlink": false,
+              "Zoomable": true,
+              "HasLamp": true,
+              "BorderThickness": 1,
+              "BorderRadius": 3.2,
+              "BorderColor": [
+                0,
+                "#C9C9C9"
+              ],
+              "LinkedMapGuid": "",
+              "BackGroundColor": [
+                0,
+                "#000000"
+              ],
+              "BackGroundImageUrl": "",
+              "fontSize": "27px",
+              "LinkUrl": "",
+              "EnableLinkUrl": false,
+              "LoadHtml": "",
+              "EnableLoadHtml": false,
+              "LoadAPI": "",
+              "EnableLoadAPI": false,
+              "LoadPopup": "",
+              "EnableLoadPopup": false,
+              "LoadPOI": "",
+              "EnableLoadPOI": false,
+              "meta": {
+                "metric": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                },
+                "health": {
+                  "method": "GET",
+                  "url": "http://play.drilldown.info:1880/itrm_random_health?title=sensor3",
+                  "body": ""
+                },
+                "position": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                }
+              },
+              "hover": false
+            }
+          },
+          {
+            "X": 857,
+            "Y": 113,
+            "Z": 0,
+            "W": 34,
+            "H": 18,
+            "D": 0,
+            "UIElementTypeName": "Universal",
+            "UIElementUniqueName": "091e2fee-838f-4a0f-bf78-63f8760023f5",
+            "UIElementDisplayName": "UniversalRect",
+            "SplunkObjectID": 6,
+            "ClassName": "Universal",
+            "ShapeType": "Rectangle",
+            "ObjectType": "Universal",
+            "DataJSON": {
+              "ID": "091e2fee-838f-4a0f-bf78-63f8760023f5",
+              "Name": "Universal_091e2",
+              "ZIndex": 30,
+              "ShapeType": "Rectangle",
+              "SplunkObjectID": "6",
+              "ClassName": "Universal",
+              "Position": [
+                [
+                  857,
+                  113
+                ],
+                [
+                  891,
+                  131
+                ]
+              ],
+              "TitlePosition": [
+                [
+                  13,
+                  40
+                ],
+                [
+                  73,
+                  60
+                ]
+              ],
+              "TitleColor": [
+                255,
+                "#000000"
+              ],
+              "TitleCaption": "",
+              "TitleAlignment": "Center",
+              "IconPosition": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0
+                ]
+              ],
+              "IconImageUrl": "",
+              "ShowAlarmLamp": true,
+              "AlarmLampPosition": [
+                83,
+                12
+              ],
+              "AlarmLampSize": 12,
+              "AlarmLampColor": [
+                255,
+                "#00ff00"
+              ],
+              "AlarmLampBlink": false,
+              "Zoomable": true,
+              "HasLamp": true,
+              "BorderThickness": 1,
+              "BorderRadius": 3.2,
+              "BorderColor": [
+                0,
+                "#C9C9C9"
+              ],
+              "LinkedMapGuid": "",
+              "BackGroundColor": [
+                0,
+                "#000000"
+              ],
+              "BackGroundImageUrl": "",
+              "fontSize": "27px",
+              "LinkUrl": "",
+              "EnableLinkUrl": false,
+              "LoadHtml": "",
+              "EnableLoadHtml": false,
+              "LoadAPI": "",
+              "EnableLoadAPI": false,
+              "LoadPopup": "",
+              "EnableLoadPopup": false,
+              "LoadPOI": "",
+              "EnableLoadPOI": false,
+              "meta": {
+                "metric": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                },
+                "health": {
+                  "method": "GET",
+                  "url": "http://play.drilldown.info:1880/itrm_random_health?title=sensor4",
+                  "body": ""
+                },
+                "position": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                }
+              },
+              "hover": false
+            }
+          },
+          {
+            "X": 144,
+            "Y": 419,
+            "Z": 0,
+            "W": 34,
+            "H": 18,
+            "D": 0,
+            "UIElementTypeName": "Universal",
+            "UIElementUniqueName": "14b2f70a-f475-402a-9181-08bf0097ee75",
+            "UIElementDisplayName": "UniversalRect",
+            "SplunkObjectID": 6,
+            "ClassName": "Universal",
+            "ShapeType": "Rectangle",
+            "ObjectType": "Universal",
+            "DataJSON": {
+              "ID": "14b2f70a-f475-402a-9181-08bf0097ee75",
+              "Name": "Universal_14b2f",
+              "ZIndex": 34,
+              "ShapeType": "Rectangle",
+              "SplunkObjectID": "6",
+              "ClassName": "Universal",
+              "Position": [
+                [
+                  144,
+                  419
+                ],
+                [
+                  178,
+                  437
+                ]
+              ],
+              "TitlePosition": [
+                [
+                  13,
+                  40
+                ],
+                [
+                  73,
+                  60
+                ]
+              ],
+              "TitleColor": [
+                255,
+                "#000000"
+              ],
+              "TitleCaption": "",
+              "TitleAlignment": "Center",
+              "IconPosition": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0
+                ]
+              ],
+              "IconImageUrl": "",
+              "ShowAlarmLamp": true,
+              "AlarmLampPosition": [
+                83,
+                12
+              ],
+              "AlarmLampSize": 12,
+              "AlarmLampColor": [
+                255,
+                "#00ff00"
+              ],
+              "AlarmLampBlink": false,
+              "Zoomable": false,
+              "HasLamp": true,
+              "BorderThickness": 1,
+              "BorderRadius": 3.2,
+              "BorderColor": [
+                0,
+                "#C9C9C9"
+              ],
+              "LinkedMapGuid": "",
+              "BackGroundColor": [
+                0,
+                "#000000"
+              ],
+              "BackGroundImageUrl": "",
+              "fontSize": "27px",
+              "LinkUrl": "",
+              "EnableLinkUrl": false,
+              "LoadHtml": "",
+              "EnableLoadHtml": false,
+              "LoadAPI": "",
+              "EnableLoadAPI": false,
+              "LoadPopup": "",
+              "EnableLoadPopup": false,
+              "LoadPOI": "",
+              "EnableLoadPOI": false,
+              "meta": {
+                "metric": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                },
+                "health": {
+                  "method": "GET",
+                  "url": "http://play.drilldown.info:1880/itrm_random_health?title=sensor5",
+                  "body": ""
+                },
+                "position": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                }
+              },
+              "hover": false
+            }
+          },
+          {
+            "X": 202,
+            "Y": 603,
+            "Z": 0,
+            "W": 34,
+            "H": 18,
+            "D": 0,
+            "UIElementTypeName": "Universal",
+            "UIElementUniqueName": "12af9018-5d8b-4e03-a179-834fbf9246c5",
+            "UIElementDisplayName": "UniversalRect",
+            "SplunkObjectID": 6,
+            "ClassName": "Universal",
+            "ShapeType": "Rectangle",
+            "ObjectType": "Universal",
+            "DataJSON": {
+              "ID": "12af9018-5d8b-4e03-a179-834fbf9246c5",
+              "Name": "Universal_12af9",
+              "ZIndex": 38,
+              "ShapeType": "Rectangle",
+              "SplunkObjectID": "6",
+              "ClassName": "Universal",
+              "Position": [
+                [
+                  202,
+                  603
+                ],
+                [
+                  236,
+                  622
+                ]
+              ],
+              "TitlePosition": [
+                [
+                  13,
+                  40
+                ],
+                [
+                  73,
+                  60
+                ]
+              ],
+              "TitleColor": [
+                255,
+                "#000000"
+              ],
+              "TitleCaption": "",
+              "TitleAlignment": "Center",
+              "IconPosition": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0
+                ]
+              ],
+              "IconImageUrl": "",
+              "ShowAlarmLamp": true,
+              "AlarmLampPosition": [
+                83,
+                12
+              ],
+              "AlarmLampSize": 12,
+              "AlarmLampColor": [
+                255,
+                "#00ff00"
+              ],
+              "AlarmLampBlink": false,
+              "Zoomable": false,
+              "HasLamp": true,
+              "BorderThickness": 1,
+              "BorderRadius": 3.2,
+              "BorderColor": [
+                0,
+                "#C9C9C9"
+              ],
+              "LinkedMapGuid": "",
+              "BackGroundColor": [
+                0,
+                "#000000"
+              ],
+              "BackGroundImageUrl": "",
+              "fontSize": "27px",
+              "LinkUrl": "",
+              "EnableLinkUrl": false,
+              "LoadHtml": "",
+              "EnableLoadHtml": false,
+              "LoadAPI": "",
+              "EnableLoadAPI": false,
+              "LoadPopup": "",
+              "EnableLoadPopup": false,
+              "LoadPOI": "",
+              "EnableLoadPOI": false,
+              "meta": {
+                "metric": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                },
+                "health": {
+                  "method": "GET",
+                  "url": "http://play.drilldown.info:1880/itrm_random_health?title=sensor6",
+                  "body": ""
+                },
+                "position": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                }
+              },
+              "hover": false
+            }
+          },
+          {
+            "X": 934,
+            "Y": 606,
+            "Z": 0,
+            "W": 252,
+            "H": 64,
+            "D": 0,
+            "UIElementTypeName": "Universal",
+            "UIElementUniqueName": "2e578f1a-96cc-4c45-8237-36cf40cb1527",
+            "UIElementDisplayName": "UniversalRect",
+            "SplunkObjectID": 1,
+            "ClassName": "Universal",
+            "ShapeType": "Rectangle",
+            "ObjectType": "Universal",
+            "DataJSON": {
+              "ID": "2e578f1a-96cc-4c45-8237-36cf40cb1527",
+              "Name": "Universal_2e578",
+              "ZIndex": 42,
+              "ShapeType": "Rectangle",
+              "SplunkObjectID": "1",
+              "ClassName": "Universal",
+              "Position": [
+                [
+                  934,
+                  606
+                ],
+                [
+                  1186,
+                  669
+                ]
+              ],
+              "TitlePosition": [
+                [
+                  13,
+                  23
+                ],
+                [
+                  87,
+                  77
+                ]
+              ],
+              "TitleColor": [
+                255,
+                "#6A5444"
+              ],
+              "TitleCaption": "Go To Home",
+              "TitleAlignment": "Center",
+              "IconPosition": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0
+                ]
+              ],
+              "IconImageUrl": "",
+              "ShowAlarmLamp": false,
+              "AlarmLampPosition": [
+                83,
+                12
+              ],
+              "AlarmLampSize": 12,
+              "AlarmLampColor": [
+                0,
+                "#00ff00"
+              ],
+              "AlarmLampBlink": false,
+              "Zoomable": false,
+              "HasLamp": false,
+              "BorderThickness": 3,
+              "BorderRadius": 3.2,
+              "BorderColor": [
+                255,
+                "#6A5444"
+              ],
+              "LinkedMapGuid": "a783c78f-71bd-495c-9702-1495f8079d89",
+              "BackGroundColor": [
+                0,
+                "#FFFFFF"
+              ],
+              "BackGroundImageUrl": "",
+              "fontSize": "27px",
+              "LinkUrl": "",
+              "EnableLinkUrl": false,
+              "LoadHtml": "",
+              "EnableLoadHtml": false,
+              "LoadAPI": "",
+              "EnableLoadAPI": false,
+              "LoadPopup": "",
+              "EnableLoadPopup": false,
+              "LoadPOI": "",
+              "EnableLoadPOI": false,
+              "meta": {
+                "metric": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                },
+                "health": {
+                  "method": "GET",
+                  "url": "http://play.drilldown.info:1880/itrm_random_health?title=sensor7",
+                  "body": ""
+                },
+                "position": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                }
+              },
+              "hover": false
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

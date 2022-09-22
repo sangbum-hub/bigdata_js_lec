@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<body>
+
+    <div>
+        <div>
+            USER : 
+            <input type="text" id = "idText" style="width: 300px"/>
+        </div>
+        <div>
+            PASSWORD :
+            <input type="password" id="pwText" style="width: 300px"/>
+        </div>
+        <input type="button" id="loginBtn" style="width: 100px" value="로그인"/>
+    </div>
+
+    <script>
+        const loginObj = document.querySelector("#loginBtn");
+
+        window.onload = function() {
+            loginObj.onclick = (event) => {
+                login();
+            };
+        };
+
+        function login(){
+            let id = document.querySelector("#idText").value;
+            let pw = document.querySelector("#pwText").value;
+
+            $.ajax({
+            type : "GET", //전송방식 (POST,GET)
+            url: "http://127.0.0.1:1880/login", //호출 URL
+            data: {
+                    id: id,
+                    password: pw
+            }, // 파라미터 지정
+            dataType: "json", // 페이지 형식
+            success: function (data) {
+                console.log(data); // 받아온 값
+            },
+            error: function () {
+                alert("통신실패!!!!");
+            },
+            });
+        }
+
+        let user;
+        let pw;
+
+
+
+    </script>
+</body>
+</html>

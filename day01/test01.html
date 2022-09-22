@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // // 1. 높이와 너비를 입력 받아서 삼각형의 넓이를 출력하는 프로그램을 작성하시오
+        // let height = prompt("높이를 입력하세요", 0);
+        // let weight = prompt(`너비를 입력하세요.`, 0);
+        // console.log((height * weight)/2);
+
+
+        // // 2. 원의 반지름을 입력 받아 원의 둘레와 면적을 출력하는 프로그램을 작성하시오.
+        // // (원주율은 3.14로 함)
+        // r = prompt("원의 반지름값 입력", 0);
+        // console.log(2*3.14*r);
+        // console.log((r**2)*3.14);
+
+
+        // // 3. 1~100까지 3의 배수만 누적해서 더한 결과를 출력하는 프로그램을 작성하시오.
+        // let sum = 0;
+        // for (let i=0; i<=100; i++){
+        //     if(i % 3 == 0){
+        //         sum+=i;
+        //     }
+        // }
+        // console.log(sum);
+
+
+        // 4 별 피라미드가 출력되는 프로그램을 작성하시오
+        // for (let i=1; i<=10; i++){
+        //     for (let j=0; j<i; j++){
+        //         document.write('*');
+        //     }
+        //     document.write('<br>')
+        // }
+
+        // let starstr = '';
+        // for(let i=1; i<=10; i++){
+        //     starstr += '*';
+        //     for(let j=1; j<=i; j++){
+        //         console.log(starstr);
+        //     }
+        // }
+
+
+        // for(let i = 0; i < 10; i++)  {
+        //     for(let j = 9; j > i; j--)  {
+        //         document.write('&nbsp');
+        //     }
+        //     for(let j = 0; j <= i; j++) {
+        //         document.write('*');
+        //     }
+        //     document.write('<br>');
+        // }
+        
+
+
+        // // 5. 3번 문제에서 1~100까지 3의 배수만 누적하는 로직을 함수로 변환하여 재 프로그래밍 하시오.
+        // function plusNum(value){
+        //     let sum = 0;
+        //     for(let i=1; i<=100; i++){
+        //         if(i%value == 0){
+        //             sum+=i;
+        //         }
+        //     }
+        //     return sum;
+        // }
+        // console.log(plusNum(3))
+
+
+        // // ex6
+        // const plusNum3 = (start, end) => {
+        //     sum = 0;
+        //     if(start < end){
+        //         for(start; start<=end; start++){
+        //             sum += start;
+        //         }
+        //     }
+        //     else if(start > end){
+        //         for(end; end<=start; end++){
+        //             sum += end;
+        //         }
+        //     }
+        //     else{
+        //         return start;
+        //     }
+
+        //     return sum;
+        // }
+        // console.log(plusNum3(10,10));
+
+
+        // // ex7
+        // let kor = parseInt(prompt('국어점수 : ', 0));
+        // let eng = parseInt(prompt('영어점수 : ', 0));
+        // let mat = parseInt(prompt('수학점수 : ', 0));
+
+        // total = (value1, value2, value3) => {
+        //     return value1 + value2 + value3;
+        // };
+        // avg = (value1, value2, value3) => {
+        //     return (value1 + value2 + value3)/3;
+        // }
+
+        // console.log('총점 : ' + total(kor, eng, mat));
+        // console.log('평균 : ' + avg(kor, eng, mat));
+ 
+        
+        // //ex8
+        // const num_li = [];
+
+        // for(let i=1; i<=100; i++){
+        //     num_li.push(Math.floor(Math.random() * 9));
+        // }
+        // console.log(num_li);
+
+
+        // let count = [0,0,0,0,0,0,0,0,0,0];
+
+        // for(let i=0; i < num_li.length; i++) {
+        //     if(num_li[i] == 1)  {
+
+        //         count[1]++;
+        //     } else if(num_li[i]==2){
+        //         count[2]++;
+        //     } else if(num_li[i]==3){
+        //         count[3]++;
+        //     } else if(num_li[i]==4){
+        //         count[4]++;
+        //     } else if(num_li[i]==5){
+        //         count[5]++;
+        //     } else if(num_li[i]==6){
+        //         count[6]++;
+        //     } else if(num_li[i]==7){
+        //         count[7]++;
+        //     } else if(num_li[i]==8){
+        //         count[8]++;
+        //     } else if(num_li[i]==9){
+        //         count[9]++;
+        //     } else {
+        //         count[0]++;
+        //     }
+        // }
+        // console.log(count);
+
+        //1일차
+        //1.
+        const ran_li = [];
+        while(ran_li.length < 3){
+            let num = Math.floor(Math.random() * 10);
+            if((ran_li[0] != num) & (ran_li[1] != num) & (ran_li[2] != num)){
+                ran_li.push(num);
+            }
+        }
+        console.log(ran_li);
+
+        
+        //2.
+        let num1 = parseInt(prompt('0~9사이 값 입력 : ',0));
+        let num2 = parseInt(prompt('0~9사이 값 입력 : ',0));
+        let num3 = parseInt(prompt('0~9사이 값 입력 : ',0));
+        
+        const num_li = [num1, num2, num3];
+        
+
+        //3.
+        let boll_count = 0;
+        let strike_count = 0;
+
+        for(let i=0; i<3; i++){
+            if(ran_li[i]==num_li[i]){
+                strike_count++;
+            }
+        } 
+
+        for(let i=0; i<3; i++){
+            for(let j=0; j<3; j++){
+                if((i!=j) & ran_li[i]==num_li[j]){
+                    boll_count++;
+                }
+            }
+        }
+
+        //4.
+        console.log(strike_count);
+        console.log(boll_count);
+
+        
+
+    </script>
+    
+</body>
+</html>

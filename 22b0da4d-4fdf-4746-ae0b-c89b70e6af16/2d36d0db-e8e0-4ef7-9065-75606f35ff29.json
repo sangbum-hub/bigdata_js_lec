@@ -1,0 +1,263 @@
+{
+  "Code": 200,
+  "Result": {
+    "MapUIElementMapping": [
+      {
+        "TimeStamp": 1648451655,
+        "CoordinateType": "pixel",
+        "MapWidth": 1280,
+        "MapHeight": 720,
+        "UIElementTypeName": "DDP",
+        "UIElementUniqueName": "2d36d0db-e8e0-4ef7-9065-75606f35ff29",
+        "UIElementDisplayName": "Slide_a783c78f-71bd-495c-9702-1495f8079d89",
+        "DataJSON": {
+          "MapServiceUrl": "/22b0da4d-4fdf-4746-ae0b-c89b70e6af16/SlideImages/2d36d0db-e8e0-4ef7-9065-75606f35ff29.png",
+          "MapBgColor": [
+            255,
+            "#162a42"
+          ],
+          "MapBgType": "Image",
+          "HomeSlide": "a783c78f-71bd-495c-9702-1495f8079d89",
+          "TopSlide": "a783c78f-71bd-495c-9702-1495f8079d89",
+          "PrevSlide": "",
+          "NextSlide": "",
+          "Parent": "a783c78f-71bd-495c-9702-1495f8079d89",
+          "UseTile": false,
+          "zoomable": true,
+          "pannable": true,
+          "zoomLimit": false
+        },
+        "MapUIElementInfo": [
+          {
+            "X": 120,
+            "Y": 101,
+            "Z": 0,
+            "W": 516,
+            "H": 518,
+            "D": 0,
+            "UIElementTypeName": "Universal",
+            "UIElementUniqueName": "495c19db-c152-4f79-97a5-0a1e612646bc",
+            "UIElementDisplayName": "UniversalRect",
+            "SplunkObjectID": 0,
+            "ClassName": "Universal",
+            "ShapeType": "Rectangle",
+            "ObjectType": "Universal",
+            "DataJSON": {
+              "ID": "495c19db-c152-4f79-97a5-0a1e612646bc",
+              "Name": "Universal_495c1",
+              "ZIndex": 2,
+              "ShapeType": "Rectangle",
+              "SplunkObjectID": "0",
+              "ClassName": "Universal",
+              "Position": [
+                [
+                  120,
+                  101
+                ],
+                [
+                  636,
+                  619
+                ]
+              ],
+              "TitlePosition": [
+                [
+                  12,
+                  88
+                ],
+                [
+                  88,
+                  99
+                ]
+              ],
+              "TitleColor": [
+                255,
+                "#FFFFFF"
+              ],
+              "TitleCaption": "Network",
+              "TitleAlignment": "Center",
+              "IconPosition": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0
+                ]
+              ],
+              "IconImageUrl": "",
+              "ShowAlarmLamp": true,
+              "AlarmLampPosition": [
+                89,
+                91
+              ],
+              "AlarmLampSize": 12,
+              "AlarmLampColor": [
+                255,
+                "#00ff00"
+              ],
+              "AlarmLampBlink": false,
+              "Zoomable": true,
+              "HasLamp": true,
+              "BorderThickness": 3,
+              "BorderRadius": 3.2,
+              "BorderColor": [
+                255,
+                "#C9C9C9"
+              ],
+              "LinkedMapGuid": "b364c35d-966a-4b22-aace-e9ff76b05f69",
+              "BackGroundColor": [
+                0,
+                "#FFFFFF"
+              ],
+              "BackGroundImageUrl": "",
+              "fontSize": "27px",
+              "LinkUrl": "",
+              "EnableLinkUrl": false,
+              "LoadHtml": "",
+              "EnableLoadHtml": false,
+              "LoadAPI": "",
+              "EnableLoadAPI": false,
+              "LoadPopup": "",
+              "EnableLoadPopup": false,
+              "LoadPOI": "",
+              "EnableLoadPOI": false,
+              "meta": {
+                "metric": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                },
+                "health": {
+                  "method": "GET",
+                  "url": "http://play.drilldown.info:1880/itrm_health?proc=PROC_GROUP_ALL&healthField=Event_count&compareValue=0&title=Network&sort=naonTotal",
+                  "body": ""
+                },
+                "position": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                }
+              },
+              "hover": false
+            }
+          },
+          {
+            "X": 648,
+            "Y": 101,
+            "Z": 0,
+            "W": 516,
+            "H": 518,
+            "D": 0,
+            "UIElementTypeName": "Universal",
+            "UIElementUniqueName": "b7c24fa7-a5d3-4f7f-bb55-e366511d5217",
+            "UIElementDisplayName": "UniversalRect",
+            "SplunkObjectID": 0,
+            "ClassName": "Universal",
+            "ShapeType": "Rectangle",
+            "ObjectType": "Universal",
+            "DataJSON": {
+              "ID": "b7c24fa7-a5d3-4f7f-bb55-e366511d5217",
+              "Name": "Universal_b7c24",
+              "ZIndex": 6,
+              "ShapeType": "Rectangle",
+              "SplunkObjectID": "0",
+              "ClassName": "Universal",
+              "Position": [
+                [
+                  648,
+                  101
+                ],
+                [
+                  1164,
+                  619
+                ]
+              ],
+              "TitlePosition": [
+                [
+                  12,
+                  88
+                ],
+                [
+                  88,
+                  99
+                ]
+              ],
+              "TitleColor": [
+                255,
+                "#FFFFFF"
+              ],
+              "TitleCaption": "Access Point",
+              "TitleAlignment": "Center",
+              "IconPosition": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0
+                ]
+              ],
+              "IconImageUrl": "",
+              "ShowAlarmLamp": true,
+              "AlarmLampPosition": [
+                89,
+                91
+              ],
+              "AlarmLampSize": 12,
+              "AlarmLampColor": [
+                255,
+                "#00ff00"
+              ],
+              "AlarmLampBlink": false,
+              "Zoomable": true,
+              "HasLamp": true,
+              "BorderThickness": 3,
+              "BorderRadius": 3.2,
+              "BorderColor": [
+                255,
+                "#C9C9C9"
+              ],
+              "LinkedMapGuid": "1c17dc48-5095-4fb9-b987-1b2e8dc94933",
+              "BackGroundColor": [
+                0,
+                "#FFFFFF"
+              ],
+              "BackGroundImageUrl": "",
+              "fontSize": "27px",
+              "LinkUrl": "",
+              "EnableLinkUrl": false,
+              "LoadHtml": "",
+              "EnableLoadHtml": false,
+              "LoadAPI": "",
+              "EnableLoadAPI": false,
+              "LoadPopup": "",
+              "EnableLoadPopup": false,
+              "LoadPOI": "",
+              "EnableLoadPOI": false,
+              "meta": {
+                "metric": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                },
+                "health": {
+                  "method": "GET",
+                  "url": "http://play.drilldown.info:1880/itrm_health?proc=PROC_GROUP_ALL&healthField=Event_count&compareValue=0&title=APs Info&sort=naonTotal",
+                  "body": ""
+                },
+                "position": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                }
+              },
+              "hover": false
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

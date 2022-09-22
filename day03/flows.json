@@ -1,0 +1,1359 @@
+[
+    {
+        "id": "10a1cd4d76a55525",
+        "type": "tab",
+        "label": "플로우 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "0477f9b8c0cfe5cf",
+        "type": "inject",
+        "z": "10a1cd4d76a55525",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "홍길동",
+        "payloadType": "str",
+        "x": 210,
+        "y": 80,
+        "wires": [
+            [
+                "6ea7e8f673861315"
+            ]
+        ]
+    },
+    {
+        "id": "6ea7e8f673861315",
+        "type": "debug",
+        "z": "10a1cd4d76a55525",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "683a65869ab2638e",
+        "type": "function",
+        "z": "10a1cd4d76a55525",
+        "name": "function 1",
+        "func": "var timestr = new Date(msg.nowtime).toLocaleString('ko-KR');\n\nmsg.nowtime = timestr;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 160,
+        "wires": [
+            [
+                "04a3432cdeb3effe"
+            ]
+        ]
+    },
+    {
+        "id": "257d68facdb67fb2",
+        "type": "inject",
+        "z": "10a1cd4d76a55525",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 200,
+        "y": 160,
+        "wires": [
+            [
+                "683a65869ab2638e"
+            ]
+        ]
+    },
+    {
+        "id": "04a3432cdeb3effe",
+        "type": "debug",
+        "z": "10a1cd4d76a55525",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "63a0988505820cf0",
+        "type": "inject",
+        "z": "10a1cd4d76a55525",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "nowtime",
+                "v": "",
+                "vt": "date"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 240,
+        "wires": [
+            [
+                "db8cde01aebe0f04"
+            ]
+        ]
+    },
+    {
+        "id": "db8cde01aebe0f04",
+        "type": "function",
+        "z": "10a1cd4d76a55525",
+        "name": "function 2",
+        "func": "var timestr = new Date(msg.nowtime).toLocaleString('ko-KR');\nmsg.nowtime = timestr;\n\nvar msg2 = {\n    'payload': 'Node-Red',\n    'nowtime': new Date().toLocaleDateString('ko-KR')\n}\n\nvar msg3 = {\n    'payload': 'Bigdata',\n    'nowtime': new Date().toLocaleDateString('ko-KR')\n}\n\nreturn [[msg, msg2, msg3]];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 240,
+        "wires": [
+            [
+                "635af6588a4b8342"
+            ]
+        ]
+    },
+    {
+        "id": "635af6588a4b8342",
+        "type": "debug",
+        "z": "10a1cd4d76a55525",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "e3646032fe33173c",
+        "type": "inject",
+        "z": "10a1cd4d76a55525",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "nowtime",
+                "v": "",
+                "vt": "date"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 340,
+        "wires": [
+            [
+                "2dec813f5f7657cf"
+            ]
+        ]
+    },
+    {
+        "id": "2dec813f5f7657cf",
+        "type": "function",
+        "z": "10a1cd4d76a55525",
+        "name": "function 3",
+        "func": "var timestr = new Date(msg.nowtime).toLocaleString('ko-KR');\nmsg.nowtime = timestr;\nmsg.index = 1;\n\nvar msg2 = {\n    'index' : 2,\n    'payload': 'Node-Red',\n    'nowtime': new Date().toLocaleDateString('ko-KR'),\n}\n\nvar msg3 = {\n    'index' : 3,\n    'payload': 'Bigdata',\n    'nowtime': new Date().toLocaleDateString('ko-KR'),\n}\n\nreturn [[msg, msg2, msg3]];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 340,
+        "wires": [
+            [
+                "57a89ef819160e41"
+            ]
+        ]
+    },
+    {
+        "id": "93815c8ce651644d",
+        "type": "debug",
+        "z": "10a1cd4d76a55525",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "57a89ef819160e41",
+        "type": "switch",
+        "z": "10a1cd4d76a55525",
+        "name": "",
+        "property": "index",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "3",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 630,
+        "y": 340,
+        "wires": [
+            [
+                "93815c8ce651644d"
+            ],
+            [
+                "4bb91fd58b0e2e3d"
+            ],
+            [
+                "fb9e2a7b24f6ea4d"
+            ]
+        ]
+    },
+    {
+        "id": "4bb91fd58b0e2e3d",
+        "type": "debug",
+        "z": "10a1cd4d76a55525",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "fb9e2a7b24f6ea4d",
+        "type": "debug",
+        "z": "10a1cd4d76a55525",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "c0de90e33e8a1f00",
+        "type": "inject",
+        "z": "10a1cd4d76a55525",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "title",
+                "v": "Bigdata",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "홍길동",
+        "payloadType": "str",
+        "x": 170,
+        "y": 460,
+        "wires": [
+            [
+                "911e3bdf1cdf46be"
+            ]
+        ]
+    },
+    {
+        "id": "83e48c205942739d",
+        "type": "debug",
+        "z": "10a1cd4d76a55525",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "911e3bdf1cdf46be",
+        "type": "template",
+        "z": "10a1cd4d76a55525",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\n    \"name\":\"{{payload}}\",\n    \"title\":\"{{title}}\"\n}",
+        "output": "json",
+        "x": 380,
+        "y": 460,
+        "wires": [
+            [
+                "83e48c205942739d"
+            ]
+        ]
+    },
+    {
+        "id": "fa2187046d655fbe",
+        "type": "debug",
+        "z": "10a1cd4d76a55525",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "93edcb1d6396b533",
+        "type": "template",
+        "z": "10a1cd4d76a55525",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "[\n    \"abc1\",\n    \"def2\",\n    \"xyz4\",\n    \"mno5\"\n]",
+        "output": "json",
+        "x": 380,
+        "y": 560,
+        "wires": [
+            [
+                "d0c975abbc4abe91"
+            ]
+        ]
+    },
+    {
+        "id": "3ab55d232fb7a3b1",
+        "type": "sort",
+        "z": "10a1cd4d76a55525",
+        "name": "",
+        "order": "descending",
+        "as_num": false,
+        "target": "payload",
+        "targetType": "msg",
+        "msgKey": "payload",
+        "msgKeyType": "elem",
+        "seqKey": "payload",
+        "seqKeyType": "msg",
+        "x": 590,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3d15bf5fa3193bad",
+        "type": "comment",
+        "z": "10a1cd4d76a55525",
+        "name": "템플릿 노드 샘플",
+        "info": "템플릿 노드 샘플",
+        "x": 180,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "d0c975abbc4abe91",
+        "type": "function",
+        "z": "10a1cd4d76a55525",
+        "name": "function 4",
+        "func": "// 내림차순\nmsg.payload.sort((A,B) =>{\n    return A>B ? -1 : A<B ? 1 : 0;\n});\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 640,
+        "wires": [
+            [
+                "fa2187046d655fbe"
+            ]
+        ]
+    },
+    {
+        "id": "e060a5e6357cad3e",
+        "type": "inject",
+        "z": "10a1cd4d76a55525",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "inject",
+        "payloadType": "str",
+        "x": 170,
+        "y": 560,
+        "wires": [
+            [
+                "93edcb1d6396b533"
+            ]
+        ]
+    },
+    {
+        "id": "f67f17db570993b6",
+        "type": "inject",
+        "z": "10a1cd4d76a55525",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "inject",
+        "payloadType": "str",
+        "x": 170,
+        "y": 760,
+        "wires": [
+            [
+                "c6ee1a99d52b5bed"
+            ]
+        ]
+    },
+    {
+        "id": "c6ee1a99d52b5bed",
+        "type": "exec",
+        "z": "10a1cd4d76a55525",
+        "command": "ping",
+        "addpay": "",
+        "append": "www.google.com",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 370,
+        "y": 760,
+        "wires": [
+            [
+                "d149d7a61c6bd6dd"
+            ],
+            [
+                "dcf939d707a3bad6"
+            ],
+            [
+                "714247340a43d9bf"
+            ]
+        ]
+    },
+    {
+        "id": "d149d7a61c6bd6dd",
+        "type": "debug",
+        "z": "10a1cd4d76a55525",
+        "name": "Output",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "dcf939d707a3bad6",
+        "type": "debug",
+        "z": "10a1cd4d76a55525",
+        "name": "Error",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "714247340a43d9bf",
+        "type": "debug",
+        "z": "10a1cd4d76a55525",
+        "name": "Return Code",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 650,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "6cf83ff9eefe8099",
+        "type": "debug",
+        "z": "10a1cd4d76a55525",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "5bd52c2e35c6612e",
+        "type": "template",
+        "z": "10a1cd4d76a55525",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\n    \"name\":\"kim\",\n    \"kor\":100,\n    \"math\":50,\n    \"eng\":60\n}",
+        "output": "json",
+        "x": 360,
+        "y": 1040,
+        "wires": [
+            [
+                "d885a47f5688a51a",
+                "380ec17c0ffb0802"
+            ]
+        ]
+    },
+    {
+        "id": "d885a47f5688a51a",
+        "type": "function",
+        "z": "10a1cd4d76a55525",
+        "name": "function 5",
+        "func": "// 총점, 평균 추가\nmsg.payload.sum = msg.payload.kor + msg.payload.math + msg.payload.eng;\n\n// 평균\nmsg.payload.avg = msg.payload.sum/3;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 1040,
+        "wires": [
+            [
+                "6cf83ff9eefe8099"
+            ]
+        ]
+    },
+    {
+        "id": "68dce573258ee280",
+        "type": "inject",
+        "z": "10a1cd4d76a55525",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "inject",
+        "payloadType": "str",
+        "x": 150,
+        "y": 1040,
+        "wires": [
+            [
+                "5bd52c2e35c6612e"
+            ]
+        ]
+    },
+    {
+        "id": "f94ba6ce3b0fd64b",
+        "type": "comment",
+        "z": "10a1cd4d76a55525",
+        "name": "",
+        "info": "",
+        "x": 140,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "380ec17c0ffb0802",
+        "type": "debug",
+        "z": "10a1cd4d76a55525",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "d6295af70ca6715e",
+        "type": "template",
+        "z": "10a1cd4d76a55525",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\n    \"data\": [\n        {\n            \"id\": \"1\",\n            \"name\": \"Tiger Nixon\",\n            \"position\": \"System Architect\",\n            \"salary\": 320800,\n            \"start_date\": \"2011/04/25\",\n            \"office\": \"Edinburgh\",\n            \"extn\": \"5421\"\n        },\n        {\n            \"id\": \"2\",\n            \"name\": \"Garrett Winters\",\n            \"position\": \"Accountant\",\n            \"salary\": 170750,\n            \"start_date\": \"2011/07/25\",\n            \"office\": \"Tokyo\",\n            \"extn\": \"8422\"\n        },\n        {\n            \"id\": \"3\",\n            \"name\": \"Ashton Cox\",\n            \"position\": \"Junior Technical Author\",\n            \"salary\": 86000,\n            \"start_date\": \"2009/01/12\",\n            \"office\": \"San Francisco\",\n            \"extn\": \"1562\"\n        },\n        {\n            \"id\": \"4\",\n            \"name\": \"Cedric Kelly\",\n            \"position\": \"Senior Javascript Developer\",\n            \"salary\": 433060,\n            \"start_date\": \"2012/03/29\",\n            \"office\": \"Edinburgh\",\n            \"extn\": \"6224\"\n        },\n        {\n            \"id\": \"5\",\n            \"name\": \"Airi Satou\",\n            \"position\": \"Accountant\",\n            \"salary\": 162700,\n            \"start_date\": \"2008/11/28\",\n            \"office\": \"Tokyo\",\n            \"extn\": \"5407\"\n        },\n        {\n            \"id\": \"6\",\n            \"name\": \"Brielle Williamson\",\n            \"position\": \"Integration Specialist\",\n            \"salary\": 372000,\n            \"start_date\": \"2012/12/02\",\n            \"office\": \"New York\",\n            \"extn\": \"4804\"\n        },\n        {\n            \"id\": \"7\",\n            \"name\": \"Herrod Chandler\",\n            \"position\": \"Sales Assistant\",\n            \"salary\": 137500,\n            \"start_date\": \"2012/08/06\",\n            \"office\": \"San Francisco\",\n            \"extn\": \"9608\"\n        },\n        {\n            \"id\": \"8\",\n            \"name\": \"Rhona Davidson\",\n            \"position\": \"Integration Specialist\",\n            \"salary\": 327900,\n            \"start_date\": \"2010/10/14\",\n            \"office\": \"Tokyo\",\n            \"extn\": \"6200\"\n        },\n        {\n            \"id\": \"9\",\n            \"name\": \"Colleen Hurst\",\n            \"position\": \"Javascript Developer\",\n            \"salary\": 205500,\n            \"start_date\": \"2009/09/15\",\n            \"office\": \"San Francisco\",\n            \"extn\": \"2360\"\n        },\n        {\n            \"id\": \"10\",\n            \"name\": \"Sonya Frost\",\n            \"position\": \"Software Engineer\",\n            \"salary\": 103600,\n            \"start_date\": \"2008/12/13\",\n            \"office\": \"Edinburgh\",\n            \"extn\": \"1667\"\n        },\n        {\n            \"id\": \"11\",\n            \"name\": \"Jena Gaines\",\n            \"position\": \"Office Manager\",\n            \"salary\": 90560,\n            \"start_date\": \"2008/12/19\",\n            \"office\": \"London\",\n            \"extn\": \"3814\"\n        },\n        {\n            \"id\": \"12\",\n            \"name\": \"Quinn Flynn\",\n            \"position\": \"Support Lead\",\n            \"salary\": 342000,\n            \"start_date\": \"2013/03/03\",\n            \"office\": \"Edinburgh\",\n            \"extn\": \"9497\"\n        },\n        {\n            \"id\": \"13\",\n            \"name\": \"Charde Marshall\",\n            \"position\": \"Regional Director\",\n            \"salary\": 470600,\n            \"start_date\": \"2008/10/16\",\n            \"office\": \"San Francisco\",\n            \"extn\": \"6741\"\n        },\n        {\n            \"id\": \"14\",\n            \"name\": \"Haley Kennedy\",\n            \"position\": \"Senior Marketing Designer\",\n            \"salary\": 313500,\n            \"start_date\": \"2012/12/18\",\n            \"office\": \"London\",\n            \"extn\": \"3597\"\n        },\n        {\n            \"id\": \"15\",\n            \"name\": \"Tatyana Fitzpatrick\",\n            \"position\": \"Regional Director\",\n            \"salary\": 385750,\n            \"start_date\": \"2010/03/17\",\n            \"office\": \"London\",\n            \"extn\": \"1965\"\n        },\n        {\n            \"id\": \"16\",\n            \"name\": \"Michael Silva\",\n            \"position\": \"Marketing Designer\",\n            \"salary\": 198500,\n            \"start_date\": \"2012/11/27\",\n            \"office\": \"London\",\n            \"extn\": \"1581\"\n        },\n        {\n            \"id\": \"17\",\n            \"name\": \"Paul Byrd\",\n            \"position\": \"Chief Financial Officer (CFO)\",\n            \"salary\": 725000,\n            \"start_date\": \"2010/06/09\",\n            \"office\": \"New York\",\n            \"extn\": \"3059\"\n        },\n        {\n            \"id\": \"18\",\n            \"name\": \"Gloria Little\",\n            \"position\": \"Systems Administrator\",\n            \"salary\": 237500,\n            \"start_date\": \"2009/04/10\",\n            \"office\": \"New York\",\n            \"extn\": \"1721\"\n        },\n        {\n            \"id\": \"19\",\n            \"name\": \"Bradley Greer\",\n            \"position\": \"Software Engineer\",\n            \"salary\": 132000,\n            \"start_date\": \"2012/10/13\",\n            \"office\": \"London\",\n            \"extn\": \"2558\"\n        },\n        {\n            \"id\": \"20\",\n            \"name\": \"Dai Rios\",\n            \"position\": \"Personnel Lead\",\n            \"salary\": 217500,\n            \"start_date\": \"2012/09/26\",\n            \"office\": \"Edinburgh\",\n            \"extn\": \"2290\"\n        }\n    ]\n}",
+        "output": "json",
+        "x": 360,
+        "y": 1200,
+        "wires": [
+            [
+                "4907944cab7c14af",
+                "92820e51ef8b48da"
+            ]
+        ]
+    },
+    {
+        "id": "7efc5b52d370725b",
+        "type": "inject",
+        "z": "10a1cd4d76a55525",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "inject",
+        "payloadType": "str",
+        "x": 150,
+        "y": 1200,
+        "wires": [
+            [
+                "d6295af70ca6715e"
+            ]
+        ]
+    },
+    {
+        "id": "4907944cab7c14af",
+        "type": "function",
+        "z": "10a1cd4d76a55525",
+        "name": "function 6",
+        "func": "// sal 300000 이상 명단 출력\nlet people = [];\n\nfor (let obj of msg.payload.data){\n    if (obj.salary >= 300000) {\n        people.push(obj);\n    }\n}\n\nmsg.payload = people;\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 1200,
+        "wires": [
+            [
+                "6a98774a77fe512a"
+            ]
+        ]
+    },
+    {
+        "id": "6a98774a77fe512a",
+        "type": "debug",
+        "z": "10a1cd4d76a55525",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "92820e51ef8b48da",
+        "type": "function",
+        "z": "10a1cd4d76a55525",
+        "name": "function 7",
+        "func": "// sal 평균 출력\nlet total = 0;\nlet avg = 0;\n\nfor(let obj of msg.payload.data){\n    total += obj.salary;\n}\n\navg = total/msg.payload.data.length;\n\nmsg.payload = avg;\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 1340,
+        "wires": [
+            [
+                "535cf1a3ea6f3201"
+            ]
+        ]
+    },
+    {
+        "id": "535cf1a3ea6f3201",
+        "type": "debug",
+        "z": "10a1cd4d76a55525",
+        "name": "debug 15",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "0710a99e2bce0d61",
+        "type": "http in",
+        "z": "10a1cd4d76a55525",
+        "name": "",
+        "url": "/mydata",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 150,
+        "y": 1460,
+        "wires": [
+            [
+                "12b9d5bc803f96d7"
+            ]
+        ]
+    },
+    {
+        "id": "7da2686334c5ba23",
+        "type": "http response",
+        "z": "10a1cd4d76a55525",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 590,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "776e9a1ce890149d",
+        "type": "template",
+        "z": "10a1cd4d76a55525",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\n    \"name\":\"kim\",\n    \"age\" : 33\n}",
+        "output": "json",
+        "x": 380,
+        "y": 1500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "12b9d5bc803f96d7",
+        "type": "function",
+        "z": "10a1cd4d76a55525",
+        "name": "function 8",
+        "func": "let senddata = {};\n\nsenddata.title = \"movie\";\nsenddata.year = 2022;\nsenddata.user = \"kim\";\n\n\nmsg.payload = senddata;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 1540,
+        "wires": [
+            [
+                "7da2686334c5ba23"
+            ]
+        ]
+    },
+    {
+        "id": "3cd7a4615086f1a7",
+        "type": "http in",
+        "z": "10a1cd4d76a55525",
+        "name": "",
+        "url": "/main",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 1660,
+        "wires": [
+            [
+                "383e3b543fb73f86"
+            ]
+        ]
+    },
+    {
+        "id": "2c36b76adb3d5203",
+        "type": "http response",
+        "z": "10a1cd4d76a55525",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 550,
+        "y": 1660,
+        "wires": []
+    },
+    {
+        "id": "383e3b543fb73f86",
+        "type": "template",
+        "z": "10a1cd4d76a55525",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE html>\n<html lang=\"kr\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>main</title>\n</head>\n<body>\n\n    <h1>\n        {{payload.name}} 님 환영합니다.\n    </h1>\n    \n</body>\n</html>",
+        "output": "str",
+        "x": 340,
+        "y": 1660,
+        "wires": [
+            [
+                "2c36b76adb3d5203"
+            ]
+        ]
+    },
+    {
+        "id": "0d5fe0a7fef384c4",
+        "type": "function",
+        "z": "10a1cd4d76a55525",
+        "name": "function 9",
+        "func": "var param = msg.payload;\n\nconsole.log(param);\n\nmsg.payload = {\n    test :{\n        node : \"test\"\n    },\n    obj : param\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 1820,
+        "wires": [
+            [
+                "e6431f4f5b2c3324"
+            ]
+        ]
+    },
+    {
+        "id": "bfe5b9f5dbdae667",
+        "type": "http in",
+        "z": "10a1cd4d76a55525",
+        "name": "",
+        "url": "/mytest",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 150,
+        "y": 1820,
+        "wires": [
+            [
+                "0d5fe0a7fef384c4"
+            ]
+        ]
+    },
+    {
+        "id": "e6431f4f5b2c3324",
+        "type": "http response",
+        "z": "10a1cd4d76a55525",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 550,
+        "y": 1820,
+        "wires": []
+    },
+    {
+        "id": "7dfdb0692a8398d1",
+        "type": "template",
+        "z": "10a1cd4d76a55525",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\n    \"data\": [\n        {\n            \"id\": \"1\",\n            \"name\": \"Tiger Nixon\",\n            \"position\": \"System Architect\",\n            \"salary\": 320800,\n            \"start_date\": \"2011/04/25\",\n            \"office\": \"Edinburgh\",\n            \"extn\": \"5421\"\n        },\n        {\n            \"id\": \"2\",\n            \"name\": \"Garrett Winters\",\n            \"position\": \"Accountant\",\n            \"salary\": 170750,\n            \"start_date\": \"2011/07/25\",\n            \"office\": \"Tokyo\",\n            \"extn\": \"8422\"\n        },\n        {\n            \"id\": \"3\",\n            \"name\": \"Ashton Cox\",\n            \"position\": \"Junior Technical Author\",\n            \"salary\": 86000,\n            \"start_date\": \"2009/01/12\",\n            \"office\": \"San Francisco\",\n            \"extn\": \"1562\"\n        },\n        {\n            \"id\": \"4\",\n            \"name\": \"Cedric Kelly\",\n            \"position\": \"Senior Javascript Developer\",\n            \"salary\": 433060,\n            \"start_date\": \"2012/03/29\",\n            \"office\": \"Edinburgh\",\n            \"extn\": \"6224\"\n        },\n        {\n            \"id\": \"5\",\n            \"name\": \"Airi Satou\",\n            \"position\": \"Accountant\",\n            \"salary\": 162700,\n            \"start_date\": \"2008/11/28\",\n            \"office\": \"Tokyo\",\n            \"extn\": \"5407\"\n        },\n        {\n            \"id\": \"6\",\n            \"name\": \"Brielle Williamson\",\n            \"position\": \"Integration Specialist\",\n            \"salary\": 372000,\n            \"start_date\": \"2012/12/02\",\n            \"office\": \"New York\",\n            \"extn\": \"4804\"\n        },\n        {\n            \"id\": \"7\",\n            \"name\": \"Herrod Chandler\",\n            \"position\": \"Sales Assistant\",\n            \"salary\": 137500,\n            \"start_date\": \"2012/08/06\",\n            \"office\": \"San Francisco\",\n            \"extn\": \"9608\"\n        },\n        {\n            \"id\": \"8\",\n            \"name\": \"Rhona Davidson\",\n            \"position\": \"Integration Specialist\",\n            \"salary\": 327900,\n            \"start_date\": \"2010/10/14\",\n            \"office\": \"Tokyo\",\n            \"extn\": \"6200\"\n        },\n        {\n            \"id\": \"9\",\n            \"name\": \"Colleen Hurst\",\n            \"position\": \"Javascript Developer\",\n            \"salary\": 205500,\n            \"start_date\": \"2009/09/15\",\n            \"office\": \"San Francisco\",\n            \"extn\": \"2360\"\n        },\n        {\n            \"id\": \"10\",\n            \"name\": \"Sonya Frost\",\n            \"position\": \"Software Engineer\",\n            \"salary\": 103600,\n            \"start_date\": \"2008/12/13\",\n            \"office\": \"Edinburgh\",\n            \"extn\": \"1667\"\n        },\n        {\n            \"id\": \"11\",\n            \"name\": \"Jena Gaines\",\n            \"position\": \"Office Manager\",\n            \"salary\": 90560,\n            \"start_date\": \"2008/12/19\",\n            \"office\": \"London\",\n            \"extn\": \"3814\"\n        },\n        {\n            \"id\": \"12\",\n            \"name\": \"Quinn Flynn\",\n            \"position\": \"Support Lead\",\n            \"salary\": 342000,\n            \"start_date\": \"2013/03/03\",\n            \"office\": \"Edinburgh\",\n            \"extn\": \"9497\"\n        },\n        {\n            \"id\": \"13\",\n            \"name\": \"Charde Marshall\",\n            \"position\": \"Regional Director\",\n            \"salary\": 470600,\n            \"start_date\": \"2008/10/16\",\n            \"office\": \"San Francisco\",\n            \"extn\": \"6741\"\n        },\n        {\n            \"id\": \"14\",\n            \"name\": \"Haley Kennedy\",\n            \"position\": \"Senior Marketing Designer\",\n            \"salary\": 313500,\n            \"start_date\": \"2012/12/18\",\n            \"office\": \"London\",\n            \"extn\": \"3597\"\n        },\n        {\n            \"id\": \"15\",\n            \"name\": \"Tatyana Fitzpatrick\",\n            \"position\": \"Regional Director\",\n            \"salary\": 385750,\n            \"start_date\": \"2010/03/17\",\n            \"office\": \"London\",\n            \"extn\": \"1965\"\n        },\n        {\n            \"id\": \"16\",\n            \"name\": \"Michael Silva\",\n            \"position\": \"Marketing Designer\",\n            \"salary\": 198500,\n            \"start_date\": \"2012/11/27\",\n            \"office\": \"London\",\n            \"extn\": \"1581\"\n        },\n        {\n            \"id\": \"17\",\n            \"name\": \"Paul Byrd\",\n            \"position\": \"Chief Financial Officer (CFO)\",\n            \"salary\": 725000,\n            \"start_date\": \"2010/06/09\",\n            \"office\": \"New York\",\n            \"extn\": \"3059\"\n        },\n        {\n            \"id\": \"18\",\n            \"name\": \"Gloria Little\",\n            \"position\": \"Systems Administrator\",\n            \"salary\": 237500,\n            \"start_date\": \"2009/04/10\",\n            \"office\": \"New York\",\n            \"extn\": \"1721\"\n        },\n        {\n            \"id\": \"19\",\n            \"name\": \"Bradley Greer\",\n            \"position\": \"Software Engineer\",\n            \"salary\": 132000,\n            \"start_date\": \"2012/10/13\",\n            \"office\": \"London\",\n            \"extn\": \"2558\"\n        },\n        {\n            \"id\": \"20\",\n            \"name\": \"Dai Rios\",\n            \"position\": \"Personnel Lead\",\n            \"salary\": 217500,\n            \"start_date\": \"2012/09/26\",\n            \"office\": \"Edinburgh\",\n            \"extn\": \"2290\"\n        }\n    ]\n}",
+        "output": "json",
+        "x": 380,
+        "y": 1460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3d5a03e5a61f0466",
+        "type": "http in",
+        "z": "10a1cd4d76a55525",
+        "name": "",
+        "url": "/get_tabledata",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 1940,
+        "wires": [
+            [
+                "786b3e65e826621a"
+            ]
+        ]
+    },
+    {
+        "id": "1bbfaa3e391de0c4",
+        "type": "http response",
+        "z": "10a1cd4d76a55525",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 590,
+        "y": 1940,
+        "wires": []
+    },
+    {
+        "id": "786b3e65e826621a",
+        "type": "template",
+        "z": "10a1cd4d76a55525",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\n    \"data\": [\n        {\n            \"id\": \"1\",\n            \"name\": \"Tiger Nixon\",\n            \"position\": \"System Architect\",\n            \"salary\": 320800,\n            \"start_date\": \"2011/04/25\",\n            \"office\": \"Edinburgh\",\n            \"extn\": \"5421\"\n        },\n        {\n            \"id\": \"2\",\n            \"name\": \"Garrett Winters\",\n            \"position\": \"Accountant\",\n            \"salary\": 170750,\n            \"start_date\": \"2011/07/25\",\n            \"office\": \"Tokyo\",\n            \"extn\": \"8422\"\n        },\n        {\n            \"id\": \"3\",\n            \"name\": \"Ashton Cox\",\n            \"position\": \"Junior Technical Author\",\n            \"salary\": 86000,\n            \"start_date\": \"2009/01/12\",\n            \"office\": \"San Francisco\",\n            \"extn\": \"1562\"\n        },\n        {\n            \"id\": \"4\",\n            \"name\": \"Cedric Kelly\",\n            \"position\": \"Senior Javascript Developer\",\n            \"salary\": 433060,\n            \"start_date\": \"2012/03/29\",\n            \"office\": \"Edinburgh\",\n            \"extn\": \"6224\"\n        },\n        {\n            \"id\": \"5\",\n            \"name\": \"Airi Satou\",\n            \"position\": \"Accountant\",\n            \"salary\": 162700,\n            \"start_date\": \"2008/11/28\",\n            \"office\": \"Tokyo\",\n            \"extn\": \"5407\"\n        },\n        {\n            \"id\": \"6\",\n            \"name\": \"Brielle Williamson\",\n            \"position\": \"Integration Specialist\",\n            \"salary\": 372000,\n            \"start_date\": \"2012/12/02\",\n            \"office\": \"New York\",\n            \"extn\": \"4804\"\n        },\n        {\n            \"id\": \"7\",\n            \"name\": \"Herrod Chandler\",\n            \"position\": \"Sales Assistant\",\n            \"salary\": 137500,\n            \"start_date\": \"2012/08/06\",\n            \"office\": \"San Francisco\",\n            \"extn\": \"9608\"\n        },\n        {\n            \"id\": \"8\",\n            \"name\": \"Rhona Davidson\",\n            \"position\": \"Integration Specialist\",\n            \"salary\": 327900,\n            \"start_date\": \"2010/10/14\",\n            \"office\": \"Tokyo\",\n            \"extn\": \"6200\"\n        },\n        {\n            \"id\": \"9\",\n            \"name\": \"Colleen Hurst\",\n            \"position\": \"Javascript Developer\",\n            \"salary\": 205500,\n            \"start_date\": \"2009/09/15\",\n            \"office\": \"San Francisco\",\n            \"extn\": \"2360\"\n        },\n        {\n            \"id\": \"10\",\n            \"name\": \"Sonya Frost\",\n            \"position\": \"Software Engineer\",\n            \"salary\": 103600,\n            \"start_date\": \"2008/12/13\",\n            \"office\": \"Edinburgh\",\n            \"extn\": \"1667\"\n        },\n        {\n            \"id\": \"11\",\n            \"name\": \"Jena Gaines\",\n            \"position\": \"Office Manager\",\n            \"salary\": 90560,\n            \"start_date\": \"2008/12/19\",\n            \"office\": \"London\",\n            \"extn\": \"3814\"\n        },\n        {\n            \"id\": \"12\",\n            \"name\": \"Quinn Flynn\",\n            \"position\": \"Support Lead\",\n            \"salary\": 342000,\n            \"start_date\": \"2013/03/03\",\n            \"office\": \"Edinburgh\",\n            \"extn\": \"9497\"\n        },\n        {\n            \"id\": \"13\",\n            \"name\": \"Charde Marshall\",\n            \"position\": \"Regional Director\",\n            \"salary\": 470600,\n            \"start_date\": \"2008/10/16\",\n            \"office\": \"San Francisco\",\n            \"extn\": \"6741\"\n        },\n        {\n            \"id\": \"14\",\n            \"name\": \"Haley Kennedy\",\n            \"position\": \"Senior Marketing Designer\",\n            \"salary\": 313500,\n            \"start_date\": \"2012/12/18\",\n            \"office\": \"London\",\n            \"extn\": \"3597\"\n        },\n        {\n            \"id\": \"15\",\n            \"name\": \"Tatyana Fitzpatrick\",\n            \"position\": \"Regional Director\",\n            \"salary\": 385750,\n            \"start_date\": \"2010/03/17\",\n            \"office\": \"London\",\n            \"extn\": \"1965\"\n        },\n        {\n            \"id\": \"16\",\n            \"name\": \"Michael Silva\",\n            \"position\": \"Marketing Designer\",\n            \"salary\": 198500,\n            \"start_date\": \"2012/11/27\",\n            \"office\": \"London\",\n            \"extn\": \"1581\"\n        },\n        {\n            \"id\": \"17\",\n            \"name\": \"Paul Byrd\",\n            \"position\": \"Chief Financial Officer (CFO)\",\n            \"salary\": 725000,\n            \"start_date\": \"2010/06/09\",\n            \"office\": \"New York\",\n            \"extn\": \"3059\"\n        },\n        {\n            \"id\": \"18\",\n            \"name\": \"Gloria Little\",\n            \"position\": \"Systems Administrator\",\n            \"salary\": 237500,\n            \"start_date\": \"2009/04/10\",\n            \"office\": \"New York\",\n            \"extn\": \"1721\"\n        },\n        {\n            \"id\": \"19\",\n            \"name\": \"Bradley Greer\",\n            \"position\": \"Software Engineer\",\n            \"salary\": 132000,\n            \"start_date\": \"2012/10/13\",\n            \"office\": \"London\",\n            \"extn\": \"2558\"\n        },\n        {\n            \"id\": \"20\",\n            \"name\": \"Dai Rios\",\n            \"position\": \"Personnel Lead\",\n            \"salary\": 217500,\n            \"start_date\": \"2012/09/26\",\n            \"office\": \"Edinburgh\",\n            \"extn\": \"2290\"\n        }\n    ]\n}",
+        "output": "json",
+        "x": 380,
+        "y": 1940,
+        "wires": [
+            [
+                "1bbfaa3e391de0c4"
+            ]
+        ]
+    },
+    {
+        "id": "17d742afd614ea65",
+        "type": "http in",
+        "z": "10a1cd4d76a55525",
+        "name": "",
+        "url": "/call_api",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 2020,
+        "wires": [
+            [
+                "3a0d12eb764836c9"
+            ]
+        ]
+    },
+    {
+        "id": "55eecffef3cf860e",
+        "type": "http response",
+        "z": "10a1cd4d76a55525",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 850,
+        "y": 2020,
+        "wires": []
+    },
+    {
+        "id": "3a0d12eb764836c9",
+        "type": "function",
+        "z": "10a1cd4d76a55525",
+        "name": "param",
+        "func": "msg.payload = {\n    topics : 234243,\n    limit : 100\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 2020,
+        "wires": [
+            [
+                "d8f6ae86dfe34fc7"
+            ]
+        ]
+    },
+    {
+        "id": "d8f6ae86dfe34fc7",
+        "type": "http request",
+        "z": "10a1cd4d76a55525",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "query",
+        "url": "https://jsonplaceholder.typicode.com/users",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 490,
+        "y": 2020,
+        "wires": [
+            [
+                "181cca8fb2b097ed"
+            ]
+        ]
+    },
+    {
+        "id": "181cca8fb2b097ed",
+        "type": "function",
+        "z": "10a1cd4d76a55525",
+        "name": "function",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 2020,
+        "wires": [
+            [
+                "55eecffef3cf860e"
+            ]
+        ]
+    },
+    {
+        "id": "966c2187801f21a5",
+        "type": "inject",
+        "z": "10a1cd4d76a55525",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 2140,
+        "wires": [
+            [
+                "7246c0beabc0b213"
+            ]
+        ]
+    },
+    {
+        "id": "7246c0beabc0b213",
+        "type": "file in",
+        "z": "10a1cd4d76a55525",
+        "name": "",
+        "filename": "C:/9weeks/request_1.json",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "utf8",
+        "allProps": false,
+        "x": 370,
+        "y": 2140,
+        "wires": [
+            [
+                "63c48eed3cc4fb8c",
+                "5aaeea0699fc4e95"
+            ]
+        ]
+    },
+    {
+        "id": "54482f5986739fd6",
+        "type": "debug",
+        "z": "10a1cd4d76a55525",
+        "name": "debug 16",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 2140,
+        "wires": []
+    },
+    {
+        "id": "5aaeea0699fc4e95",
+        "type": "debug",
+        "z": "10a1cd4d76a55525",
+        "name": "debug 17",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 2220,
+        "wires": []
+    },
+    {
+        "id": "63c48eed3cc4fb8c",
+        "type": "function",
+        "z": "10a1cd4d76a55525",
+        "name": "function 10",
+        "func": "var obj = JSON.parse(msg.payload);\nmsg.payload = obj;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 2140,
+        "wires": [
+            [
+                "54482f5986739fd6"
+            ]
+        ]
+    },
+    {
+        "id": "a628699f0959e39c",
+        "type": "http in",
+        "z": "10a1cd4d76a55525",
+        "name": "",
+        "url": "/grade",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 2320,
+        "wires": [
+            [
+                "a6329b31a48e4ce4"
+            ]
+        ]
+    },
+    {
+        "id": "b5b9e610b464b836",
+        "type": "http response",
+        "z": "10a1cd4d76a55525",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 570,
+        "y": 2320,
+        "wires": []
+    },
+    {
+        "id": "a6329b31a48e4ce4",
+        "type": "function",
+        "z": "10a1cd4d76a55525",
+        "name": "function 11",
+        "func": "\nlet eng = Number(msg.payload.eng);\nlet kor = Number(msg.payload.kor);\nlet math = Number(msg.payload.math);\n\nmsg.payload = {};\nmsg.payload.total = eng + kor + math;\nmsg.payload.avg = msg.payload.total/3;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 2320,
+        "wires": [
+            [
+                "b5b9e610b464b836"
+            ]
+        ]
+    },
+    {
+        "id": "0cf24c8e2553d128",
+        "type": "http in",
+        "z": "10a1cd4d76a55525",
+        "name": "",
+        "url": "/login",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 2400,
+        "wires": [
+            [
+                "023396526e45d7ba"
+            ]
+        ]
+    },
+    {
+        "id": "4fe89e1180e5f395",
+        "type": "http response",
+        "z": "10a1cd4d76a55525",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 570,
+        "y": 2400,
+        "wires": []
+    },
+    {
+        "id": "023396526e45d7ba",
+        "type": "function",
+        "z": "10a1cd4d76a55525",
+        "name": "function 12",
+        "func": "\nlet user = msg.payload.id;\nlet pw = msg.payload.password;\nlet result = \"\";\n\nif(user == \"admin\" && pw == '1234'){\n    result = \"OK\";\n} else{\n    result = \"NO\";\n};\n\nmsg.payload = {result : result};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 2400,
+        "wires": [
+            [
+                "4fe89e1180e5f395"
+            ]
+        ]
+    }
+]

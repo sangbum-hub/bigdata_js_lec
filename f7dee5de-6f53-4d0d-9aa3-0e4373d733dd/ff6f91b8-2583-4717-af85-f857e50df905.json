@@ -1,0 +1,656 @@
+{
+  "Code": 200,
+  "Result": {
+    "MapUIElementMapping": [
+      {
+        "TimeStamp": 1586455887,
+        "CoordinateType": "pixel",
+        "MapWidth": 2309,
+        "MapHeight": 1299,
+        "UIElementTypeName": "DCG",
+        "UIElementUniqueName": "ff6f91b8-2583-4717-af85-f857e50df905",
+        "UIElementDisplayName": "Slide_4",
+        "DataJSON": {
+          "MapServiceUrl": "/f7dee5de-6f53-4d0d-9aa3-0e4373d733dd/SlideImages/ff6f91b8-2583-4717-af85-f857e50df905.png",
+          "MapBgColor": [
+            255,
+            "#FFFFFF"
+          ],
+          "MapBgType": "",
+          "HomeSlide": "180dc4e7-cb5d-4a04-9531-d927475b06fc",
+          "TopSlide": "180dc4e7-cb5d-4a04-9531-d927475b06fc",
+          "PrevSlide": "",
+          "NextSlide": "",
+          "Parent": "180dc4e7-cb5d-4a04-9531-d927475b06fc",
+          "UseTile": false,
+          "zoomable": true,
+          "pannable": true,
+          "zoomLimit": false
+        },
+        "MapUIElementInfo": [
+          {
+            "X": 1096,
+            "Y": 469,
+            "Z": 0,
+            "W": 37,
+            "H": 39,
+            "D": 0,
+            "UIElementTypeName": "Universal",
+            "UIElementUniqueName": "b71a7009-1007-48a7-9a43-bb5a080a6d83",
+            "UIElementDisplayName": "My Header",
+            "SplunkObjectID": 10005,
+            "ClassName": "Universal",
+            "ShapeType": "Rectangle",
+            "ObjectType": "",
+            "DataJSON": {
+              "ID": "b71a7009-1007-48a7-9a43-bb5a080a6d83",
+              "Name": "My Header",
+              "ZIndex": 4,
+              "ShapeType": "Rectangle",
+              "SplunkObjectID": "10005",
+              "ClassName": "Universal",
+              "Position": [
+                [
+                  1096,
+                  469
+                ],
+                [
+                  1134,
+                  508
+                ]
+              ],
+              "TitlePosition": [
+                [
+                  13,
+                  40
+                ],
+                [
+                  73,
+                  60
+                ]
+              ],
+              "TitleColor": [
+                255,
+                "#FFFFFF"
+              ],
+              "TitleCaption": "",
+              "TitleAlignment": "Center",
+              "IconPosition": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0
+                ]
+              ],
+              "IconImageUrl": "",
+              "ShowAlarmLamp": true,
+              "AlarmLampPosition": [
+                13,
+                12
+              ],
+              "AlarmLampSize": 12,
+              "AlarmLampColor": [
+                255,
+                "#00ff00"
+              ],
+              "AlarmLampBlink": false,
+              "Zoomable": false,
+              "HasLamp": true,
+              "BorderThickness": 0,
+              "BorderRadius": 3.2,
+              "BorderColor": [
+                0,
+                "#FFFFFF"
+              ],
+              "LinkedMapGuid": "",
+              "BackGroundColor": [
+                0,
+                "#FFFFFF"
+              ],
+              "BackGroundImageUrl": "",
+              "fontSize": "19px",
+              "LinkUrl": "",
+              "EnableLinkUrl": false,
+              "LoadHtml": "",
+              "EnableLoadHtml": false,
+              "LoadAPI": "",
+              "EnableLoadAPI": false,
+              "LoadPopup": "",
+              "EnableLoadPopup": false,
+              "LoadPOI": "",
+              "EnableLoadPOI": false,
+              "meta": {
+                "metric": {
+                  "method": "",
+                  "url": "",
+                  "body": ""
+                },
+                "health": {
+                  "method": "",
+                  "url": "http://play.drilldown.info:1880/random_health?title=Room Health",
+                  "body": ""
+                },
+                "position": {
+                  "method": "",
+                  "url": "",
+                  "body": ""
+                }
+              },
+              "hover": false
+            }
+          },
+          {
+            "X": 1679,
+            "Y": 344,
+            "Z": 0,
+            "W": 37,
+            "H": 39,
+            "D": 0,
+            "UIElementTypeName": "Universal",
+            "UIElementUniqueName": "96246886-9486-4449-b85d-248f7bd3cd2c",
+            "UIElementDisplayName": "My Header",
+            "SplunkObjectID": 10006,
+            "ClassName": "Universal",
+            "ShapeType": "Rectangle",
+            "ObjectType": "",
+            "DataJSON": {
+              "ID": "96246886-9486-4449-b85d-248f7bd3cd2c",
+              "Name": "My Header",
+              "ZIndex": 8,
+              "ShapeType": "Rectangle",
+              "SplunkObjectID": "10006",
+              "ClassName": "Universal",
+              "Position": [
+                [
+                  1679,
+                  344
+                ],
+                [
+                  1717,
+                  383
+                ]
+              ],
+              "TitlePosition": [
+                [
+                  13,
+                  40
+                ],
+                [
+                  73,
+                  60
+                ]
+              ],
+              "TitleColor": [
+                255,
+                "#FFFFFF"
+              ],
+              "TitleCaption": "",
+              "TitleAlignment": "Center",
+              "IconPosition": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0
+                ]
+              ],
+              "IconImageUrl": "",
+              "ShowAlarmLamp": true,
+              "AlarmLampPosition": [
+                13,
+                12
+              ],
+              "AlarmLampSize": 12,
+              "AlarmLampColor": [
+                255,
+                "#00ff00"
+              ],
+              "AlarmLampBlink": false,
+              "Zoomable": false,
+              "HasLamp": true,
+              "BorderThickness": 0,
+              "BorderRadius": 3.2,
+              "BorderColor": [
+                0,
+                "#FFFFFF"
+              ],
+              "LinkedMapGuid": "",
+              "BackGroundColor": [
+                0,
+                "#FFFFFF"
+              ],
+              "BackGroundImageUrl": "",
+              "fontSize": "19px",
+              "LinkUrl": "",
+              "EnableLinkUrl": false,
+              "LoadHtml": "",
+              "EnableLoadHtml": false,
+              "LoadAPI": "",
+              "EnableLoadAPI": false,
+              "LoadPopup": "",
+              "EnableLoadPopup": false,
+              "LoadPOI": "",
+              "EnableLoadPOI": false,
+              "meta": {
+                "metric": {
+                  "method": "",
+                  "url": "",
+                  "body": ""
+                },
+                "health": {
+                  "method": "",
+                  "url": "http://play.drilldown.info:1880/random_health?title=Room Health",
+                  "body": ""
+                },
+                "position": {
+                  "method": "",
+                  "url": "",
+                  "body": ""
+                }
+              },
+              "hover": false
+            }
+          },
+          {
+            "X": 2451,
+            "Y": 886,
+            "Z": 0,
+            "W": 37,
+            "H": 39,
+            "D": 0,
+            "UIElementTypeName": "Universal",
+            "UIElementUniqueName": "71d07924-7093-4ff8-a010-579bc67ff3bb",
+            "UIElementDisplayName": "My Header",
+            "SplunkObjectID": 10007,
+            "ClassName": "Universal",
+            "ShapeType": "Rectangle",
+            "ObjectType": "",
+            "DataJSON": {
+              "ID": "71d07924-7093-4ff8-a010-579bc67ff3bb",
+              "Name": "My Header",
+              "ZIndex": 12,
+              "ShapeType": "Rectangle",
+              "SplunkObjectID": "10007",
+              "ClassName": "Universal",
+              "Position": [
+                [
+                  2451,
+                  886
+                ],
+                [
+                  2488,
+                  925
+                ]
+              ],
+              "TitlePosition": [
+                [
+                  13,
+                  40
+                ],
+                [
+                  73,
+                  60
+                ]
+              ],
+              "TitleColor": [
+                255,
+                "#FFFFFF"
+              ],
+              "TitleCaption": "",
+              "TitleAlignment": "Center",
+              "IconPosition": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0
+                ]
+              ],
+              "IconImageUrl": "",
+              "ShowAlarmLamp": true,
+              "AlarmLampPosition": [
+                13,
+                12
+              ],
+              "AlarmLampSize": 12,
+              "AlarmLampColor": [
+                255,
+                "#00ff00"
+              ],
+              "AlarmLampBlink": false,
+              "Zoomable": false,
+              "HasLamp": true,
+              "BorderThickness": 0,
+              "BorderRadius": 3.2,
+              "BorderColor": [
+                0,
+                "#FFFFFF"
+              ],
+              "LinkedMapGuid": "",
+              "BackGroundColor": [
+                0,
+                "#FFFFFF"
+              ],
+              "BackGroundImageUrl": "",
+              "fontSize": "19px",
+              "LinkUrl": "",
+              "EnableLinkUrl": false,
+              "LoadHtml": "",
+              "EnableLoadHtml": false,
+              "LoadAPI": "",
+              "EnableLoadAPI": false,
+              "LoadPopup": "",
+              "EnableLoadPopup": false,
+              "LoadPOI": "",
+              "EnableLoadPOI": false,
+              "meta": {
+                "metric": {
+                  "method": "",
+                  "url": "",
+                  "body": ""
+                },
+                "health": {
+                  "method": "",
+                  "url": "http://play.drilldown.info:1880/random_health?title=Room Health",
+                  "body": ""
+                },
+                "position": {
+                  "method": "",
+                  "url": "",
+                  "body": ""
+                }
+              },
+              "hover": false
+            }
+          },
+          {
+            "X": 1059,
+            "Y": 1055,
+            "Z": 0,
+            "W": 37,
+            "H": 39,
+            "D": 0,
+            "UIElementTypeName": "Universal",
+            "UIElementUniqueName": "5dc2f4da-7659-43fc-a032-58ee71ad4579",
+            "UIElementDisplayName": "My Header",
+            "SplunkObjectID": 10008,
+            "ClassName": "Universal",
+            "ShapeType": "Rectangle",
+            "ObjectType": "",
+            "DataJSON": {
+              "ID": "5dc2f4da-7659-43fc-a032-58ee71ad4579",
+              "Name": "My Header",
+              "ZIndex": 16,
+              "ShapeType": "Rectangle",
+              "SplunkObjectID": "10008",
+              "ClassName": "Universal",
+              "Position": [
+                [
+                  1059,
+                  1055
+                ],
+                [
+                  1096,
+                  1093
+                ]
+              ],
+              "TitlePosition": [
+                [
+                  13,
+                  40
+                ],
+                [
+                  73,
+                  60
+                ]
+              ],
+              "TitleColor": [
+                255,
+                "#FFFFFF"
+              ],
+              "TitleCaption": "",
+              "TitleAlignment": "Center",
+              "IconPosition": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0
+                ]
+              ],
+              "IconImageUrl": "",
+              "ShowAlarmLamp": true,
+              "AlarmLampPosition": [
+                13,
+                13
+              ],
+              "AlarmLampSize": 12,
+              "AlarmLampColor": [
+                255,
+                "#00ff00"
+              ],
+              "AlarmLampBlink": false,
+              "Zoomable": false,
+              "HasLamp": true,
+              "BorderThickness": 0,
+              "BorderRadius": 3.2,
+              "BorderColor": [
+                0,
+                "#FFFFFF"
+              ],
+              "LinkedMapGuid": "",
+              "BackGroundColor": [
+                0,
+                "#FFFFFF"
+              ],
+              "BackGroundImageUrl": "",
+              "fontSize": "19px",
+              "LinkUrl": "",
+              "EnableLinkUrl": false,
+              "LoadHtml": "",
+              "EnableLoadHtml": false,
+              "LoadAPI": "",
+              "EnableLoadAPI": false,
+              "LoadPopup": "",
+              "EnableLoadPopup": false,
+              "LoadPOI": "",
+              "EnableLoadPOI": false,
+              "meta": {
+                "metric": {
+                  "method": "",
+                  "url": "",
+                  "body": ""
+                },
+                "health": {
+                  "method": "",
+                  "url": "http://play.drilldown.info:1880/random_health?title=Room Health",
+                  "body": ""
+                },
+                "position": {
+                  "method": "",
+                  "url": "",
+                  "body": ""
+                }
+              },
+              "hover": false
+            }
+          },
+          {
+            "X": 1676,
+            "Y": 1093,
+            "Z": 0,
+            "W": 37,
+            "H": 39,
+            "D": 0,
+            "UIElementTypeName": "Universal",
+            "UIElementUniqueName": "012d4615-4e43-495f-899e-2da6521dc963",
+            "UIElementDisplayName": "My Header",
+            "SplunkObjectID": 10009,
+            "ClassName": "Universal",
+            "ShapeType": "Rectangle",
+            "ObjectType": "",
+            "DataJSON": {
+              "ID": "012d4615-4e43-495f-899e-2da6521dc963",
+              "Name": "My Header",
+              "ZIndex": 20,
+              "ShapeType": "Rectangle",
+              "SplunkObjectID": "10009",
+              "ClassName": "Universal",
+              "Position": [
+                [
+                  1676,
+                  1093
+                ],
+                [
+                  1713,
+                  1132
+                ]
+              ],
+              "TitlePosition": [
+                [
+                  13,
+                  40
+                ],
+                [
+                  73,
+                  60
+                ]
+              ],
+              "TitleColor": [
+                255,
+                "#FFFFFF"
+              ],
+              "TitleCaption": "",
+              "TitleAlignment": "Center",
+              "IconPosition": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0
+                ]
+              ],
+              "IconImageUrl": "",
+              "ShowAlarmLamp": true,
+              "AlarmLampPosition": [
+                13,
+                12
+              ],
+              "AlarmLampSize": 12,
+              "AlarmLampColor": [
+                255,
+                "#00ff00"
+              ],
+              "AlarmLampBlink": false,
+              "Zoomable": false,
+              "HasLamp": true,
+              "BorderThickness": 0,
+              "BorderRadius": 3.2,
+              "BorderColor": [
+                0,
+                "#FFFFFF"
+              ],
+              "LinkedMapGuid": "",
+              "BackGroundColor": [
+                0,
+                "#FFFFFF"
+              ],
+              "BackGroundImageUrl": "",
+              "fontSize": "19px",
+              "LinkUrl": "",
+              "EnableLinkUrl": false,
+              "LoadHtml": "",
+              "EnableLoadHtml": false,
+              "LoadAPI": "",
+              "EnableLoadAPI": false,
+              "LoadPopup": "",
+              "EnableLoadPopup": false,
+              "LoadPOI": "",
+              "EnableLoadPOI": false,
+              "meta": {
+                "metric": {
+                  "method": "",
+                  "url": "",
+                  "body": ""
+                },
+                "health": {
+                  "method": "",
+                  "url": "http://play.drilldown.info:1880/random_health?title=Room Health",
+                  "body": ""
+                },
+                "position": {
+                  "method": "",
+                  "url": "",
+                  "body": ""
+                }
+              },
+              "hover": false
+            }
+          },
+          {
+            "X": 168,
+            "Y": 1160,
+            "Z": 0,
+            "W": 533,
+            "H": 400,
+            "D": 0,
+            "UIElementTypeName": "Chart",
+            "UIElementUniqueName": "8a337d0d-0000-4cad-a492-949833e326da",
+            "UIElementDisplayName": "Chart_8a337",
+            "ClassName": "Chart",
+            "DataJSON": {
+              "ID": "8a337d0d-0000-4cad-a492-949833e326da",
+              "Name": "Chart_8a337",
+              "ZIndex": "26",
+              "ClassName": "Chart",
+              "Position": [
+                [
+                  168,
+                  1160
+                ],
+                [
+                  701,
+                  1560
+                ]
+              ],
+              "meta": {
+                "data": {
+                  "url_options": [
+                    {
+                      "name": "s1",
+                      "url": "http://play.drilldown.info:1880/factory_line?data=co2List&title=Co2",
+                      "interval": 5,
+                      "body": "{}"
+                    }
+                  ],
+                  "method": "GET",
+                  "name": "s1",
+                  "interval": 5,
+                  "body": "{}",
+                  "url": "http://play.drilldown.info:1880/factory_line?data=co2List&title=Co2"
+                },
+                "position": {
+                  "method": "",
+                  "body": "",
+                  "url": ""
+                }
+              },
+              "hover": false
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

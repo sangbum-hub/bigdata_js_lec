@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=chrome">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    /* ex06 */
+    .sports{
+        font-size: 20px;
+        font-weight: bold;
+        color: blue;
+    }
+
+    .rpg {
+        font-size: 15px;
+        font-weight: bold;
+        color: crimson;
+        border: 3px solid rgb(7, 72, 194);
+    }
+
+    #game6{
+        font-size: 25px;
+        font-weight: bold;
+        color: crimson;
+        border: 3px dashed rgb(12, 247, 247);
+    }
+
+</style>
+<body>
+    <div>
+
+        <!-- <div id="game1" class="sports">NBA 2022</div>
+        <div id="game2" class="sports">FIFA 2022</div>
+        <div id="game3" class="sports">NFL 2022</div>
+        <br />
+        <br />
+        
+        <div id="game4" class="rpg">WoW</div>
+        <div id="game5" class="rpg">Jelda</div>
+        <div id="game6" class="rpg">diablo</div>
+        <br/>
+        <br/>
+
+        <div id="game1" class="sports" year="2022">NBA 2022</div>
+        <div id="game2" class="sports" year="2022">FIFA 2022</div>
+        <div id="game3" class="sports" year="2022">NFL 2022</div>
+        <br />
+        <br />
+        <div id="game4" class="rpg" year="2008">WoW</div>
+        <div id="game5" class="rpg" year="1990">Jelda</div>
+        <div id="game6" class="rpg" year="1998">diablo</div>
+        <div id="game7" year="2022">Marvel Fighter</div> -->
+
+
+        <!-- ex07 -->
+        <!-- <div id="divbox" style="width:200px;height:200px; background: yellowgreen;">
+        </div>
+        <div id="mouseXYText"> </div>
+        <br><br>
+        <input id="inputbox" type="text" style="width:200px;"/>
+        <div id="keyCodeText"> -->
+
+
+    </div>
+    <script>
+
+
+        // // ex01
+        // var arr = ['zero', 'one', 'two'];
+        // var arr2 = new Array();
+        // arr2.push('zero');
+        // arr2.push('one');
+        // arr2.push('two');
+
+        // for(let i in arr){
+        //     console.log(arr[i]);
+        // }
+
+        // for(let i of arr){
+        //     console.log(i);
+        // }
+
+        // arr.forEach((item, index) =>{
+        //     console.log(item, index);
+        // });
+
+
+
+        // // ex02
+        // let array = [{name:'고구마', price:1000}, {name:'감자', price:500},
+        //                 {name:'바나나', price:1500}];
+        
+        // let popped = array.pop();
+        // console.log(popped);
+        // console.log(array);
+
+        // array.push(popped);
+        // array.push({name:'사과', price:2000});
+        // console.log(array);
+
+        // delete array[2];
+        // console.log(array);
+
+        // var arr = [1, true, 'JavaScript', '자바스크립트'];
+        // arr.reverse();
+        // console.log(arr);
+
+        // var removedElement = arr.splice(1, 2, false, 'C언어');
+        // console.log(arr);
+        // console.log(removedElement);
+
+        // let arrayA = ['고구마', '감자', '바나나'];
+        // arrayA.sort(); // 기본 오름차순
+
+        // let arrayB = [{name:'고구마', price:1000}, {name:'감자', price:500},
+        //                 {name:'바나나', price:1500}];
+        
+        // arrayB.sort((itemA, itemB) => {
+        //     if(itemA.name < itemB.name){
+        //         return -1; // 작은 것 판정시 -1 리턴
+        //     } else if(itemA.name > itemB.name){
+        //         return 1; // 큰것 판정시 1 리턴
+        //     } else{
+        //         return 0;
+        //     }
+        // });
+        // console.log(arrayB);
+
+
+
+        // // ex03
+        // const JavascriptObject = [{name:'윤인상', region:'서울'}, {name:'윤명월', region:'도쿄'}];
+        // for(key in JavascriptObject[0]){
+        //     console.log(typeof JavascriptObject[0][key]);
+        //     console.log(JavascriptObject[0][key]);
+        // }
+
+        // const outputA = JSON.stringify(JavascriptObject); // 문자열 형태로 만들때 stringify 사용
+        // const outputB = JSON.stringify(JavascriptObject, null, 2);
+        // console.log(outputA);
+        // console.log(outputB);
+
+        // const outputC = JSON.parse(outputB);            // 문자열을 객체로 변환할 때 parse를 사용
+        // console.log(outputC);
+
+        
+
+        // // ex04
+        // let num = 10;
+
+        // function plusNum(value, plusnum = 20){
+        //     let num = value + 10;
+        //     console.log('함수 호출 결과 값은 ' + num + '입니다.');
+        // }
+
+        // setTimeout(plusNum, 2000, 10);  // 지연시간이 밀리세컨이기에 2000 -> 2초
+
+        // let timer = setInterval(plusNum, 2000, 10);
+        // setTimeout(()=>{
+        //     clearInterval(timer);
+        //     console.log('타이머 종료');
+        // }, 6000);       // 6초 후 타이머 종료
+        
+
+        // // _콜백(Callback)
+        // function callTenTimes(callback){
+        //     for(let i=0; i<10; i++){
+        //         // 매개변수로 전달된 함수를 호출합니다.
+        //         callback();
+        //     }
+        // }
+
+        // callTenTimes(function(){
+        //     console.log('함수 호출');
+        // });
+
+
+
+        // // ex06
+        // const game1Obj = document.querySelector("#game1");
+        // game1Obj.innerHTML = "NBA 2000";
+        
+        // // game1Obj.textContent = "NBA 2000";
+        // game1Obj.setAttribute("year", "2000");  
+        // console.log(`game1Obj year attribute = ${game1Obj.getAttribute("year")} `);
+        
+        // const gameEls = document.querySelectorAll(".sports");
+        // gameEls.forEach((el) => {
+        //     el.style.border = "1px solid blue";
+        //     el.style.padding = "24px";
+        //     el.style.width = "48px";
+        // });
+
+        // const game7Obj = document.getElementById("game7");
+        // game7Obj.classList.add("rpg");
+
+        // const rpggameEls = document.querySelectorAll(".rpg");
+        // rpggameEls.forEach((el) => {
+        //     console.log(el);
+        // });
+
+        // const hiddenObjs = document.querySelectorAll(".sports[year='2022']");
+        // hiddenObjs.forEach((el) => {
+        //     el.style.display = "none";
+        // });
+
+
+        // // ex07
+        // window.onload = function () {       // 윈도우가 실행 했을 때 바로 실행되는 코드 window.onload
+        //     document.getElementById("divbox").addEventListener("click", function(event) {
+        //         document.getElementById("mouseXYText").innerHTML =      //inner이벤트는 안에 tag를 넣는다.
+        //         "mouse >>>> " + event.offsetX + " , " + event.offsetY;
+        //     });
+        //     document.getElementById("inputbox").addEventListener("keyup", function(event) {
+        //         document.getElementById("mouseXYText").innerHTML = 
+        //         "keyCode >>>> " + event.keyCode;
+        //     });
+        // };
+
+
+
+        // ex08
+        var url = "http://dev2.soxcorp.co.kr:17104/mytest";
+        var request = new XMLHttpRequest();
+        request.open("GET", url, true); // 비동기 호출
+        request.send(null);
+        request.onreadystatechange = function () {
+            if (request.readyState === 4 && request.status === 200) {
+                result = request.responseText;
+                result = JSON.parse(result);
+                console.log(result);
+                }
+        };
+        
+    </script>
+</body>
+</html>

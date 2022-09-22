@@ -1,0 +1,250 @@
+{
+  "Code": 200,
+  "Result": {
+    "MapUIElementMapping": [
+      {
+        "TimeStamp": 1648450177,
+        "CoordinateType": "pixel",
+        "MapWidth": 1280,
+        "MapHeight": 720,
+        "UIElementTypeName": "DDP",
+        "UIElementUniqueName": "459baebb-15f1-44fa-b801-09499d2a6771",
+        "UIElementDisplayName": "Slide_a783c78f-71bd-495c-9702-1495f8079d89",
+        "DataJSON": {
+          "MapServiceUrl": "/22b0da4d-4fdf-4746-ae0b-c89b70e6af16/SlideImages/459baebb-15f1-44fa-b801-09499d2a6771.png",
+          "MapBgColor": [
+            255,
+            "#162a42"
+          ],
+          "MapBgType": "Image",
+          "HomeSlide": "a783c78f-71bd-495c-9702-1495f8079d89",
+          "TopSlide": "a783c78f-71bd-495c-9702-1495f8079d89",
+          "PrevSlide": "",
+          "NextSlide": "",
+          "Parent": "a378d804-0038-474b-8253-e41c9fdf2f12",
+          "UseTile": false,
+          "zoomable": true,
+          "pannable": true,
+          "zoomLimit": false
+        },
+        "MapUIElementInfo": [
+          {
+            "X": 65,
+            "Y": 67,
+            "Z": 0,
+            "W": 1151,
+            "H": 604,
+            "D": 0,
+            "UIElementTypeName": "Universal",
+            "UIElementUniqueName": "3aa98ec2-500c-41a5-8bb7-ea0b08cbb223",
+            "UIElementDisplayName": "UniversalRect",
+            "SplunkObjectID": 0,
+            "ClassName": "Universal",
+            "ShapeType": "Rectangle",
+            "ObjectType": "Universal",
+            "DataJSON": {
+              "ID": "3aa98ec2-500c-41a5-8bb7-ea0b08cbb223",
+              "Name": "Universal_3aa98",
+              "ZIndex": 1,
+              "ShapeType": "Rectangle",
+              "SplunkObjectID": "0",
+              "ClassName": "Universal",
+              "Position": [
+                [
+                  65,
+                  67
+                ],
+                [
+                  1215,
+                  671
+                ]
+              ],
+              "TitlePosition": [
+                [
+                  12,
+                  0
+                ],
+                [
+                  88,
+                  12
+                ]
+              ],
+              "TitleColor": [
+                255,
+                "#FFFFFF"
+              ],
+              "TitleCaption": "Service Metric",
+              "TitleAlignment": "Center",
+              "IconPosition": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0
+                ]
+              ],
+              "IconImageUrl": "",
+              "ShowAlarmLamp": false,
+              "AlarmLampPosition": [
+                93,
+                6
+              ],
+              "AlarmLampSize": 12,
+              "AlarmLampColor": [
+                0,
+                "#00ff00"
+              ],
+              "AlarmLampBlink": false,
+              "Zoomable": true,
+              "HasLamp": false,
+              "BorderThickness": 3,
+              "BorderRadius": 3.2,
+              "BorderColor": [
+                255,
+                "#C9C9C9"
+              ],
+              "LinkedMapGuid": "",
+              "BackGroundColor": [
+                0,
+                "#FFFFFF"
+              ],
+              "BackGroundImageUrl": "",
+              "fontSize": "27px",
+              "LinkUrl": "",
+              "EnableLinkUrl": false,
+              "LoadHtml": "",
+              "EnableLoadHtml": false,
+              "LoadAPI": "",
+              "EnableLoadAPI": false,
+              "LoadPopup": "",
+              "EnableLoadPopup": false,
+              "LoadPOI": "",
+              "EnableLoadPOI": false,
+              "meta": {
+                "metric": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                },
+                "health": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                },
+                "position": {
+                  "method": "GET",
+                  "url": "",
+                  "body": ""
+                }
+              }
+            }
+          },
+          {
+            "X": 695,
+            "Y": 227,
+            "Z": 0,
+            "W": 492,
+            "H": 369,
+            "D": 0,
+            "UIElementTypeName": "Chart",
+            "UIElementUniqueName": "2d7ecd04-7370-4057-a321-65d58db31c58",
+            "UIElementDisplayName": "Chart_2d7ec",
+            "ClassName": "Chart",
+            "DataJSON": {
+              "ID": "2d7ecd04-7370-4057-a321-65d58db31c58",
+              "Name": "Chart_2d7ec",
+              "ZIndex": "5",
+              "ClassName": "Chart",
+              "Position": [
+                [
+                  695,
+                  227
+                ],
+                [
+                  1187,
+                  596
+                ]
+              ],
+              "meta": {
+                "data": {
+                  "url_options": [
+                    {
+                      "name": "s1",
+                      "url": "http://play.drilldown.info:1880/itrm_line?proc=PROC_NETWORK_TRAFFIC_ALL",
+                      "interval": 5,
+                      "body": "{}"
+                    }
+                  ],
+                  "method": "GET",
+                  "name": "s1",
+                  "interval": 5,
+                  "body": "{}",
+                  "url": "http://play.drilldown.info:1880/itrm_line?proc=PROC_NETWORK_TRAFFIC_ALL"
+                },
+                "position": {
+                  "method": "",
+                  "body": "",
+                  "url": ""
+                }
+              },
+              "hover": false
+            }
+          },
+          {
+            "X": 113,
+            "Y": 227,
+            "Z": 0,
+            "W": 553,
+            "H": 369,
+            "D": 0,
+            "UIElementTypeName": "Table",
+            "UIElementUniqueName": "b252c83c-753b-49c6-9083-c47b39df18be",
+            "UIElementDisplayName": "Table_b252c",
+            "ClassName": "Table",
+            "DataJSON": {
+              "ID": "b252c83c-753b-49c6-9083-c47b39df18be",
+              "Name": "Table_b252c",
+              "ZIndex": "8",
+              "ClassName": "Table",
+              "Position": [
+                [
+                  113,
+                  227
+                ],
+                [
+                  666,
+                  596
+                ]
+              ],
+              "meta": {
+                "data": {
+                  "url_options": [
+                    {
+                      "name": "s1",
+                      "url": "http://play.drilldown.info:1880/itrm_table?proc=PROC_ALERTS_ALL",
+                      "interval": 10,
+                      "body": "{}"
+                    }
+                  ],
+                  "method": "GET",
+                  "name": "s1",
+                  "interval": 10,
+                  "body": "{}",
+                  "url": "http://play.drilldown.info:1880/itrm_table?proc=PROC_ALERTS_ALL"
+                },
+                "position": {
+                  "method": "",
+                  "body": "",
+                  "url": ""
+                }
+              },
+              "hover": false
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

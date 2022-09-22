@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // // ex1
+        // var num = 10;
+        // console.log("num 값은 ", num);
+        // console.log("num 값은 " + num);
+        // console.log(`num 값은 ${num}` );
+        // document.write("num 값은 ", num, "<br>");
+        // document.write(`num 값은 ${num}`, "<br>");
+        // num = prompt("새로운 값 입력", 0);
+        // console.log("num 값은 ", num);
+
+
+        // // ex2
+        // let num1 = 10;
+        // let num2 = 20;
+        // console.log(`num1 값은${num1} num2 값은${num2}`);
+        // console.log("두값의합은" , num1 + num2 );
+        // const num3 = 100;
+        // console.log(`num3 값은${num3}` );
+        // num3 = 200;
+        // console.log(`num3 값은${num3}` );
+
+
+        // // ex3
+        // let value;
+        // let value1 = 10;
+        // let value2 = "10";
+        // let value3 = true;
+        // let value4 = {};
+        // let value5 = [];
+        // console.log(`value의 타입은 ${typeof value}`);
+        // console.log(`value1의 타입은 ${typeof value1}`);
+        // console.log(`value2의 타입은 ${typeof value2}`);
+        // console.log(`value3의 타입은 ${typeof value3}`);
+        // console.log(`value4의 타입은 ${typeof value4}`);
+        // console.log(`value5의 타입은 ${typeof value5}`);
+
+
+        // // ex4
+        // let value1 = 10;
+        // let value2 = "20";
+        // let value3 = String(value1);
+        // let value4 = Number(value2);
+        // // value3 = value1.toString();
+        // // value4 = parseInt(value2);
+        // console.log(`value3 = ${value3} 의 타입은 ${typeof value3} ` );
+        // console.log(`value4 = ${value4} 의 타입은 ${typeof value4} ` );
+        // console.log(`value = ${value4} 의 불타입은 ${!!value4} ` );
+        // console.log(`value = ${value1} + ${value2} 의 불타입은 ${value1 + value2} ` );
+        // console.log(`50 == "50"의 결과는 ${50 == "50"} ` ); // == 값만 비교
+        // console.log(`50 === "50"의 결과는 ${50 === "50"} ` ); // === 값, 데이터 타입까지 비교
+
+
+        // // ex5
+        // let input = 0;
+        // input = prompt('숫자를 입력하시오', 0);
+        
+        // let result = input + 20;
+        // console.log(`input + 20 = ${result}`);
+
+        // result = input % 2;
+        // console.log(`input % 2 = ${result}`);
+
+        // result+=100;
+        // console.log(`result += 100 -- ${result}`);
+
+        // result++;
+        // console.log(`result++ -- ${result}`);
+
+
+        // // ex6
+        // let input = 0;
+        // input = prompt('숫자를 입력하시오.', 0)
+
+        // if (input % 2 == 1) {
+        //     console.log(`${input}은 홀수`);
+        // } else {
+        //     console.log(`${input}은 짝수`);
+        // }
+
+        // if(input % 2 == 0 || input % 3 == 0){
+        //     console.log(`${input}은 2의 배수 이거나 3의 배수`);
+        // }
+
+
+        // // ex7
+        // let num = 0;
+
+        // while(true){
+        //     num = prompt('숫자를 입력하시오', 0);
+        //     console.log(`input num = ${num}`);
+        //     if(num == 0){
+        //         break;
+        //     }
+        // }
+        
+        // let i = 0;
+        // num = 10;
+
+        // while(i < num) {
+        //     console.log(i);
+        //     i++;
+        // }
+
+
+        // // ex8
+        // let output = 0;
+        // for(let i = 0; i<=100; i++){
+        //     output += 1;
+        // }
+
+        // console.log(output);
+        
+        // let arr = ['사과','배','복숭아','귤'];
+        // for(let i of arr){
+        //     console.log(i)
+        // }
+
+
+        // // ex9
+        // let num = 10;
+        // function plusNum(value){
+        //     console.log('value의 값은 ' + value + '입니다.');
+        //     let num = value + 10;
+        //     return num;
+        // };
+        // console.log('함수 호출 결과 값은 ' + plusNum(num) + '입니다.');
+
+        // let num = 10;
+
+        // const plusNum = function(value){
+        //     console.log('value의 값은' + value + '입니다.');
+        //     return value + 10;
+        // };
+
+        // const plusNum2 = (value, plusNum = 20) => {
+        //     console.log('value의 값은'+ value + '입니다.');
+        //     return value + plusNum;
+        // };
+
+        // console.log(plusNum(num));
+        // console.log(plusNum2(num));
+
+        // const plusNum3 = (start, end) => {
+        //     sum = 0;
+        //     if(start < end){
+        //         for(start; start<=end; start++){
+        //             sum += start;
+        //         }
+        //     }
+        //     else if(start > end){
+        //         for(end; end<=start; end++){
+        //             sum += end;
+        //         }
+        //     }
+        //     else{
+        //         return start;
+        //     }
+
+        //     return sum;
+        // }
+        // console.log(plusNum3(10,10));
+
+
+        // // ex10
+        // var firstStr = "이것도 문자열입니다."; // 큰따옴표를 사용한 문자열
+        // var secondStr = "이것도 문자열입니다."; // 작은따옴표를 사용한 문자열
+        // var thirdStr = "나의 이름은 '홍길동'이야."; // 작은따옴표는 큰따옴표로 둘러싸인 문자열에만 포함
+        // var fourthStr = '나의 이름은 "홍길동"이야.'; // 큰따옴표는 작은따옴표로 둘러싸인 문자열에만 포함
+        
+        // var strKor = "한글";
+        // var strEng = "abcABC";
+        // console.log(strKor.length); // 2
+        // console.log(strEng.length); // 6
+        
+        // let str = "abcDEFabc";
+        // console.log(str.charAt(0)); // a
+        // console.log(str.charCodeAt(0)); // 97 -> 'a'에 해당하는 UTF-16 코드를 반환함.
+
+        // console.log(str.indexOf("abc")); // 0 -> 자바스크립트에서 인덱스는 0부터 시작함.
+        // console.log(str.search("abc")); // 0 -> 자바스크립트에서 인덱스는 0부터 시작함.
+        // console.log(str.indexOf("abcd")); // -1 -> 문자열을 비교할 때 문자의 대소문자를 구분함.
+        // console.log(str.indexOf("abc", 3)); // 6 -> 인덱스 3부터 'abc'를 찾기 시작함.
+        // console.log(str.lastIndexOf("abc")); // 6
+        // console.log(str.lastIndexOf("d")); // -1
+        // console.log(str.lastIndexOf("c")); // 8
+        
+        // console.log(str.replace("abc", "ddd")); // 1개만 바꿈
+        // console.log(str.replaceAll("abc", "ddd")); // 전체 바꿈
+
+        // console.log(str.slice(2, 6)); // cDEF -> 인덱스 2부터 인덱스 5까지의 문자열을 추출함.
+        // console.log(str.slice(0, -1)); // abcDEFab -> 마지막 문자 제거
+        // console.log(str.substring(2, 6)); // cDEF -> 시작인덱스, 끝인덱스
+        // console.log(str.substr(2, 4)); // cDEF -> 시작인덱스, 추출문자수
+        
+        // let str2 = "자바스크립트는 너무 멋져요! 그리고 유용해요.";
+        // console.log(str2.split("")); // 한 문자("")씩 나눔.
+        // console.log(str2.split(" ")); // 띄어쓰기(" ")를 기준으로 나눔.
+        // console.log(str2.split("!")); // 느낌표("!")를 기준으로 나눔.
+
+        // let str3 = "자바스크립트";
+        // console.log(str3.concat("는 너무 멋져요!")); // 자바스크립트는 너무 멋져요!
+        
+        // console.log(str.toUpperCase());
+        // console.log(str.toLowerCase());
+        
+        // let str4 = " 자바스크립트 ";
+        // console.log(str4.trim());
+
+
+        let array = [{name:'고구마', price:1000},{name:'감자', price:500},{name:'바나나', price:1500}];
+        
+        let popped = array.pop();
+        console.log(popped);
+        console.log(array);
+
+        array.push(popped);
+        array.push({name:'사과', price:2000});
+        console.log(array);
+
+
+
+    
+    </script>
+
+</body>
+</html>

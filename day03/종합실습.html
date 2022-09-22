@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<body>
+    <script>
+        let eng = Number(prompt("영어입력", 0));
+        let kor = Number(prompt("국어입력", 0));
+        let math = Number(prompt("수학입력", 0));
+
+        $.ajax({
+            type : "GET", //전송방식 (POST,GET)
+            url: "http://127.0.0.1:1880/grade", //호출 URL
+            data: {
+                    eng: eng,
+                    kor: kor,
+                    math: math
+                    
+            }, // 파라미터 지정
+            dataType: "json", // 페이지 형식
+            success: function (data) {
+                console.log(data); // 받아온 값
+                console.log(data.total);
+                console.log(data.avg);
+            },
+            error: function () {
+                alert("통신실패!!!!");
+            }
+        });
+
+
+    </script>
+</body>
+</html>

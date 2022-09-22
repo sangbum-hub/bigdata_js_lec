@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // // 실습 1
+        // function f(num, arr1){
+        //     for(let i of arr1){
+        //         if(num == i){
+        //             return true;
+        //         }
+        //     } return false;
+        // };
+
+        // var ran_li = [];
+        // for(let i=0; i<5; i++){
+        //     let num = Math.floor(Math.random() * 10);
+        //     if(!f(num, ran_li)){
+        //         ran_li.push(num);
+        //     } else{
+        //         i--;
+        //     }
+
+        // };
+
+        // console.log(ran_li);
+
+
+        // // 실습 2-1
+        // let name = ['kim','lee','park','song','hong'];
+        // let kor = [100, 60, 78, 33, 60];
+        // let math = [60, 70, 79, 63, 61];
+        // let eng = [60, 70, 70, 60, 60];
+
+        // // let obj = {};   // 객체 생성
+        // let arr = [];
+
+        // for(let i=0; i<5; i++){
+        //     arr[i] = {};
+        //     arr[i].name = name[i];
+        //     arr[i].kor = kor[i];
+        //     arr[i].math = math[i];
+        //     arr[i].eng = eng[i];
+        // }
+        
+        // arr.forEach((item, index) => {
+        //     console.log(item);
+        // });
+
+
+        // // 실습 2-2
+        // let name = ['kim', 'lee', 'park'];
+        // let addr = ['seoul', 'busan', 'jeju'];
+        // let addrnum = [10, 12, 22];
+
+        // let arr =[];
+        // for(let i=0; i<name.length; i++){
+        //     let obj = {};
+        //     obj.name = name[i];
+        //     obj.addr = {};
+        //     obj.addr.city = addr[i];
+        //     obj.addr.addrnum = addrnum[i];
+        //     arr.push(obj);
+        // }
+
+        // arr.forEach((item, index) => {
+        //     console.log(item);
+        // });
+
+
+        // // 실습 3-1
+        // let name2 = [];
+        // let kor2 = [];
+        // let math2 = [];
+        // let eng2 = [];
+
+        // for(i=0; i<arr.length; i++){
+        //     name2[i] = arr[i].name;
+        //     kor2[i] = arr[i].kor;
+        //     math2[i] = arr[i].math;
+        //     eng2[i] = arr[i].eng;
+        // }
+        // console.log(name2);
+        // console.log(kor2);
+        // console.log(math2);
+        // console.log(eng2);
+
+
+        // // 실습 3-2
+        // let name2 = [];
+        // let addr2 = [];
+        // let addrnum2 = [];
+
+        // for(i=0; i<arr.length; i++){
+        //     name2[i] = arr[i].name;
+        //     addr2[i] = arr[i].addr.city;
+        //     addrnum2[i] = arr[i].addr.addrnum;
+        // }
+        // console.log(name2);
+        // console.log(addr2);
+        // console.log(addrnum2);
+        
+
+        // // 실습 4
+        // function plusNum(){
+        //     let now = new Date();               // 현재 날짜를 유닉스 코드로 호출
+        //     let timeStr = now.toLocaleString();     // 유닉스 코드로 된 현재 날짜를 문자열로 변경
+        //     console.log('현재 시각은 ' + timeStr + '입니다.');
+        // }
+
+        // let timer = setInterval(plusNum, 1000);
+        // setTimeout(()=>{
+        //     clearInterval(timer);
+        //     console.log('타이머 종료');
+        // }, 6000);       // 6초 후 타이머 종료
+                        
+    </script>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>    
+        $.ajax({
+            type : "GET", //전송방식 (POST,GET)
+            url: "http://make-random.com/MakeRandom/api/userInfo.get", //호출 URL
+            data: { name: "soxcorp", age: 4 }, // 파라미터 지정
+            dataType: "text", // 페이지 형식
+            success: function (data) {
+            console.log(JSON.parse(data)); // 받아온 값
+            },
+            error: function () {
+            alert("통신실패!!!!");
+            }
+        });
+    </script>
+
+
+</body>
+</html>
