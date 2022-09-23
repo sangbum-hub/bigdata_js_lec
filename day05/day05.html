@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/echarts@5.3.3/dist/echarts.min.js"></script>
+
+<body>
+        
+    <div id="container" style="height: 500%"></div>
+    <script type="text/javascript">
+        var dom = document.getElementById("container");
+        var myChart = echarts.init(dom, null, {
+            renderer: "canvas",
+            useDirtyRect: false,
+        });
+        var option;
+        $.ajax({
+            type: "GET", 
+
+            url: "http://61.73.3.96:10002/big2/line_data1", // → 이 부분만 계속 바꾸면 됨
+            url: "http://61.73.3.96:10002/big2/bar_data1", // → 이 부분만 계속 바꾸면 됨
+            // url: "http://61.73.3.96:10002/big2/line_data1", // → 이 부분만 계속 바꾸면 됨
+            // url: "http://61.73.3.96:10002/big2/line_data1", // → 이 부분만 계속 바꾸면 됨
+
+            dataType: "json", 
+            success: function (data) {
+                option = data.option;
+                if (option && typeof option === "object") {
+                    myChart.setOption(option);
+                }
+            },
+            error: function () {
+            console.log("통신실패!!!!");
+            },
+        });
+    </script>
+        
+</body>
+</html>

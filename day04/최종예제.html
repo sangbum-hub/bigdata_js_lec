@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -24,7 +24,8 @@
             </tr>
         </thead>
     </table>
-<div id="container" style="width:100%;height:100%;"></div>
+
+<div id="container" style="width:100%;height:500%;"></div>
     
     <script >
         $("#example").DataTable({
@@ -39,7 +40,7 @@
         });
 
         var dom = document.getElementById("container");
-        var myChart = encharts.init(dom, null, {
+        var myChart = echarts.init(dom, null, {
             renderer: "canvas",
             useDirtyRect : false,
         });
@@ -50,6 +51,7 @@
             url: "http://127.0.0.1:1880/get_citychart", 
             dataType: "json", 
             success: function (data) {
+                console.log(data);
             option = data.option;
                 if(option && typeof option === "object"){
                     myChart.setOption(option);
@@ -61,47 +63,5 @@
         });
     </script>
 </body>
-</html> -->
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-<script src="https://fastly.jsdelivr.net/npm/echarts@5.3.3/dist/echarts.min.js"></script>
-
-<body>
-        
-    <div id="container" style="height: 500%"></div>
-    <script type="text/javascript">
-        var dom = document.getElementById("container");
-        var myChart = echarts.init(dom, null, {
-            renderer: "canvas",
-            useDirtyRect: false,
-        });
-        var option;
-        $.ajax({
-            type: "GET", 
-
-            url: "http://127.0.0.1:1880/get_citychart",  //line_chart node
-
-            dataType: "json", 
-            success: function (data) {
-                option = data.option;
-                if (option && typeof option === "object") {
-                    myChart.setOption(option);
-                }
-            },
-            error: function () {
-            console.log("통신실패!!!!");
-            },
-        });
-    </script>
-        
-</body>
 </html>
+
