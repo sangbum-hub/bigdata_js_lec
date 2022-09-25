@@ -1,0 +1,45 @@
+youtube참조
+https://youtu.be/TWEfWHQv4hA
+
+DDP 플레이어 접속 주소
+http://dev.soxcorp.co.kr/DrilldownPlay
+
+DDP 전용 Node-red 접속 주소
+http://dev2.soxcorp.co.kr:17104
+
+
+id : bduser02
+pw : !bigdata@
+
+node-red
+http://61.73.3.96:10002
+
+
+db : bigdb
+host : 127.0.0.1
+port : 3366
+user : user
+password : !user1
+
+
+src안에 있는것만 복사
+<iframe width="956" height="538" src="https://www.youtube.com/embed/w1dlmOjDLX8" title="C가 주옥같은 개발자들 보세요. Rust 10분 정리!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+
+1. 주제(서비스) 공급 대상자 : 국가 인구/부동관 관련 정책 수립자 -> 지역 주택공급 정책 수립
+지역 전입 
+-> 그에 따른 아파트/주택 가격 안정화 및 대책마련(재건축 필요, LH 사업 진행 등)
+2. 데이터 수집 방법(라이브, db, 랜덤) : 공공데이터 xlsx
+3. 어떤 차트/ 시각화를 사용하여 보여줄 것인가 : table, bar/line, 히트맵-지도(가능여부 판별해보기)
+
+1970~ 2022, 분기 
+지역별 5~10년 단위 통계 및 최근 년도 데이터 추이를 비교 및 그에 따른 대책 선정 + 최근 동향 관련 뉴스/영상 첨부
+
+
+HOME
+년도별 평균 테이블
+TOP3 AREA
+지역별분포
+원인분석영상
