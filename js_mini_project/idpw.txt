@@ -8,7 +8,7 @@ DDP 전용 Node-red 접속 주소
 http://dev2.soxcorp.co.kr:17104
 
 
-id : bduser02
+id : bduser32
 pw : !bigdata@
 
 node-red
@@ -24,6 +24,8 @@ password : !user1
 
 src안에 있는것만 복사
 <iframe width="956" height="538" src="https://www.youtube.com/embed/w1dlmOjDLX8" title="C가 주옥같은 개발자들 보세요. Rust 10분 정리!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="956" height="538" src="https://www.youtube.com/embed/OFLkXI27qmo" title="주거비 부담에 서울 떠나 경기로…인구 이동 5년 만에 최대 [MBN 종합뉴스]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 
