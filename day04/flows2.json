@@ -1,0 +1,931 @@
+[
+    {
+        "id": "675fc68bc3f59721",
+        "type": "tab",
+        "label": "플로우 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "de7228f946eb40af",
+        "type": "http in",
+        "z": "675fc68bc3f59721",
+        "name": "",
+        "url": "/bd1/line_data1",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 150,
+        "y": 660,
+        "wires": [
+            [
+                "09763b637ac98732"
+            ]
+        ]
+    },
+    {
+        "id": "16991385f4804689",
+        "type": "http response",
+        "z": "675fc68bc3f59721",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 610,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "09763b637ac98732",
+        "type": "function",
+        "z": "675fc68bc3f59721",
+        "name": "line_chart",
+        "func": "msg.payload = {};\n\nmsg.payload.option = {\n    xAxis: {\n        type: 'category',\n        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']\n    },\n    yAxis: {\n        type: 'value'\n    },\n    series: [\n        {\n            data: [150, 230, 224, 218, 135, 147, 260],\n            type: 'line'\n        }\n    ]\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 660,
+        "wires": [
+            [
+                "16991385f4804689"
+            ]
+        ]
+    },
+    {
+        "id": "9323f3060e42397d",
+        "type": "http in",
+        "z": "675fc68bc3f59721",
+        "name": "",
+        "url": "/bd1/bar_data1",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 150,
+        "y": 760,
+        "wires": [
+            [
+                "13cc199783009bdd"
+            ]
+        ]
+    },
+    {
+        "id": "1a39bcc5afe31037",
+        "type": "http response",
+        "z": "675fc68bc3f59721",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 610,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "13cc199783009bdd",
+        "type": "function",
+        "z": "675fc68bc3f59721",
+        "name": "bar_chart",
+        "func": "msg.payload = {};\n\nmsg.payload.option = {\n    xAxis: {\n        type: 'category',\n        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']\n    },\n    yAxis: {\n        type: 'value'\n    },\n    series: [\n        {\n            data: [120, 200, 150, 80, 70, 110, 130],\n            type: 'bar',\n            showBackground: true,\n            backgroundStyle: {\n                color: 'rgba(180, 180, 180, 0.2)'\n            }\n        }\n    ]\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 760,
+        "wires": [
+            [
+                "1a39bcc5afe31037"
+            ]
+        ]
+    },
+    {
+        "id": "69ce519da41f1158",
+        "type": "http in",
+        "z": "675fc68bc3f59721",
+        "name": "",
+        "url": "/bd1/scatter_data1",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 840,
+        "wires": [
+            [
+                "3798c17e2b32af65"
+            ]
+        ]
+    },
+    {
+        "id": "63ad63d2dd45c8da",
+        "type": "http response",
+        "z": "675fc68bc3f59721",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 610,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "3798c17e2b32af65",
+        "type": "function",
+        "z": "675fc68bc3f59721",
+        "name": "scatter_chart",
+        "func": "msg.payload = {};\n\nmsg.payload.option = {\n    xAxis: {},\n    yAxis: {},\n    series: [\n        {\n            symbolSize: 20,\n            data: [\n                [10.0, 8.04],\n                [8.07, 6.95],\n                [13.0, 7.58],\n                [9.05, 8.81],\n                [11.0, 8.33],\n                [14.0, 7.66],\n                [13.4, 6.81],\n                [10.0, 6.33],\n                [14.0, 8.96],\n                [12.5, 6.82],\n                [9.15, 7.2],\n                [11.5, 7.2],\n                [3.03, 4.23],\n                [12.2, 7.83],\n                [2.02, 4.47],\n                [1.05, 3.33],\n                [4.05, 4.96],\n                [6.03, 7.24],\n                [12.0, 6.26],\n                [12.0, 8.84],\n                [7.08, 5.82],\n                [5.02, 5.68]\n            ],\n            type: 'scatter'\n        }\n    ]\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 840,
+        "wires": [
+            [
+                "63ad63d2dd45c8da"
+            ]
+        ]
+    },
+    {
+        "id": "907392f9d06654d5",
+        "type": "http response",
+        "z": "675fc68bc3f59721",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 610,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "9daac21369e2925e",
+        "type": "function",
+        "z": "675fc68bc3f59721",
+        "name": "line_chart2",
+        "func": "msg.payload = {};\n\nmsg.payload.option = {\n    xAxis: {\n        type: 'category',\n        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']\n    },\n    yAxis: {\n        type: 'value'\n    },\n    series: [\n        {\n            data: [150, 230, 224, 218, 135, 147, 260],\n            type: 'line'\n        }\n    ]\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 1040,
+        "wires": [
+            [
+                "907392f9d06654d5"
+            ]
+        ]
+    },
+    {
+        "id": "ad3d1f87406ba292",
+        "type": "inject",
+        "z": "675fc68bc3f59721",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 80,
+        "wires": [
+            [
+                "a91ac00825b65572"
+            ]
+        ]
+    },
+    {
+        "id": "a91ac00825b65572",
+        "type": "function",
+        "z": "675fc68bc3f59721",
+        "name": "function 13",
+        "func": "msg.payload = {}; //결과만 받을 수 있도록 초기화\n\nmsg.topic = \n\"select * from city limit 10;\"\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 80,
+        "wires": [
+            [
+                "09ffef1ec25f8b35"
+            ]
+        ]
+    },
+    {
+        "id": "09ffef1ec25f8b35",
+        "type": "mysql",
+        "z": "675fc68bc3f59721",
+        "mydb": "3c8f13bac289c8de",
+        "name": "",
+        "x": 510,
+        "y": 80,
+        "wires": [
+            [
+                "94d32547a287bf52"
+            ]
+        ]
+    },
+    {
+        "id": "94d32547a287bf52",
+        "type": "debug",
+        "z": "675fc68bc3f59721",
+        "name": "debug 18",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "2165da89088788a1",
+        "type": "inject",
+        "z": "675fc68bc3f59721",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 180,
+        "wires": [
+            [
+                "ab51b57a3429124d"
+            ]
+        ]
+    },
+    {
+        "id": "ab51b57a3429124d",
+        "type": "function",
+        "z": "675fc68bc3f59721",
+        "name": "function 14",
+        "func": "msg.payload = {};\n\nmsg.topic = \n\"select * from city where population >= 700000 limit 10\"\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 180,
+        "wires": [
+            [
+                "d604cb503931ba48"
+            ]
+        ]
+    },
+    {
+        "id": "d604cb503931ba48",
+        "type": "mysql",
+        "z": "675fc68bc3f59721",
+        "mydb": "3c8f13bac289c8de",
+        "name": "",
+        "x": 510,
+        "y": 180,
+        "wires": [
+            [
+                "d548f3134489efaa"
+            ]
+        ]
+    },
+    {
+        "id": "d548f3134489efaa",
+        "type": "debug",
+        "z": "675fc68bc3f59721",
+        "name": "debug 19",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "4397a37206923836",
+        "type": "inject",
+        "z": "675fc68bc3f59721",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 300,
+        "wires": [
+            [
+                "c460c7c5c35fcf6a"
+            ]
+        ]
+    },
+    {
+        "id": "da3c57b427a8121e",
+        "type": "mysql",
+        "z": "675fc68bc3f59721",
+        "mydb": "3c8f13bac289c8de",
+        "name": "",
+        "x": 470,
+        "y": 300,
+        "wires": [
+            [
+                "c7321a3b385147ee"
+            ]
+        ]
+    },
+    {
+        "id": "f3c80e19fa964f6a",
+        "type": "debug",
+        "z": "675fc68bc3f59721",
+        "name": "debug 21",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "c460c7c5c35fcf6a",
+        "type": "function",
+        "z": "675fc68bc3f59721",
+        "name": "function 18",
+        "func": "msg.payload = {}; //결과만 받을 수 있도록 초기화\n\nmsg.topic = \n\"select * from city limit 10;\"\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 300,
+        "wires": [
+            [
+                "da3c57b427a8121e"
+            ]
+        ]
+    },
+    {
+        "id": "c7321a3b385147ee",
+        "type": "function",
+        "z": "675fc68bc3f59721",
+        "name": "function 17",
+        "func": "let orglist = msg.payload;\nlet result = [];\n\nfor (let rec of orglist){\n    if(rec.Population >= 700000){\n        result.push(rec);\n    }\n}\n\nmsg.payload = result;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 300,
+        "wires": [
+            [
+                "f3c80e19fa964f6a"
+            ]
+        ]
+    },
+    {
+        "id": "3dcd15153793d59d",
+        "type": "mysql",
+        "z": "675fc68bc3f59721",
+        "mydb": "3c8f13bac289c8de",
+        "name": "",
+        "x": 470,
+        "y": 380,
+        "wires": [
+            [
+                "eb4fc9f9acd793aa"
+            ]
+        ]
+    },
+    {
+        "id": "41f3bb4b5e0d6391",
+        "type": "function",
+        "z": "675fc68bc3f59721",
+        "name": "function 19",
+        "func": "msg.payload = {}; //결과만 받을 수 있도록 초기화\n\nmsg.topic = \n\"select * from city limit 10;\"\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 380,
+        "wires": [
+            [
+                "3dcd15153793d59d"
+            ]
+        ]
+    },
+    {
+        "id": "eb4fc9f9acd793aa",
+        "type": "function",
+        "z": "675fc68bc3f59721",
+        "name": "function 20",
+        "func": "let orglist = msg.payload;\nlet result = [];\n\nfor (let rec of orglist){\n    if(rec.Population >= 700000){\n        result.push(rec);\n    }\n}\n\nmsg.payload = result;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 380,
+        "wires": [
+            [
+                "30793bc7ab1ce5e2"
+            ]
+        ]
+    },
+    {
+        "id": "1bc19401a9828a67",
+        "type": "http in",
+        "z": "675fc68bc3f59721",
+        "name": "",
+        "url": "/city",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 380,
+        "wires": [
+            [
+                "41f3bb4b5e0d6391"
+            ]
+        ]
+    },
+    {
+        "id": "30793bc7ab1ce5e2",
+        "type": "http response",
+        "z": "675fc68bc3f59721",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 810,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "59c2b407f441dcc6",
+        "type": "http in",
+        "z": "675fc68bc3f59721",
+        "name": "",
+        "url": "/tabledata",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 480,
+        "wires": [
+            [
+                "556077e2b0e438bb"
+            ]
+        ]
+    },
+    {
+        "id": "5358e2e52b6a6c1f",
+        "type": "http response",
+        "z": "675fc68bc3f59721",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 650,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "556077e2b0e438bb",
+        "type": "template",
+        "z": "675fc68bc3f59721",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\n  \"data\": [\n    {\n      \"id\": \"1\",\n      \"name\": \"Tiger Nixon\",\n      \"position\": \"System Architect\",\n      \"salary\": 320800,\n      \"start_date\": \"2011/04/25\",\n      \"office\": \"Edinburgh\",\n      \"extn\": \"5421\"\n    },\n    {\n      \"id\": \"2\",\n      \"name\": \"Garrett Winters\",\n      \"position\": \"Accountant\",\n      \"salary\": 170750,\n      \"start_date\": \"2011/07/25\",\n      \"office\": \"Tokyo\",\n      \"extn\": \"8422\"\n    },\n    {\n      \"id\": \"3\",\n      \"name\": \"Ashton Cox\",\n      \"position\": \"Junior Technical Author\",\n      \"salary\": 86000,\n      \"start_date\": \"2009/01/12\",\n      \"office\": \"San Francisco\",\n      \"extn\": \"1562\"\n    },\n    {\n      \"id\": \"4\",\n      \"name\": \"Cedric Kelly\",\n      \"position\": \"Senior Javascript Developer\",\n      \"salary\": 433060,\n      \"start_date\": \"2012/03/29\",\n      \"office\": \"Edinburgh\",\n      \"extn\": \"6224\"\n    },\n    {\n      \"id\": \"5\",\n      \"name\": \"Airi Satou\",\n      \"position\": \"Accountant\",\n      \"salary\": 162700,\n      \"start_date\": \"2008/11/28\",\n      \"office\": \"Tokyo\",\n      \"extn\": \"5407\"\n    },\n    {\n      \"id\": \"6\",\n      \"name\": \"Brielle Williamson\",\n      \"position\": \"Integration Specialist\",\n      \"salary\": 372000,\n      \"start_date\": \"2012/12/02\",\n      \"office\": \"New York\",\n      \"extn\": \"4804\"\n    },\n    {\n      \"id\": \"7\",\n      \"name\": \"Herrod Chandler\",\n      \"position\": \"Sales Assistant\",\n      \"salary\": 137500,\n      \"start_date\": \"2012/08/06\",\n      \"office\": \"San Francisco\",\n      \"extn\": \"9608\"\n    },\n    {\n      \"id\": \"8\",\n      \"name\": \"Rhona Davidson\",\n      \"position\": \"Integration Specialist\",\n      \"salary\": 327900,\n      \"start_date\": \"2010/10/14\",\n      \"office\": \"Tokyo\",\n      \"extn\": \"6200\"\n    },\n    {\n      \"id\": \"9\",\n      \"name\": \"Colleen Hurst\",\n      \"position\": \"Javascript Developer\",\n      \"salary\": 205500,\n      \"start_date\": \"2009/09/15\",\n      \"office\": \"San Francisco\",\n      \"extn\": \"2360\"\n    },\n    {\n      \"id\": \"10\",\n      \"name\": \"Sonya Frost\",\n      \"position\": \"Software Engineer\",\n      \"salary\": 103600,\n      \"start_date\": \"2008/12/13\",\n      \"office\": \"Edinburgh\",\n      \"extn\": \"1667\"\n    },\n    {\n      \"id\": \"11\",\n      \"name\": \"Jena Gaines\",\n      \"position\": \"Office Manager\",\n      \"salary\": 90560,\n      \"start_date\": \"2008/12/19\",\n      \"office\": \"London\",\n      \"extn\": \"3814\"\n    },\n    {\n      \"id\": \"12\",\n      \"name\": \"Quinn Flynn\",\n      \"position\": \"Support Lead\",\n      \"salary\": 342000,\n      \"start_date\": \"2013/03/03\",\n      \"office\": \"Edinburgh\",\n      \"extn\": \"9497\"\n    },\n    {\n      \"id\": \"13\",\n      \"name\": \"Charde Marshall\",\n      \"position\": \"Regional Director\",\n      \"salary\": 470600,\n      \"start_date\": \"2008/10/16\",\n      \"office\": \"San Francisco\",\n      \"extn\": \"6741\"\n    },\n    {\n      \"id\": \"14\",\n      \"name\": \"Haley Kennedy\",\n      \"position\": \"Senior Marketing Designer\",\n      \"salary\": 313500,\n      \"start_date\": \"2012/12/18\",\n      \"office\": \"London\",\n      \"extn\": \"3597\"\n    },\n    {\n      \"id\": \"15\",\n      \"name\": \"Tatyana Fitzpatrick\",\n      \"position\": \"Regional Director\",\n      \"salary\": 385750,\n      \"start_date\": \"2010/03/17\",\n      \"office\": \"London\",\n      \"extn\": \"1965\"\n    },\n    {\n      \"id\": \"16\",\n      \"name\": \"Michael Silva\",\n      \"position\": \"Marketing Designer\",\n      \"salary\": 198500,\n      \"start_date\": \"2012/11/27\",\n      \"office\": \"London\",\n      \"extn\": \"1581\"\n    },\n    {\n      \"id\": \"17\",\n      \"name\": \"Paul Byrd\",\n      \"position\": \"Chief Financial Officer (CFO)\",\n      \"salary\": 725000,\n      \"start_date\": \"2010/06/09\",\n      \"office\": \"New York\",\n      \"extn\": \"3059\"\n    },\n    {\n      \"id\": \"18\",\n      \"name\": \"Gloria Little\",\n      \"position\": \"Systems Administrator\",\n      \"salary\": 237500,\n      \"start_date\": \"2009/04/10\",\n      \"office\": \"New York\",\n      \"extn\": \"1721\"\n    },\n    {\n      \"id\": \"19\",\n      \"name\": \"Bradley Greer\",\n      \"position\": \"Software Engineer\",\n      \"salary\": 132000,\n      \"start_date\": \"2012/10/13\",\n      \"office\": \"London\",\n      \"extn\": \"2558\"\n    },\n    {\n      \"id\": \"20\",\n      \"name\": \"Dai Rios\",\n      \"position\": \"Personnel Lead\",\n      \"salary\": 217500,\n      \"start_date\": \"2012/09/26\",\n      \"office\": \"Edinburgh\",\n      \"extn\": \"2290\"\n    }\n  ]\n}",
+        "output": "json",
+        "x": 400,
+        "y": 480,
+        "wires": [
+            [
+                "5358e2e52b6a6c1f"
+            ]
+        ]
+    },
+    {
+        "id": "deb0e072ccd2f590",
+        "type": "http in",
+        "z": "675fc68bc3f59721",
+        "name": "",
+        "url": "/tabledata2",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 580,
+        "wires": [
+            [
+                "93f03de73527e23a"
+            ]
+        ]
+    },
+    {
+        "id": "73ffed2e982e794e",
+        "type": "http response",
+        "z": "675fc68bc3f59721",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 790,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "93f03de73527e23a",
+        "type": "http request",
+        "z": "675fc68bc3f59721",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://make-random.com/MakeRandom/api/userInfo.get",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 370,
+        "y": 580,
+        "wires": [
+            [
+                "dd60643a21c240f4"
+            ]
+        ]
+    },
+    {
+        "id": "dd60643a21c240f4",
+        "type": "function",
+        "z": "675fc68bc3f59721",
+        "name": "function 21",
+        "func": "var data = msg.payload;\n\nvar convert = [];\n\nfor(let line of data){\n    let obj = {};\n    obj.id = line.id;\n    obj.website = line.website;\n    obj.address = line.address.address;\n    obj.phone = line.phone;\n    obj.name = line.name;\n    obj.company = line.company.name;\n    obj.email = line.email;\n\n    convert.push(obj);\n}\n\nmsg.payload = {};\nmsg.payload.data = convert;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 580,
+        "wires": [
+            [
+                "73ffed2e982e794e"
+            ]
+        ]
+    },
+    {
+        "id": "e94cc2d393d1ed7f",
+        "type": "http in",
+        "z": "675fc68bc3f59721",
+        "name": "",
+        "url": "/bd1/gauge_data1",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 940,
+        "wires": [
+            [
+                "22d74a644b579a7a"
+            ]
+        ]
+    },
+    {
+        "id": "6262ae8892bd083d",
+        "type": "http response",
+        "z": "675fc68bc3f59721",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 610,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "22d74a644b579a7a",
+        "type": "function",
+        "z": "675fc68bc3f59721",
+        "name": "gauge_chart",
+        "func": "msg.payload = {};\n\nmsg.payload.option = {\n    tooltip: {\n        formatter: '{a} <br/>{b} : {c}%'\n    },\n    series: [\n        {\n            name: 'Pressure',\n            type: 'gauge',\n            progress: {\n                show: true\n            },\n            detail: {\n                valueAnimation: true,\n                formatter: '{value}'\n            },\n            data: [\n                {\n                    value: 50,\n                    name: 'SCORE'\n                }\n            ]\n        }\n    ]\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 940,
+        "wires": [
+            [
+                "6262ae8892bd083d"
+            ]
+        ]
+    },
+    {
+        "id": "6811d44671e318bc",
+        "type": "mysql",
+        "z": "675fc68bc3f59721",
+        "mydb": "3c8f13bac289c8de",
+        "name": "",
+        "x": 490,
+        "y": 1220,
+        "wires": [
+            [
+                "3abfc83d712bd2dd"
+            ]
+        ]
+    },
+    {
+        "id": "b5b81944537eb27c",
+        "type": "function",
+        "z": "675fc68bc3f59721",
+        "name": "function 26",
+        "func": "msg.payload = {}; //결과만 받을 수 있도록 초기화\n\nmsg.topic = \n\"select * from country order by GNP desc limit 10;\"\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 1220,
+        "wires": [
+            [
+                "6811d44671e318bc"
+            ]
+        ]
+    },
+    {
+        "id": "a6ae82e612e2af0b",
+        "type": "http in",
+        "z": "675fc68bc3f59721",
+        "name": "",
+        "url": "/get_citytable",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 1220,
+        "wires": [
+            [
+                "b5b81944537eb27c"
+            ]
+        ]
+    },
+    {
+        "id": "4c97c4a261efb88b",
+        "type": "http response",
+        "z": "675fc68bc3f59721",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 850,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "3abfc83d712bd2dd",
+        "type": "function",
+        "z": "675fc68bc3f59721",
+        "name": "function 28",
+        "func": "let data = msg.payload;\n\nmsg.payload = {};\nmsg.payload.data = data;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 1220,
+        "wires": [
+            [
+                "4c97c4a261efb88b",
+                "8ff4b91fb2676cce"
+            ]
+        ]
+    },
+    {
+        "id": "19855a8b3075775f",
+        "type": "http in",
+        "z": "675fc68bc3f59721",
+        "name": "",
+        "url": "/bd1/line_data1",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 150,
+        "y": 1040,
+        "wires": [
+            [
+                "9daac21369e2925e"
+            ]
+        ]
+    },
+    {
+        "id": "5cbd70f39a21a91a",
+        "type": "inject",
+        "z": "675fc68bc3f59721",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 1160,
+        "wires": [
+            [
+                "b5b81944537eb27c"
+            ]
+        ]
+    },
+    {
+        "id": "8ff4b91fb2676cce",
+        "type": "debug",
+        "z": "675fc68bc3f59721",
+        "name": "debug 22",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "7e4f6b9a0aeb720c",
+        "type": "mysql",
+        "z": "675fc68bc3f59721",
+        "mydb": "3c8f13bac289c8de",
+        "name": "",
+        "x": 490,
+        "y": 1400,
+        "wires": [
+            [
+                "28495a1a75ca9a50"
+            ]
+        ]
+    },
+    {
+        "id": "9a33258aa8fab00f",
+        "type": "function",
+        "z": "675fc68bc3f59721",
+        "name": "function 29",
+        "func": "msg.payload = {}; //결과만 받을 수 있도록 초기화\n\nmsg.topic = \n\"select * from country order by GNP desc limit 10;\"\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 1400,
+        "wires": [
+            [
+                "7e4f6b9a0aeb720c"
+            ]
+        ]
+    },
+    {
+        "id": "8b6ac002bc6c8ae3",
+        "type": "http in",
+        "z": "675fc68bc3f59721",
+        "name": "",
+        "url": "/get_citychart",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 1400,
+        "wires": [
+            [
+                "9a33258aa8fab00f"
+            ]
+        ]
+    },
+    {
+        "id": "36e47db8ec51b48d",
+        "type": "http response",
+        "z": "675fc68bc3f59721",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 850,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "28495a1a75ca9a50",
+        "type": "function",
+        "z": "675fc68bc3f59721",
+        "name": "function 30",
+        "func": "let data = msg.payload;\nlet xValue = [];\nlet dataValue = [];\n\nfor(let item of data){\n    xValue.push(item.Name);\n    dataValue.push(item.GNP);\n}\nlet option = {\n    tooltip: {\n        trigger: 'axis',\n        axisPointer: {\n            type: 'shadow'\n        }\n    },\n    xAxis: {\n        type: 'category',\n        data: xValue\n    },\n\n    yAxis: {\n        type: 'value'\n    },\n    series: [{\n        data: dataValue,\n        type: 'bar'\n    }]\n};\nmsg.payload = {};\nmsg.payload.option = option;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 1400,
+        "wires": [
+            [
+                "36e47db8ec51b48d",
+                "76e38b1bb7b04293"
+            ]
+        ]
+    },
+    {
+        "id": "76e38b1bb7b04293",
+        "type": "debug",
+        "z": "675fc68bc3f59721",
+        "name": "debug 23",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "3c8f13bac289c8de",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3366",
+        "db": "bigdb",
+        "tz": "",
+        "charset": "UTF8"
+    }
+]

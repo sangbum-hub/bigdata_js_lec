@@ -1,0 +1,1113 @@
+[
+    {
+        "id": "d4771e0e6694dd8b",
+        "type": "tab",
+        "label": "플로우_project",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "3d17086465d51b3a",
+        "type": "http in",
+        "z": "d4771e0e6694dd8b",
+        "name": "",
+        "url": "/team2_table1",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 150,
+        "y": 320,
+        "wires": [
+            [
+                "571c1f5cbb7fa8b8"
+            ]
+        ]
+    },
+    {
+        "id": "cda0e4084d547f2d",
+        "type": "http response",
+        "z": "d4771e0e6694dd8b",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 890,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "571c1f5cbb7fa8b8",
+        "type": "function",
+        "z": "d4771e0e6694dd8b",
+        "name": "function 37",
+        "func": "msg.payload = {};\n\nmsg.topic =\n    \"SELECT * from city_avg1;\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 320,
+        "wires": [
+            [
+                "2fbd3c4ee8b31658"
+            ]
+        ]
+    },
+    {
+        "id": "2fbd3c4ee8b31658",
+        "type": "mysql",
+        "z": "d4771e0e6694dd8b",
+        "mydb": "3c8f13bac289c8de",
+        "name": "",
+        "x": 530,
+        "y": 320,
+        "wires": [
+            [
+                "ad4948718d6220ed"
+            ]
+        ]
+    },
+    {
+        "id": "ad4948718d6220ed",
+        "type": "function",
+        "z": "d4771e0e6694dd8b",
+        "name": "function 38",
+        "func": "var data = msg.payload;\n\nvar headerlist = [];\n\n//header 추가\nfor (var Key in data[0]) {\n    headerlist.push({ text: Key, value: Key });\n}\n\nmsg.payload = {\n    headers: headerlist,\n    items: data // 데이터는 읽어온 대로\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 320,
+        "wires": [
+            [
+                "cda0e4084d547f2d"
+            ]
+        ]
+    },
+    {
+        "id": "8e27891436450802",
+        "type": "http in",
+        "z": "d4771e0e6694dd8b",
+        "name": "",
+        "url": "/team2_table2",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 150,
+        "y": 420,
+        "wires": [
+            [
+                "51178fefc96246c0"
+            ]
+        ]
+    },
+    {
+        "id": "f2e870726fee344b",
+        "type": "http response",
+        "z": "d4771e0e6694dd8b",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 890,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "51178fefc96246c0",
+        "type": "function",
+        "z": "d4771e0e6694dd8b",
+        "name": "function 39",
+        "func": "msg.payload = {};\n\nmsg.topic =\n    \"SELECT * from seoul_avg1;\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 420,
+        "wires": [
+            [
+                "9a98fdb8eaad5515"
+            ]
+        ]
+    },
+    {
+        "id": "9a98fdb8eaad5515",
+        "type": "mysql",
+        "z": "d4771e0e6694dd8b",
+        "mydb": "3c8f13bac289c8de",
+        "name": "",
+        "x": 530,
+        "y": 420,
+        "wires": [
+            [
+                "b5cd8d03246b0f3e"
+            ]
+        ]
+    },
+    {
+        "id": "b5cd8d03246b0f3e",
+        "type": "function",
+        "z": "d4771e0e6694dd8b",
+        "name": "function 40",
+        "func": "var data = msg.payload;\n\nvar headerlist = [];\n\n//header 추가\nfor (var Key in data[0]) {\n    headerlist.push({ text: Key, value: Key });\n}\n\nmsg.payload = {\n    headers: headerlist,\n    items: data // 데이터는 읽어온 대로\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 420,
+        "wires": [
+            [
+                "f2e870726fee344b"
+            ]
+        ]
+    },
+    {
+        "id": "227b9d29684aa1c8",
+        "type": "http in",
+        "z": "d4771e0e6694dd8b",
+        "name": "",
+        "url": "/line_ch",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 540,
+        "wires": [
+            [
+                "1639f81ae97809e5"
+            ]
+        ]
+    },
+    {
+        "id": "b37fa49c90047e68",
+        "type": "http response",
+        "z": "d4771e0e6694dd8b",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 810,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "d7c31d5045d36431",
+        "type": "function",
+        "z": "d4771e0e6694dd8b",
+        "name": "line_chart2",
+        "func": "msg.payload = {};\n\nmsg.payload = {\n    xAxis: {\n        type: 'category',\n        data: 'unnamed: 0'\n    },\n    yAxis: {\n        type: 'value'\n    },\n    series: [\n        {\n            data: [150, 230, 224, 218, 135, 147, 260],\n            type: 'line'\n        }\n    ]\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 540,
+        "wires": [
+            [
+                "b37fa49c90047e68"
+            ]
+        ]
+    },
+    {
+        "id": "12220c21d9c052d8",
+        "type": "mysql",
+        "z": "d4771e0e6694dd8b",
+        "mydb": "3c8f13bac289c8de",
+        "name": "",
+        "x": 490,
+        "y": 540,
+        "wires": [
+            [
+                "d7c31d5045d36431"
+            ]
+        ]
+    },
+    {
+        "id": "1639f81ae97809e5",
+        "type": "function",
+        "z": "d4771e0e6694dd8b",
+        "name": "function 41",
+        "func": "msg.payload = {};\n\nmsg.topic =\n    \"SELECT * from city_avg1;\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 540,
+        "wires": [
+            [
+                "12220c21d9c052d8"
+            ]
+        ]
+    },
+    {
+        "id": "8a4fdf2a8cf1c542",
+        "type": "mysql",
+        "z": "d4771e0e6694dd8b",
+        "mydb": "3c8f13bac289c8de",
+        "name": "",
+        "x": 510,
+        "y": 760,
+        "wires": [
+            [
+                "c51cf5de50b4fb0c"
+            ]
+        ]
+    },
+    {
+        "id": "d73fc66e66d84cb7",
+        "type": "function",
+        "z": "d4771e0e6694dd8b",
+        "name": "function 42",
+        "func": "msg.payload = {}; //결과만 받을 수 있도록 초기화\n\nmsg.topic = \n\"select * from city_avg1;\"\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 760,
+        "wires": [
+            [
+                "8a4fdf2a8cf1c542"
+            ]
+        ]
+    },
+    {
+        "id": "3508bcc2c16befec",
+        "type": "http in",
+        "z": "d4771e0e6694dd8b",
+        "name": "",
+        "url": "/city_bar",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 760,
+        "wires": [
+            [
+                "d73fc66e66d84cb7"
+            ]
+        ]
+    },
+    {
+        "id": "f3ec77e9d7a17195",
+        "type": "http response",
+        "z": "d4771e0e6694dd8b",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 870,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "c51cf5de50b4fb0c",
+        "type": "function",
+        "z": "d4771e0e6694dd8b",
+        "name": "function 43",
+        "func": "let orglist = msg.payload;\nlet result_name = [];\nlet result_in = [];\nlet result_out = [];\n\nlet word = \"1990_in\";\nlet word1 = \"1990_out\";\nlet word2 = \"2000_in\";\nlet word3 = \"2000_out\";\nlet word4 = \"2010_in\";\nlet word5 = \"2010_out\";\nlet word6 = \"2020_in\";\nlet word7 = \"2020_out\";\nlet word8 = \"2021_in\";\nlet word9 = \"2021_out\";\nlet word10 = \"2022_in\";\nlet word11 = \"2022_out\";\n\n\nfor (let rec of orglist) {\n    result_name.push(rec.시도별);\n    result_in.push(rec[word]);\n    result_out.push(rec[word1]);\n    result_in.push(rec[word2]);\n    result_out.push(rec[word3]);\n    result_in.push(rec[word4]);\n    result_out.push(rec[word5]);\n    result_in.push(rec[word6]);\n    result_out.push(rec[word7]);\n    result_in.push(rec[word8]);\n    result_out.push(rec[word9]);\n    result_in.push(rec[word10]);\n    result_out.push(rec[word11]);\n\n}\n\nmsg.payload = {};\nmsg.payload.name = result_name;\nmsg.payload.in = result_in;\nmsg.payload.out = result_out;\n\nlet option = {\n    xAxis: {\n        type: \"category\",\n        data: msg.payload.name,\n    },\n    yAxis: {\n        type: \"value\",\n    },\n    series: [\n        {\n            data: msg.payload.in,\n            type: \"line\",\n        },\n    ],\n};\n\nmsg.payload = {};\nmsg.payload = option;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 760,
+        "wires": [
+            [
+                "f3ec77e9d7a17195",
+                "c431bc5de3cc52f0"
+            ]
+        ]
+    },
+    {
+        "id": "c431bc5de3cc52f0",
+        "type": "debug",
+        "z": "d4771e0e6694dd8b",
+        "name": "debug 24",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "ce52600cc8b0e272",
+        "type": "inject",
+        "z": "d4771e0e6694dd8b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 860,
+        "wires": [
+            [
+                "d73fc66e66d84cb7"
+            ]
+        ]
+    },
+    {
+        "id": "f362310e3ea8e9dc",
+        "type": "mysql",
+        "z": "d4771e0e6694dd8b",
+        "mydb": "3c8f13bac289c8de",
+        "name": "",
+        "x": 510,
+        "y": 980,
+        "wires": [
+            [
+                "e7771c94693e15da"
+            ]
+        ]
+    },
+    {
+        "id": "737d789056daf16c",
+        "type": "function",
+        "z": "d4771e0e6694dd8b",
+        "name": "function 44",
+        "func": "msg.payload = {}; //결과만 받을 수 있도록 초기화\n\nmsg.topic = \n\"select * from city_avg1;\"\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 980,
+        "wires": [
+            [
+                "f362310e3ea8e9dc"
+            ]
+        ]
+    },
+    {
+        "id": "2f1957d0bbdd1073",
+        "type": "http in",
+        "z": "d4771e0e6694dd8b",
+        "name": "",
+        "url": "/get_citychart",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 980,
+        "wires": [
+            [
+                "737d789056daf16c"
+            ]
+        ]
+    },
+    {
+        "id": "c73a2fb79d9893b7",
+        "type": "http response",
+        "z": "d4771e0e6694dd8b",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 870,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "e7771c94693e15da",
+        "type": "function",
+        "z": "d4771e0e6694dd8b",
+        "name": "function 45",
+        "func": "let data = msg.payload;\nlet xValue = [];\nlet dataValue = [];\n\nlet word = '1990_in';\n\n\nfor(let item of data){\n    xValue.push(item.시도별);\n    dataValue.push(item[word]);\n}\nlet option = {\n    tooltip: {\n        trigger: 'axis',\n        axisPointer: {\n            type: 'shadow'\n        }\n    },\n    xAxis: {\n        type: 'category',\n        data: xValue\n    },\n\n    yAxis: {\n        type: 'value'\n    },\n    series: [{\n        data: dataValue,\n        type: 'bar'\n    }]\n};\nmsg.payload = {};\nmsg.payload = option;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 980,
+        "wires": [
+            [
+                "c73a2fb79d9893b7",
+                "d3227496dc6721c2"
+            ]
+        ]
+    },
+    {
+        "id": "d3227496dc6721c2",
+        "type": "debug",
+        "z": "d4771e0e6694dd8b",
+        "name": "debug 25",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "ac75cbbdcea83809",
+        "type": "mysql",
+        "z": "d4771e0e6694dd8b",
+        "mydb": "3c8f13bac289c8de",
+        "name": "",
+        "x": 510,
+        "y": 1140,
+        "wires": [
+            [
+                "75ea338d520469e4"
+            ]
+        ]
+    },
+    {
+        "id": "754f3b6777c710bd",
+        "type": "function",
+        "z": "d4771e0e6694dd8b",
+        "name": "function 46",
+        "func": "msg.payload = {}; //결과만 받을 수 있도록 초기화\n\nmsg.topic = \n\"select * from city_avg1;\"\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 1140,
+        "wires": [
+            [
+                "ac75cbbdcea83809"
+            ]
+        ]
+    },
+    {
+        "id": "01485e98c29f9239",
+        "type": "http in",
+        "z": "d4771e0e6694dd8b",
+        "name": "",
+        "url": "/city_bar123",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 1140,
+        "wires": [
+            [
+                "754f3b6777c710bd"
+            ]
+        ]
+    },
+    {
+        "id": "0d28c5df7bf9f756",
+        "type": "http response",
+        "z": "d4771e0e6694dd8b",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 870,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "75ea338d520469e4",
+        "type": "function",
+        "z": "d4771e0e6694dd8b",
+        "name": "function 47",
+        "func": "let data = msg.payload;\nlet xValue = [];\nlet dataValue = [];\n\nlet word = '1990_in';\n\n\nfor (let item of data) {\n    xValue.push(item.시도별);\n    dataValue.push(item[word]);\n}\nlet option = {\n    tooltip: {\n        trigger: 'axis',\n        axisPointer: {\n            // Use axis to trigger tooltip\n            type: 'shadow' // 'shadow' as default; can also be 'line' or 'shadow'\n        }\n    },\n    legend: {\n        data: ['1990', '2000', '2010', '2020', '2021', '2022'],\n        left: '50%' },\n    grid: {\n        left: '5%',\n        right: '5%',\n        bottom: '3%',\n        containLabel: true\n    },\n    xAxis: {\n        type: 'category',\n        data: xValue\n    },\n    yAxis: {\n        type: 'value'\n    },\n    series: [\n        {\n            name: '1990',\n            label: {\n                show: true,\n                position: 'top'\n            },\n            emphasis: {\n                focus: 'series'\n            },\n            data: [2108138, 1919081, 259673],\n            type: 'bar'\n        },\n        {\n            name: '2000',\n            label: {\n                show: true,\n                position: 'top'\n            },\n            emphasis: {\n                focus: 'series'\n            },\n            data: [2114344, 2246679, 254801],\n            type: 'bar'\n        },\n        {\n            name: '2010',\n            label: {\n                show: true,\n                position: 'top'\n            },\n            emphasis: {\n                focus: 'series'\n            },\n            data: [1554789, 1978608, 224628],\n            type: 'bar'\n        },\n        {\n            name: '2020',\n            label: {\n                show: true,\n                position: 'top'\n            },\n            emphasis: {\n                focus: 'series'\n            },\n            data: [1578127, 2152572, 223354],\n            type: 'bar'\n        },\n        {\n            name: '2021',\n            label: {\n                show: true,\n                position: 'top'\n            },\n            emphasis: {\n                focus: 'series'\n            },\n            data: [1418187, 2036215, 217103],\n            type: 'bar'\n        },\n        {\n            name: '2022',\n            label: {\n                show: true,\n                position: 'top'\n            },\n            emphasis: {\n                focus: 'series'\n            },\n            data: [95535, 129097, 15440],\n            type: 'bar'\n        }\n    ]\n};\n\nmsg.payload = {};\nmsg.payload = option;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 1140,
+        "wires": [
+            [
+                "0d28c5df7bf9f756",
+                "5ed66f8bb1f9f324"
+            ]
+        ]
+    },
+    {
+        "id": "5ed66f8bb1f9f324",
+        "type": "debug",
+        "z": "d4771e0e6694dd8b",
+        "name": "debug 26",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "047144b2c182944e",
+        "type": "inject",
+        "z": "d4771e0e6694dd8b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 1200,
+        "wires": [
+            [
+                "754f3b6777c710bd"
+            ]
+        ]
+    },
+    {
+        "id": "53862f7bd80e137c",
+        "type": "mysql",
+        "z": "d4771e0e6694dd8b",
+        "mydb": "3c8f13bac289c8de",
+        "name": "",
+        "x": 470,
+        "y": 1300,
+        "wires": [
+            [
+                "9ea044cf82d50b11"
+            ]
+        ]
+    },
+    {
+        "id": "846f1ad9498a7e59",
+        "type": "function",
+        "z": "d4771e0e6694dd8b",
+        "name": "function 48",
+        "func": "msg.payload = {}; //결과만 받을 수 있도록 초기화\n\nmsg.topic = \n\"select * from city_avg1;\"\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 1300,
+        "wires": [
+            [
+                "53862f7bd80e137c"
+            ]
+        ]
+    },
+    {
+        "id": "2a7cfe96c008a109",
+        "type": "http in",
+        "z": "d4771e0e6694dd8b",
+        "name": "",
+        "url": "/city_bar_in1",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 90,
+        "y": 1300,
+        "wires": [
+            [
+                "846f1ad9498a7e59"
+            ]
+        ]
+    },
+    {
+        "id": "fdc392136685e515",
+        "type": "http response",
+        "z": "d4771e0e6694dd8b",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 830,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "9ea044cf82d50b11",
+        "type": "function",
+        "z": "d4771e0e6694dd8b",
+        "name": "function 49",
+        "func": "let data = msg.payload;\nlet xValue = [];\nlet dataValue1 = [];\nlet dataValue2 = [];\nlet dataValue3 = [];\nlet dataValue4 = [];\nlet dataValue5 = [];\nlet dataValue6 = [];\n\nlet word1 = '1990_in';\nlet word2 = '2000_in';\nlet word3 = '2010_in';\nlet word4 = '2020_in';\nlet word5 = '2021_in';\nlet word6 = '2022_in';\n\n\nfor (let item of data) {\n    xValue.push(item.시도별);\n    dataValue1.push(item[word1]);\n    dataValue2.push(item[word2]);\n    dataValue3.push(item[word3]);\n    dataValue4.push(item[word4]);\n    dataValue5.push(item[word5]);\n    dataValue6.push(item[word6]);\n}\nlet option = {\n    tooltip: {\n        trigger: 'axis',\n        axisPointer: {\n            // Use axis to trigger tooltip\n            type: 'shadow' // 'shadow' as default; can also be 'line' or 'shadow'\n        }\n    },\n    legend: {\n        data: ['1990', '2000', '2010', '2020', '2021', '2022'],\n        left: '40%' },\n    grid: {\n        left: '5%',\n        right: '5%',\n        bottom: '3%',\n        containLabel: true\n    },\n    xAxis: {\n        type: 'category',\n        data: xValue\n    },\n    yAxis: {\n        type: 'value'\n    },\n    series: [\n        {\n            name: '1990',\n            label: {\n                show: true,\n                position: 'top'\n            },\n            emphasis: {\n                focus: 'series'\n            },\n            data: dataValue1,\n            type: 'bar'\n        },\n        {\n            name: '2000',\n            label: {\n                show: true,\n                position: 'top'\n            },\n            emphasis: {\n                focus: 'series'\n            },\n            data: dataValue2,\n            type: 'bar'\n        },\n        {\n            name: '2010',\n            label: {\n                show: true,\n                position: 'top'\n            },\n            emphasis: {\n                focus: 'series'\n            },\n            data: dataValue3,\n            type: 'bar'\n        },\n        {\n            name: '2020',\n            label: {\n                show: true,\n                position: 'top'\n            },\n            emphasis: {\n                focus: 'series'\n            },\n            data: dataValue4,\n            type: 'bar'\n        },\n        {\n            name: '2021',\n            label: {\n                show: true,\n                position: 'top'\n            },\n            emphasis: {\n                focus: 'series'\n            },\n            data: dataValue5,\n            type: 'bar'\n        },\n        {\n            name: '2022',\n            label: {\n                show: true,\n                position: 'top'\n            },\n            emphasis: {\n                focus: 'series'\n            },\n            data: dataValue6,\n            type: 'bar'\n        }\n    ]\n};\n\nmsg.payload = {};\nmsg.payload = option;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 1300,
+        "wires": [
+            [
+                "fdc392136685e515",
+                "28dac433bf1ac341"
+            ]
+        ]
+    },
+    {
+        "id": "28dac433bf1ac341",
+        "type": "debug",
+        "z": "d4771e0e6694dd8b",
+        "name": "debug 27",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "96e55f8a456a5738",
+        "type": "inject",
+        "z": "d4771e0e6694dd8b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 1360,
+        "wires": [
+            [
+                "846f1ad9498a7e59"
+            ]
+        ]
+    },
+    {
+        "id": "f2aa7f28b285698d",
+        "type": "mysql",
+        "z": "d4771e0e6694dd8b",
+        "mydb": "3c8f13bac289c8de",
+        "name": "",
+        "x": 470,
+        "y": 1440,
+        "wires": [
+            [
+                "e4cbfcbdef47fbff"
+            ]
+        ]
+    },
+    {
+        "id": "5b4ae5319c8e9e38",
+        "type": "function",
+        "z": "d4771e0e6694dd8b",
+        "name": "function 50",
+        "func": "msg.payload = {}; //결과만 받을 수 있도록 초기화\n\nmsg.topic = \n\"select * from city_avg1;\"\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 1440,
+        "wires": [
+            [
+                "f2aa7f28b285698d"
+            ]
+        ]
+    },
+    {
+        "id": "581589b7628de4dd",
+        "type": "http in",
+        "z": "d4771e0e6694dd8b",
+        "name": "",
+        "url": "/city_bar_out",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 90,
+        "y": 1440,
+        "wires": [
+            [
+                "5b4ae5319c8e9e38"
+            ]
+        ]
+    },
+    {
+        "id": "6cfd2767f54869ac",
+        "type": "http response",
+        "z": "d4771e0e6694dd8b",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 830,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "e4cbfcbdef47fbff",
+        "type": "function",
+        "z": "d4771e0e6694dd8b",
+        "name": "function 51",
+        "func": "let data = msg.payload;\nlet xValue = [];\nlet dataValue1 = [];\nlet dataValue2 = [];\nlet dataValue3 = [];\nlet dataValue4 = [];\nlet dataValue5 = [];\nlet dataValue6 = [];\n\nlet word1 = '1990_out';\nlet word2 = '2000_out';\nlet word3 = '2010_out';\nlet word4 = '2020_out';\nlet word5 = '2021_out';\nlet word6 = '2022_out';\n\n\nfor (let item of data) {\n    xValue.push(item.시도별);\n    dataValue1.push(item[word1]);\n    dataValue2.push(item[word2]);\n    dataValue3.push(item[word3]);\n    dataValue4.push(item[word4]);\n    dataValue5.push(item[word5]);\n    dataValue6.push(item[word6]);\n}\nlet option = {\n    tooltip: {\n        trigger: 'axis',\n        axisPointer: {\n            // Use axis to trigger tooltip\n            type: 'shadow' // 'shadow' as default; can also be 'line' or 'shadow'\n        }\n    },\n    legend: {\n        data: ['1990', '2000', '2010', '2020', '2021', '2022'],\n        left: '40%' },\n    grid: {\n        left: '5%',\n        right: '5%',\n        bottom: '3%',\n        containLabel: true\n    },\n    xAxis: {\n        type: 'category',\n        data: xValue\n    },\n    yAxis: {\n        type: 'value'\n    },\n    series: [\n        {\n            name: '1990',\n            label: {\n                show: true,\n                position: 'top'\n            },\n            emphasis: {\n                focus: 'series'\n            },\n            data: dataValue1,\n            type: 'bar'\n        },\n        {\n            name: '2000',\n            label: {\n                show: true,\n                position: 'top'\n            },\n            emphasis: {\n                focus: 'series'\n            },\n            data: dataValue2,\n            type: 'bar'\n        },\n        {\n            name: '2010',\n            label: {\n                show: true,\n                position: 'top'\n            },\n            emphasis: {\n                focus: 'series'\n            },\n            data: dataValue3,\n            type: 'bar'\n        },\n        {\n            name: '2020',\n            label: {\n                show: true,\n                position: 'top'\n            },\n            emphasis: {\n                focus: 'series'\n            },\n            data: dataValue4,\n            type: 'bar'\n        },\n        {\n            name: '2021',\n            label: {\n                show: true,\n                position: 'top'\n            },\n            emphasis: {\n                focus: 'series'\n            },\n            data: dataValue5,\n            type: 'bar'\n        },\n        {\n            name: '2022',\n            label: {\n                show: true,\n                position: 'top'\n            },\n            emphasis: {\n                focus: 'series'\n            },\n            data: dataValue6,\n            type: 'bar'\n        }\n    ]\n};\n\nmsg.payload = {};\nmsg.payload = option;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 1440,
+        "wires": [
+            [
+                "6cfd2767f54869ac",
+                "4165082050913d4a"
+            ]
+        ]
+    },
+    {
+        "id": "4165082050913d4a",
+        "type": "debug",
+        "z": "d4771e0e6694dd8b",
+        "name": "debug 28",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 1440,
+        "wires": []
+    },
+    {
+        "id": "fcc1327a6552b7ac",
+        "type": "inject",
+        "z": "d4771e0e6694dd8b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 1500,
+        "wires": [
+            [
+                "5b4ae5319c8e9e38"
+            ]
+        ]
+    },
+    {
+        "id": "d237276a09ae3fdc",
+        "type": "mysql",
+        "z": "d4771e0e6694dd8b",
+        "mydb": "3c8f13bac289c8de",
+        "name": "",
+        "x": 470,
+        "y": 1580,
+        "wires": [
+            [
+                "7ef683d33f5f73f4"
+            ]
+        ]
+    },
+    {
+        "id": "256575cad4db195b",
+        "type": "function",
+        "z": "d4771e0e6694dd8b",
+        "name": "function 52",
+        "func": "msg.payload = {}; //결과만 받을 수 있도록 초기화\n\nmsg.topic = \n\"select * from seoul_avg1 order by 2022in, 2022out DESC limit 5;\"\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 1580,
+        "wires": [
+            [
+                "d237276a09ae3fdc"
+            ]
+        ]
+    },
+    {
+        "id": "3c34e7abde40fc2d",
+        "type": "http in",
+        "z": "d4771e0e6694dd8b",
+        "name": "",
+        "url": "/seoul_bar_in1",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 90,
+        "y": 1580,
+        "wires": [
+            [
+                "256575cad4db195b"
+            ]
+        ]
+    },
+    {
+        "id": "f445d8664314e259",
+        "type": "http response",
+        "z": "d4771e0e6694dd8b",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 830,
+        "y": 1640,
+        "wires": []
+    },
+    {
+        "id": "7ef683d33f5f73f4",
+        "type": "function",
+        "z": "d4771e0e6694dd8b",
+        "name": "function 53",
+        "func": "let data = msg.payload;\nlet xValue = [];\nlet dataValue1 = [];\nlet dataValue2 = [];\nlet dataValue3 = [];\nlet dataValue4 = [];\nlet dataValue5 = [];\nlet dataValue6 = [];\n\nlet word1 = '1990in';\nlet word2 = '2000in';\nlet word3 = '2010in';\nlet word4 = '2020in';\nlet word5 = '2021in';\nlet word6 = '2022in';\n\n\nfor (let item of data) {\n    xValue.push(item.area);\n    dataValue1.push(item[word1]);\n    dataValue2.push(item[word2]);\n    dataValue3.push(item[word3]);\n    dataValue4.push(item[word4]);\n    dataValue5.push(item[word5]);\n    dataValue6.push(item[word6]);\n}\nlet option = {\n    tooltip: {\n        trigger: 'axis',\n        axisPointer: {\n            // Use axis to trigger tooltip\n            type: 'shadow' // 'shadow' as default; can also be 'line' or 'shadow'\n        }\n    },\n    legend: {\n        data: ['1990', '2000', '2010', '2020', '2021', '2022'],\n        left: '40%' },\n    grid: {\n        left: '5%',\n        right: '5%',\n        bottom: '3%',\n        containLabel: true\n    },\n    xAxis: {\n        type: 'category',\n        data: xValue\n    },\n    yAxis: {\n        type: 'value'\n    },\n    series: [\n        {\n            name: '1990',\n            label: {\n                show: true,\n                position: 'top'\n            },\n            emphasis: {\n                focus: 'series'\n            },\n            data: dataValue1,\n            type: 'bar'\n        },\n        {\n            name: '2000',\n            label: {\n                show: true,\n                position: 'top'\n            },\n            emphasis: {\n                focus: 'series'\n            },\n            data: dataValue2,\n            type: 'bar'\n        },\n        {\n            name: '2010',\n            label: {\n                show: true,\n                position: 'top'\n            },\n            emphasis: {\n                focus: 'series'\n            },\n            data: dataValue3,\n            type: 'bar'\n        },\n        {\n            name: '2020',\n            label: {\n                show: true,\n                position: 'top'\n            },\n            emphasis: {\n                focus: 'series'\n            },\n            data: dataValue4,\n            type: 'bar'\n        },\n        {\n            name: '2021',\n            label: {\n                show: true,\n                position: 'top'\n            },\n            emphasis: {\n                focus: 'series'\n            },\n            data: dataValue5,\n            type: 'bar'\n        },\n        {\n            name: '2022',\n            label: {\n                show: true,\n                position: 'top'\n            },\n            emphasis: {\n                focus: 'series'\n            },\n            data: dataValue6,\n            type: 'bar'\n        }\n    ]\n};\n\nmsg.payload = {};\nmsg.payload = option;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 1580,
+        "wires": [
+            [
+                "f445d8664314e259",
+                "b9346802d841e300"
+            ]
+        ]
+    },
+    {
+        "id": "b9346802d841e300",
+        "type": "debug",
+        "z": "d4771e0e6694dd8b",
+        "name": "debug 29",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 1580,
+        "wires": []
+    },
+    {
+        "id": "2088e45c2d09cebd",
+        "type": "inject",
+        "z": "d4771e0e6694dd8b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 1640,
+        "wires": [
+            [
+                "256575cad4db195b"
+            ]
+        ]
+    },
+    {
+        "id": "1d4714bea00c7724",
+        "type": "mysql",
+        "z": "d4771e0e6694dd8b",
+        "mydb": "3c8f13bac289c8de",
+        "name": "",
+        "x": 470,
+        "y": 1720,
+        "wires": [
+            [
+                "9daa234622540e96"
+            ]
+        ]
+    },
+    {
+        "id": "17e8f24a5f8a5264",
+        "type": "function",
+        "z": "d4771e0e6694dd8b",
+        "name": "function 54",
+        "func": "msg.payload = {}; //결과만 받을 수 있도록 초기화\n\nmsg.topic = \n\"select * from seoul_avg1 order by 2022in, 2022out DESC limit 5;\"\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 1720,
+        "wires": [
+            [
+                "1d4714bea00c7724"
+            ]
+        ]
+    },
+    {
+        "id": "97b8ce45c8e42219",
+        "type": "http in",
+        "z": "d4771e0e6694dd8b",
+        "name": "",
+        "url": "/seoul_bar_out",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 90,
+        "y": 1720,
+        "wires": [
+            [
+                "17e8f24a5f8a5264"
+            ]
+        ]
+    },
+    {
+        "id": "34f4f7fcfa3ceb5d",
+        "type": "http response",
+        "z": "d4771e0e6694dd8b",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 830,
+        "y": 1780,
+        "wires": []
+    },
+    {
+        "id": "9daa234622540e96",
+        "type": "function",
+        "z": "d4771e0e6694dd8b",
+        "name": "function 55",
+        "func": "let data = msg.payload;\nlet xValue = [];\nlet dataValue1 = [];\nlet dataValue2 = [];\nlet dataValue3 = [];\nlet dataValue4 = [];\nlet dataValue5 = [];\nlet dataValue6 = [];\n\nlet word1 = '1990out';\nlet word2 = '2000out';\nlet word3 = '2010out';\nlet word4 = '2020out';\nlet word5 = '2021out';\nlet word6 = '2022out';\n\n\nfor (let item of data) {\n    xValue.push(item.area);\n    dataValue1.push(item[word1]);\n    dataValue2.push(item[word2]);\n    dataValue3.push(item[word3]);\n    dataValue4.push(item[word4]);\n    dataValue5.push(item[word5]);\n    dataValue6.push(item[word6]);\n}\nlet option = {\n    tooltip: {\n        trigger: 'axis',\n        axisPointer: {\n            // Use axis to trigger tooltip\n            type: 'shadow' // 'shadow' as default; can also be 'line' or 'shadow'\n        }\n    },\n    legend: {\n        data: ['1990', '2000', '2010', '2020', '2021', '2022'],\n        left: '40%' },\n    grid: {\n        left: '5%',\n        right: '5%',\n        bottom: '3%',\n        containLabel: true\n    },\n    xAxis: {\n        type: 'category',\n        data: xValue\n    },\n    yAxis: {\n        type: 'value'\n    },\n    series: [\n        {\n            name: '1990',\n            label: {\n                show: true,\n                position: 'top'\n            },\n            emphasis: {\n                focus: 'series'\n            },\n            data: dataValue1,\n            type: 'bar'\n        },\n        {\n            name: '2000',\n            label: {\n                show: true,\n                position: 'top'\n            },\n            emphasis: {\n                focus: 'series'\n            },\n            data: dataValue2,\n            type: 'bar'\n        },\n        {\n            name: '2010',\n            label: {\n                show: true,\n                position: 'top'\n            },\n            emphasis: {\n                focus: 'series'\n            },\n            data: dataValue3,\n            type: 'bar'\n        },\n        {\n            name: '2020',\n            label: {\n                show: true,\n                position: 'top'\n            },\n            emphasis: {\n                focus: 'series'\n            },\n            data: dataValue4,\n            type: 'bar'\n        },\n        {\n            name: '2021',\n            label: {\n                show: true,\n                position: 'top'\n            },\n            emphasis: {\n                focus: 'series'\n            },\n            data: dataValue5,\n            type: 'bar'\n        },\n        {\n            name: '2022',\n            label: {\n                show: true,\n                position: 'top'\n            },\n            emphasis: {\n                focus: 'series'\n            },\n            data: dataValue6,\n            type: 'bar'\n        }\n    ]\n};\n\nmsg.payload = {};\nmsg.payload = option;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 1720,
+        "wires": [
+            [
+                "34f4f7fcfa3ceb5d",
+                "e77dc5c1d18acebe"
+            ]
+        ]
+    },
+    {
+        "id": "e77dc5c1d18acebe",
+        "type": "debug",
+        "z": "d4771e0e6694dd8b",
+        "name": "debug 30",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "78208fce4be22a67",
+        "type": "inject",
+        "z": "d4771e0e6694dd8b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 1780,
+        "wires": [
+            [
+                "17e8f24a5f8a5264"
+            ]
+        ]
+    },
+    {
+        "id": "3c8f13bac289c8de",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3366",
+        "db": "bigdb",
+        "tz": "",
+        "charset": "UTF8"
+    }
+]
